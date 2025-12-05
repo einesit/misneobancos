@@ -47,6 +47,34 @@
 
     .section-title{display:flex;align-items:center;gap:12px}
     .small{font-size:0.9rem;color:var(--muted)}
+ 
+    /* CSS para bullets azules y letras uniformes */
+    ul li {
+        list-style: none;        /* Desactiva bullets nativos */
+        position: relative;      /* Necesario para los pseudo-elementos */
+        font-size: 16px;         /* Tamaño uniforme del texto de la lista */
+        line-height: 1.5;        /* Alineación vertical consistente */
+    }
+
+    ul li::before {
+        content: "• ";           /* Bullet azul seguido de espacio */
+        color: #007bff;          /* Azul similar al sitio */
+        font-size: 16px;         /* Mismo tamaño para todos */
+        position: absolute;      /* Para colocarlo al inicio de la línea */
+        left: -1.2em;            /* Ajusta la distancia desde el texto */
+        top: 0;                  /* Alinea verticalmente */
+        width: 1em;              /* Ancho fijo para alinear */
+        display: inline-block;
+    }
+
+    ul li span.bullet-letter {
+        font-size: 16px;         /* Igual que los bullets */
+        line-height: 1.5;        /* Misma altura que el texto de la lista */
+        vertical-align: middle;  /* Alinea perfectamente con el bullet */
+        margin-left: 0.2em;      /* Espacio entre bullet y letra */
+    }
+  
+  
   </style>
   <script type="application/ld+json">
   {
@@ -213,6 +241,7 @@
   </div>
 </body>
 </html>
+
 
 
 
