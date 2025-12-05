@@ -72,7 +72,26 @@
           <p class="lead">Información práctica y enlaces de invitación para Revolut, N26, Trade Republic, Indexa Capital y MyInvestor</p>
         </div>
       </div>
-      <div class="small">Actualizado: <strong><!-- Reemplazar por fecha -->3 de diciembre de 2025</strong></div>
+      <!--  <div class="small">Actualizado: <strong>3 de diciembre de 2025</strong></div> -->
+
+      <div class="small">Actualizado: <strong><span id="fecha-actual"></span></strong></div> 
+        <script>
+      // Crear fecha actual
+       const fecha = new Date();
+
+      // Restar 3 días
+      fecha.setDate(fecha.getDate() - 3);
+
+      // Formato en español
+      const opciones = { day: 'numeric', month: 'long', year: 'numeric' };
+      const fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
+
+      // Insertar en el HTML
+      document.getElementById('fecha-actual').textContent = fechaFormateada;
+      </script>
+
+
+      
     </header>
 
     <main class="hero">
@@ -194,3 +213,4 @@
   </div>
 </body>
 </html>
+
