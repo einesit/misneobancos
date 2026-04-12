@@ -1,252 +1,328 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Neobancos y Carteras Indexadas — Recomendaciones y enlaces de invitación</title>
-  <meta name="description" content="Información comparada de Revolut, N26 y Trade Republic (neobancos) y de Indexa Capital y MyInvestor (carteras de fondos indexados)." />
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-  <style>
-    :root{
-      --bg:#f7f9fb; --card:#ffffff; --muted:#6b7280; --accent:#0b74ff; --radius:12px;
-      --glass: rgba(255,255,255,0.75);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    *{box-sizing:border-box}
-    body{margin:0; background:linear-gradient(180deg,var(--bg),#eef3fb); color:#0f172a}
-    .container{max-width:1100px;margin:36px auto;padding:24px}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;gap:16px;align-items:center}
-    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#5cc8ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
-    h1{margin:0;font-size:1.6rem}
-    p.lead{margin:6px 0 0;color:var(--muted)}
+<title>MisNeobancos — Comparador financiero inteligente</title>
+<meta name="description" content="Comparador de neobancos, inversión y tarjeta premium: Revolut, N26, Trade Republic, Indexa Capital y MyInvestor. Información práctica y enlaces de invitación.">
 
-    .hero{margin-top:20px;background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:0 6px 24px rgba(15,23,42,0.06)}
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    @media (max-width:880px){.grid{grid-template-columns:1fr}}
+<style>
+:root{
+  --bg:#f6f8fc;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#6b7280;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
 
-    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
-    .card h3{margin:0 0 8px}
-    .muted{color:var(--muted);font-size:0.95rem}
+*{
+  box-sizing:border-box;
+}
 
-    .features{display:flex;flex-direction:column;gap:10px;margin-top:8px}
-    .feature{display:flex;gap:12px;align-items:flex-start}
-    .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:6px}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+}
 
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
-    .btn-primary{background:var(--accent);color:white}
-    .btn-outline{border:1px solid rgba(15,23,42,0.08);background:transparent;color:var(--muted)}
+/* HEADER */
+header{
+  background:linear-gradient(135deg,#0b1220,#111b33);
+  color:white;
+  padding:28px 16px;
+  text-align:center;
+}
 
-    footer{margin-top:28px;padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(11,116,255,0.05),transparent)}
+header h1{
+  margin:0;
+  font-size:22px;
+}
 
-    .disclaimer{font-size:0.9rem;color:var(--muted);margin-top:12px}
+header p{
+  margin-top:8px;
+  color:#a9b4c6;
+  font-size:14px;
+}
 
-    .invite{display:flex;gap:12px;flex-wrap:wrap}
-    .invite a{min-width:160px}
+header .subtitle{
+  margin-top:10px;
+  font-size:13px;
+  color:#cbd5e1;
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:1.4;
+}
 
-    .section-title{display:flex;align-items:center;gap:12px}
-    .small{font-size:0.9rem;color:var(--muted)}  
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Neobancos y Carteras Indexadas",
-    "url": "https://tusitio-ejemplo.com",
-    "description": "Información clara sobre neobancos (Revolut, N26, Trade Republic) y carteras de fondos indexados (Indexa Capital, MyInvestor), con enlaces de invitación y aviso legal.",
-    "publisher": {
-      "@type": "Person",
-      "name": "Administrador del sitio"
-    }
+.top-info{
+  margin-top:10px;
+  font-size:12px;
+  color:#94a3b8;
+}
+
+/* IMAGEN CABECERA */
+.hero-image{
+  max-width:1200px;
+  margin:20px auto 8px;
+  padding:0 16px;
+}
+
+.hero-image-frame{
+  height:290px;
+  overflow:hidden;
+  border-radius:22px;
+  box-shadow:0 14px 35px rgba(15,23,42,.12);
+  background:#e5e7eb;
+}
+
+.hero-image-frame img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+}
+
+/* LAYOUT */
+.container{
+  max-width:1200px;
+  margin:24px auto;
+  padding:16px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.card{
+  background:white;
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
+  transition:.2s;
+}
+
+.card:hover{
+  transform:translateY(-2px);
+}
+
+.badge{
+  display:inline-block;
+  font-size:12px;
+  background:#eef2ff;
+  color:#4f46e5;
+  padding:4px 10px;
+  border-radius:999px;
+  margin-bottom:10px;
+}
+
+h2{
+  margin:0 0 6px;
+  font-size:18px;
+}
+
+p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.5;
+}
+
+/* BOTÓN */
+.btn{
+  display:block;
+  margin-top:12px;
+  padding:12px;
+  border-radius:12px;
+  text-align:center;
+  text-decoration:none;
+  font-weight:800;
+  color:white;
+  background:linear-gradient(135deg,#111827,#1f2937);
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+/* AMEX */
+.premium{
+  border:1px solid #d1d5db;
+  background:linear-gradient(180deg,#ffffff,#f3f4f6);
+  position:relative;
+  overflow:hidden;
+}
+
+.premium::before{
+  content:"PLATINUM";
+  position:absolute;
+  top:12px;
+  right:-40px;
+  background:#111;
+  color:#e5e7eb;
+  font-size:10px;
+  padding:6px 45px;
+  transform:rotate(35deg);
+  letter-spacing:1px;
+}
+
+/* FOOTER */
+.footer{
+  max-width:1200px;
+  margin:30px auto;
+  padding:16px;
+}
+
+.legal{
+  background:white;
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.05);
+  font-size:12.5px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .grid{
+    grid-template-columns:1fr;
   }
-  </script>
+
+  .hero-image-frame{
+    height:270px;
+  }
+
+  .hero-image-frame img{
+    object-position:center top;
+  }
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <!-- <div class="logo">BN</div> -->
-        <div>
-          <h1>Neobancos & Carteras Indexadas</h1>
-          <p class="lead">Información práctica y enlaces de invitación para Revolut, N26, Trade Republic, Indexa Capital y MyInvestor</p>
-        </div>
-      </div>
-      <!--  <div class="small">Actualizado: <strong>3 de diciembre de 2025</strong></div> -->
 
-      <div class="small">Actualizado: <strong><span id="fecha-actual"></span></strong></div> 
-        <script>
-      // Crear fecha actual
-       const fecha = new Date();
+<header>
+  <h1>MisNeobancos</h1>
+  <p>Comparador de banca digital, inversión y tarjetas premium</p>
 
-      // Restar 2 días
-      fecha.setDate(fecha.getDate() - 2);
+  <p class="subtitle">
+    Comparativa de neobancos, inversión y tarjeta premium: Revolut, N26, Trade Republic, Indexa Capital y MyInvestor. Selección de opciones con información práctica y enlaces de invitación con posibles beneficios para el usuario y esta web.
+  </p>
 
-      // Formato en español
-      const opciones = { day: 'numeric', month: 'long', year: 'numeric' };
-      const fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
+  <div class="top-info" id="update"></div>
+</header>
 
-      // Insertar en el HTML
-      document.getElementById('fecha-actual').textContent = fechaFormateada;
-      </script>
-
-
-      
-    </header>
-
-    <main class="hero">
-      <p class="muted">Aquí encontrarás información meramente informativa sobre los productos principales y sus características. Los botones con enlaces de invitación se facilitan de forma transparente, sin constituir comunicación comercial individualizada ni asesoramiento financiero.</p>
-
-      <section style="margin-top:18px">
-        <div class="section-title"><h2 style="margin:0;font-size:1.1rem">Neobancos destacados</h2><span class="muted">(Revolut · N26 · Trade Republic)</span></div>
-
-        <div class="grid" style="margin-top:12px">
-          <!-- Revolut -->
-          <article class="card">
-            <h3>Revolut</h3>
-            <p class="muted">Cuenta multidivisa, tarjetas físicas y virtuales, cambio de divisa con tipos interbancarios en muchas divisas, productos añadidos como trading, cripto y seguros.</p>
-            <div class="features">
-              <div class="feature"><div class="dot"></div><div><strong>Cuenta y tarjeta</strong><div class="muted">IBAN europeo (según país), tarjeta contactless</div></div></div>
-              <div class="feature"><div class="dot"></div><div><strong>Cambio de divisa</strong><div class="muted">Tipo interbancario con límites según plan</div></div></div>
-              <div class="feature"><div class="dot"></div><div><strong>Productos extra</strong><div class="muted">Trading, cripto, seguros y cajeros</div></div></div>
-            </div>
-            <div style="margin-top:12px" class="invite">
-              <!-- IMPORTANTE: sustituir # por tu enlace de invitación real -->
-              <a class="btn btn-primary" href="https://revolut.com/referral/?referral-code=marc6xpqk!DEC2-25-AR-CRY&geo-redirect" target="_blank" rel="noopener">Invitación a Revolut</a>
-              <a class="btn btn-outline" href="https://www.revolut.com" target="_blank" rel="noopener">Web oficial</a>
-            </div>
-          </article>
-
-          <!-- N26 -->
-          <article class="card">
-            <h3>N26</h3>
-            <p class="muted">Banco 100% móvil con enfoque en simplicidad: cuentas, tarjetas, gestión de gastos y paquetes con seguros.</p>
-            <div class="features">
-              <div class="feature"><div class="dot"></div><div><strong>Cuenta principal</strong><div class="muted">IBAN en SEPA, transferencias, domiciliaciones</div></div></div>
-              <div class="feature"><div class="dot"></div><div><strong>Gestión desde app</strong><div class="muted">Etiquetas, estadísticas y espacios para ahorrar</div></div></div>
-              <div class="feature"><div class="dot"></div><div><strong>Planes</strong><div class="muted">Desde la cuenta básica hasta planes con seguro de viajes</div></div></div>
-            </div>
-            <div style="margin-top:12px" class="invite">
-              <a class="btn btn-primary" href="https://n26.com/r/marcq8763" target="_blank" rel="noopener">Invitación a N26</a>
-              <a class="btn btn-outline" href="https://n26.com" target="_blank" rel="noopener">Web oficial</a>
-            </div>
-          </article>
-
-          <!-- Trade Republic -->
-          <article class="card">
-            <h3>Trade Republic</h3>
-            <p class="muted">Plataforma de inversión con comisiones reducidas, acceso a acciones, ETFs y planes de ahorro en ETF/acciones con bajas comisiones.</p>
-            <div class="features">
-              <div class="feature"><div class="dot"></div><div><strong>Comisiones bajas</strong><div class="muted">Modelo de comisiones sencillo y competitivo</div></div></div>
-              <div class="feature"><div class="dot"></div><div><strong>Planes de ahorro</strong><div class="muted">Programas periódicos de inversión en ETFs/acciones</div></div></div>
-              <div class="feature"><div class="dot"></div><div><strong>Interfaz móvil</strong><div class="muted">Fácil de usar para principiantes y usuarios avanzados</div></div></div>
-            </div>
-            <div style="margin-top:12px" class="invite">
-              <a class="btn btn-primary" href="https://refnocode.trade.re/z907j81c" target="_blank" rel="noopener">Invitación a Trade Republic</a>
-              <a class="btn btn-outline" href="https://traderepublic.com" target="_blank" rel="noopener">Web oficial</a>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <section style="margin-top:20px">
-        <div class="section-title"><h2 style="margin:0;font-size:1.1rem">Carteras de fondos indexadas</h2><span class="muted">(Indexa Capital · MyInvestor)</span></div>
-
-        <div class="grid" style="margin-top:12px">
-          <!-- Indexa Capital -->
-          <article class="card">
-            <h3>Indexa Capital</h3>
-            <p class="muted">Gestora automatizada (roboadvisor) que crea carteras diversificadas usando fondos indexados y ETFs, ajustadas al perfil de riesgo del cliente.</p>
-            <div class="features">
-              <div class="feature"><div class="dot"></div><div><strong>Carteras automáticas</strong><div class="muted">Asignación según tu perfil y horizonte</div></div></div>
-              <div class="feature"><div class="dot"></div><div><strong>Fondos indexados</strong><div class="muted">Selección de fondos de bajo coste y alta diversificación</div></div></div>
-              <div class="feature"><div class="dot"></div><div><strong>Comisiones</strong><div class="muted">Transparencia en comisiones totales (gestión + fondos)</div></div></div>
-            </div>
-            <div style="margin-top:12px" class="invite">
-              <a class="btn btn-primary" href="https://indexacapital.com/t/MhZ02B" target="_blank" rel="noopener">Invitación a Indexa Capital</a>
-              <a class="btn btn-outline" href="https://indexacapital.com" target="_blank" rel="noopener">Web oficial</a>
-            </div>
-          </article>
-
-          <!-- MyInvestor -->
-          <article class="card">
-            <h3>MyInvestor</h3>
-            <p class="muted">Neobanco/gestora que ofrece acceso a fondos indexados, planes de pensiones y opciones de inversión con comisiones competitivas.</p>
-            <div class="features">
-              <div class="feature"><div class="dot"></div><div><strong>Fondos y planes</strong><div class="muted">Fondos índice y carteras gestionadas</div></div></div>
-              <div class="feature"><div class="dot"></div><div><strong>Acceso integrado</strong><div class="muted">Cuenta bancaria, inversión y productos de ahorro en un mismo lugar</div></div></div>
-              <div class="feature"><div class="dot"></div><div><strong>Promociones</strong><div class="muted">Ofertas periódicas por vinculación o por uso de referidos</div></div></div>
-            </div>
-            <div style="margin-top:12px" class="invite">
-              <a class="btn btn-primary" href="https://newapp.myinvestor.es/do/signup?promotionalCode=YADUA" target="_blank" rel="noopener">Invitación a MyInvestor</a>
-              <a class="btn btn-outline" href="https://myinvestor.es" target="_blank" rel="noopener">Web oficial</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section style="margin-top:20px" class="card">
-        <h3>¿Qué son los fondos indexados?</h3>
-        <p class="muted">Los fondos indexados son fondos de inversión cuyo objetivo es replicar el comportamiento de un índice de referencia (por ejemplo, el S&P 500, el MSCI World o un índice de renta fija). En lugar de intentar superar al mercado seleccionando activos individuales (gestión activa), los fondos indexados compran una cesta amplia de activos para imitar la composición del índice.</p>
-
-        <div style="margin-top:10px">
-          <strong>Ventajas principales:</strong>
-          <ul style="color:var(--muted)">
-            <li>Comisiones bajas: al ser gestión pasiva requieren menos trading y menos costes de gestión.</li>
-            <li>Diversificación automática: un solo fondo puede dar exposición a cientos o miles de valores.</li>
-            <li>Transparencia: conocen el índice que replican y suelen ser sencillos de entender.</li>
-            <li>Históricamente, muchos fondos indexados han superado a la mayoría de gestores activos en periodos largos debido a sus menores costes.</li>
-            <li>Simplicidad: recomendados para una estrategia de inversión a largo plazo y para inversores que buscan minimizar costes y sesgos de selección.</li>
-          </ul>
-        </div>
-
-        <p class="muted" style="margin-top:8px">Importante: aunque los fondos indexados reducen algunos riesgos (como el riesgo de selección), <strong>no son inmunes al riesgo de mercado</strong>. El valor de la inversión puede bajar y no hay garantía de rentabilidad.</p>
-      </section>
-      
-      <section style="margin-top:20px">
-        <article class="card">
-          <h3>Amex Platinum</h3>
-          <p class="muted">
-            Además, te comparto mi enlace de invitación a la tarjeta American Express Platinum para que puedas solicitarla y aprovechar la promoción exclusiva disponible en este momento. Actualmente, puedes obtener hasta 60.000 puntos de bienvenida, que podrás utilizar para, por ejemplo, adquirir vuelos en tu aerolínea favorita.
-            <br>
-            <br>
-            No se trata de un producto de inversión, sino de una tarjeta con coste, que ofrece numerosos beneficios: seguros de viaje, acceso a salas VIP en aeropuertos, reservas exclusivas en restaurantes, experiencias prémium y mucho más.
-            <br>
-          </p>
-          <div style="margin-top:12px" class="invite">
-            <a class="btn btn-primary" href="https://americanexpress.com/es-es/referral/platinum?ref=mARCQPice&XLINK=MYCP" target="_blank" rel="noopener"> Invitación a Amex Platinum
-            </a>
-          </div>
-        </article>
-      </section>
-
-      <div class="disclaimer card" style="margin-top:18px">
-        <strong>Aviso legal</strong>
-        <p class="muted">La información en esta web es de carácter estrictamente informativo y general. No constituye asesoramiento financiero ni recomendación personalizada de inversión. El uso de enlaces de invitación se realiza con total transparencia, indicando que pueden generar beneficios para ambas partes, sin implicar promoción profesional ni actividad económica regulada. Siempre que consideres invertir, valora tu situación personal y, si procede, consulta con un asesor financiero independiente.</p>
-      </div>
-
-    </main>
+<section class="hero-image">
+  <div class="hero-image-frame">
+    <img
+      src="plan-financiero-personal.png"
+      alt="Planificación financiera personal con calculadora, gráficos, planta y entorno de trabajo profesional">
   </div>
+</section>
+
+<div class="container grid">
+
+  <!-- REVOLUT -->
+  <div class="card">
+    <div class="badge">CUENTA GLOBAL</div>
+    <h2>Revolut</h2>
+    <p>Cuenta multidivisa para viajes, pagos internacionales y control financiero desde app.</p>
+    <p>✔ Cambio de divisa interbancario<br>✔ Tarjetas virtuales y físicas<br>✔ Control de gastos en tiempo real</p>
+    <a class="btn" href="https://revolut.com/referral/?referral-code=marc6xpqk!DEC2-25-AR-CRY&geo-redirect">
+      Abrir Revolut
+    </a>
+  </div>
+
+  <!-- N26 -->
+  <div class="card">
+    <div class="badge">BANCA DIGITAL</div>
+    <h2>N26</h2>
+    <p>Banco digital con IBAN español y gestión simple del dinero desde el móvil.</p>
+    <p>✔ IBAN español<br>✔ Categorías automáticas<br>✔ Ahorro inteligente</p>
+    <a class="btn" href="https://n26.com/r/marcq8763">
+      Abrir cuenta
+    </a>
+  </div>
+
+  <!-- TRADE REPUBLIC -->
+  <div class="card">
+    <div class="badge">INVERSIÓN</div>
+    <h2>Trade Republic</h2>
+    <p>Invierte en acciones y ETFs con bajas comisiones y enfoque a largo plazo.</p>
+    <p>✔ ETFs globales<br>✔ Planes automáticos<br>✔ Broker europeo regulado</p>
+    <a class="btn" href="https://refnocode.trade.re/z907j81c">
+      Invertir
+    </a>
+  </div>
+
+  <!-- INDEXA -->
+  <div class="card">
+    <div class="badge">INDEXADOS</div>
+    <h2>Indexa Capital</h2>
+    <p>Gestión automatizada de carteras indexadas adaptadas a tu perfil.</p>
+    <p>✔ Diversificación global<br>✔ Rebalanceo automático<br>✔ Inversión pasiva</p>
+    <a class="btn" href="https://indexacapital.com/t/MhZ02B">
+      Ver cartera
+    </a>
+  </div>
+
+  <!-- MYINVESTOR -->
+  <div class="card">
+    <div class="badge">AHORRO E INVERSIÓN</div>
+    <h2>MyInvestor</h2>
+    <p>Neobanco español con cuenta e inversión en fondos indexados.</p>
+    <p>✔ Cuenta bancaria<br>✔ Fondos indexados<br>✔ Bajas comisiones</p>
+    <a class="btn" href="https://newapp.myinvestor.es/do/signup?promotionalCode=YADUA">
+      Abrir cuenta
+    </a>
+  </div>
+
+  <!-- AMEX -->
+  <div class="card premium">
+    <div class="badge">RECOMENDADO PREMIUM</div>
+    <h2>American Express Platinum</h2>
+    <p>Tarjeta premium orientada a viajes, experiencias exclusivas y beneficios de alto nivel.</p>
+    <p>
+      ✔ Acceso a salas VIP<br>
+      ✔ Seguro de viaje premium<br>
+      ✔ Beneficios en hoteles<br>
+      ✔ Programa Membership Rewards
+    </p>
+    <p style="margin-top:10px;font-size:12.5px;color:#6b7280;">
+      Ideal para usuarios que viajan con frecuencia o buscan maximizar beneficios premium.
+    </p>
+    <a class="btn" href="https://americanexpress.com/es-es/referral/platinum?ref=mARCQPice&XLINK=MYCP">
+      Solicitar Amex Platinum
+    </a>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="legal">
+    <strong>Aviso legal</strong><br><br>
+    La información en esta web es de carácter estrictamente informativo y general. No constituye asesoramiento financiero ni recomendación personalizada de inversión. El uso de enlaces de invitación se realiza con total transparencia, indicando que pueden generar beneficios para ambas partes, sin implicar promoción profesional ni actividad económica regulada. Siempre que consideres invertir, valora tu situación personal y, si procede, consulta con un asesor financiero independiente.
+  </div>
+</div>
+
+<script>
+const d = new Date();
+d.setDate(d.getDate() - 3);
+
+document.getElementById("update").innerText =
+  "Última actualización: " + d.toLocaleDateString("es-ES", {
+    day:"numeric",
+    month:"long",
+    year:"numeric"
+  });
+</script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
