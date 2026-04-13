@@ -4,27 +4,65 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- Open Graph (WhatsApp, Telegram, Facebook, iMessage) -->
+<title>MisNeobancos — Comparador financiero inteligente</title>
+
+<meta name="description" content="Comparador de neobancos, inversión y tarjeta prémium: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor y American Express Platinum. Información práctica, ahorro en comisiones y ventajas para viajeros e inversores.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://misneobancos.com/">
+
+<!-- SEO adicional -->
+<meta name="author" content="MisNeobancos">
+<meta name="theme-color" content="#0b1220">
+<meta name="application-name" content="MisNeobancos">
+<meta property="og:locale" content="es_ES">
+
+<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="MisNeobancos — Comparador financiero inteligente">
-<meta property="og:description" content="Comparador de neobancos, inversión y tarjeta prémium: Revolut, N26, Trade Republic, Indexa Capital y MyInvestor. Información práctica y enlaces de invitación.">
+<meta property="og:description" content="Comparador de neobancos, inversión y tarjetas prémium. Revolut, N26, Trade Republic, Indexa Capital, MyInvestor y American Express Platinum.">
 <meta property="og:url" content="https://misneobancos.com/">
 <meta property="og:image" content="https://misneobancos.com/plan-financiero-personal-2.jpg">
-<meta property="og:image:secure_url" content="https://misneobancos.com/plan-financiero-personal-2.jpg">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta property="og:site_name" content="MisNeobancos">
 
-<!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MisNeobancos — Comparador financiero inteligente">
-<meta name="twitter:description" content="Comparador de neobancos, inversión y tarjetas prémium.">
+<meta name="twitter:description" content="Comparador de banca digital, inversión y tarjetas prémium con información práctica y enlaces de invitación.">
 <meta name="twitter:image" content="https://misneobancos.com/plan-financiero-personal-2.jpg">
-<meta name="twitter:image:alt" content="Comparador financiero MisNeobancos">
 
-<title>MisNeobancos — Comparador financiero inteligente</title>
-<meta name="description" content="Comparador de neobancos, inversión y tarjeta prémium: Revolut, N26, Trade Republic, Indexa Capital y MyInvestor. Información práctica y enlaces de invitación.">
+<link rel="preload" as="image" href="plan-financiero-personal.png">
+
+<!-- Datos estructurados -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "MisNeobancos",
+  "url": "https://misneobancos.com/",
+  "description": "Comparador financiero inteligente de neobancos, inversión y tarjetas prémium en España.",
+  "inLanguage": "es",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MisNeobancos",
+    "url": "https://misneobancos.com/"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Comparativa de productos financieros",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Revolut" },
+    { "@type": "ListItem", "position": 2, "name": "N26" },
+    { "@type": "ListItem", "position": 3, "name": "Trade Republic" },
+    { "@type": "ListItem", "position": 4, "name": "Indexa Capital" },
+    { "@type": "ListItem", "position": 5, "name": "MyInvestor" },
+    { "@type": "ListItem", "position": 6, "name": "American Express Platinum" }
+  ]
+}
+</script>
 
 <style>
 :root{
@@ -71,7 +109,7 @@ header .subtitle{
   color:#94a3b8;
 }
 
-/* IMAGEN CABECERA */
+/* HERO */
 .hero-image{
   max-width:1200px;
   margin:20px auto 8px;
@@ -131,14 +169,20 @@ header .subtitle{
 }
 
 h2{
-  margin:0 0 6px;
-  font-size:18px;
+  margin:0 0 8px;
+  font-size:20px;
+}
+
+h3{
+  margin:20px 0 8px;
+  font-size:17px;
+  color:var(--text);
 }
 
 p{
   color:var(--muted);
   font-size:14px;
-  line-height:1.5;
+  line-height:1.6;
 }
 
 /* BENEFICIO */
@@ -169,7 +213,7 @@ p{
   box-shadow:0 12px 25px rgba(0,0,0,.25);
 }
 
-/* AMEX */
+/* PREMIUM */
 .premium{
   border:1px solid #d1d5db;
   background:linear-gradient(180deg,#ffffff,#f3f4f6);
@@ -187,6 +231,14 @@ p{
   font-size:10px;
   padding:6px 45px;
   transform:rotate(35deg);
+}
+
+/* BLOQUE INFORMATIVO */
+.info-block{
+  background:white;
+  border-radius:18px;
+  padding:24px;
+  box-shadow:0 10px 25px rgba(0,0,0,.05);
 }
 
 /* FOOTER */
@@ -219,6 +271,10 @@ p{
   .hero-image-frame img{
     object-position:center top;
   }
+
+  .info-block{
+    padding:20px;
+  }
 }
 </style>
 </head>
@@ -230,7 +286,8 @@ p{
   <p>Comparador de banca digital, inversión y tarjetas prémium</p>
 
   <p class="subtitle">
-    Comparativa de neobancos, inversión y tarjeta prémium: Revolut, N26, Trade Republic, Indexa Capital y MyInvestor. Selección de opciones con información práctica y enlaces de invitación con posibles beneficios para el usuario y esta web.
+    Comparativa de neobancos, inversión y tarjeta prémium: Revolut, N26, Trade Republic, Indexa Capital y MyInvestor.
+    Selección de opciones con información práctica y enlaces de invitación con posibles beneficios para el usuario y esta web.
   </p>
 
   <div class="top-info" id="update"></div>
@@ -238,12 +295,73 @@ p{
 
 <section class="hero-image">
   <div class="hero-image-frame">
-    <img
-      src="plan-financiero-personal.png"
-      alt="Planificación financiera personal con calculadora, gráficos, planta y entorno de trabajo profesional">
+    <img src="plan-financiero-personal.png" alt="Planificación financiera personal con análisis y gráficos">
   </div>
 </section>
 
+<!-- BLOQUE INFORMATIVO DETALLADO ANTES DE LOS BANCOS -->
+<div class="container">
+  <div class="info-block">
+    <h2>Qué es un neobanco y por qué cada vez más personas lo eligen</h2>
+    <p>
+      Un neobanco es una entidad financiera digital o una plataforma bancaria pensada para gestionar el dinero de forma
+      sencilla desde el móvil, con una operativa mucho más ágil que la banca tradicional. Su propuesta se centra en la
+      experiencia de usuario, la transparencia y la reducción de costes. En la práctica, suelen permitir abrir una cuenta
+      en pocos minutos, controlar gastos en tiempo real, recibir notificaciones instantáneas, operar desde una app muy
+      intuitiva y acceder a funciones útiles para viajes, ahorro o inversión.
+    </p>
+    <p>
+      Frente a la banca tradicional, una de las grandes ventajas de muchos neobancos es el ahorro en comisiones. En muchos
+      casos ofrecen cuentas sin comisiones de mantenimiento, menos costes por transferencias o una operativa internacional
+      más competitiva. A ello se suma la facilidad de uso de sus apps, que suelen estar mejor diseñadas para el día a día:
+      categorización automática de gastos, tarjetas virtuales, bloqueo y desbloqueo inmediato de tarjeta, creación de
+      espacios de ahorro y control total desde el teléfono.
+    </p>
+
+    <h3>La importancia de invertir a largo plazo</h3>
+    <p>
+      Ahorrar está bien, pero invertir a largo plazo suele ser una de las herramientas más eficaces para construir patrimonio
+      con el paso de los años. Invertir a largo plazo permite aprovechar el interés compuesto, suavizar la volatilidad de los
+      mercados y no depender de movimientos puntuales de corto plazo. Para muchas personas, la clave no está en intentar
+      adivinar qué hará el mercado mañana, sino en mantener una estrategia constante, diversificada y alineada con sus
+      objetivos financieros.
+    </p>
+
+    <h3>Qué significa gestión activa y gestión pasiva</h3>
+    <p>
+      En inversión, la gestión activa consiste en seleccionar activos con el objetivo de intentar batir al mercado. Es decir,
+      un gestor decide qué acciones o bonos comprar y vender buscando obtener una rentabilidad superior a la de un índice de
+      referencia. La gestión pasiva, en cambio, no intenta adivinar qué activo lo hará mejor, sino replicar el comportamiento
+      de un índice o de una combinación amplia de mercados a través de fondos indexados, ETFs o carteras diversificadas.
+    </p>
+
+    <h3>Ventajas de la gestión pasiva con fondos indexados o carteras indexadas</h3>
+    <p>
+      La gestión pasiva se ha convertido en una de las formas más sólidas y eficientes de invertir a largo plazo. Su principal
+      ventaja es que suele implicar comisiones mucho más bajas que la gestión activa, algo especialmente importante porque las
+      comisiones reducen la rentabilidad acumulada con los años. Además, permite acceder a una diversificación muy amplia,
+      repartiendo la inversión entre muchas empresas, sectores y geografías, lo que ayuda a reducir riesgos innecesarios.
+    </p>
+    <p>
+      Otra ventaja importante es la sencillez. En lugar de estar pendiente de comprar y vender constantemente, el inversor
+      puede mantener una estrategia más estable, disciplinada y fácil de seguir. Las carteras de fondos indexados añaden,
+      además, la ventaja del rebalanceo y la automatización, lo que facilita mantener el perfil de riesgo adecuado sin tener
+      que tomar decisiones continuas. Para muchas personas, esta combinación de bajas comisiones, diversificación global,
+      simplicidad y enfoque a largo plazo hace de la gestión pasiva una opción especialmente atractiva.
+    </p>
+
+    <h3>Por qué también aparece American Express Platinum en esta comparativa</h3>
+    <p>
+      Aunque esta web está centrada sobre todo en neobancos e inversión, American Express Platinum aparece aquí porque puede
+      ser una opción muy interesante para viajeros frecuentes. Destaca por sus seguros de viaje, acceso a salas VIP, ventajas
+      en hoteles, acumulación de puntos y otros beneficios orientados a quienes valoran comodidad, protección y servicios
+      prémium al viajar. No responde al mismo perfil que un neobanco o una cartera indexada, pero sí encaja dentro de una
+      estrategia financiera enfocada a optimizar el uso diario del dinero y aprovechar ventajas concretas según el estilo de vida.
+    </p>
+  </div>
+</div>
+
+<!-- TARJETAS -->
 <div class="container grid">
 
   <!-- REVOLUT -->
@@ -253,9 +371,7 @@ p{
     <p>Cuenta multidivisa para viajes, pagos internacionales y control financiero desde app.</p>
     <p>✔ Cambio de divisa interbancario<br>✔ Tarjetas virtuales y físicas<br>✔ Control de gastos en tiempo real</p>
     <p class="benefit">💸 Hasta 50€ por cada amigo que invites</p>
-    <a class="btn" href="https://revolut.com/referral/?referral-code=marc6xpqk!APR1-26-AR-CRY&geo-redirect" target="_blank" rel="noopener noreferrer">
-      Abrir cuenta
-    </a>
+    <a class="btn" href="https://revolut.com/referral/?referral-code=marc6xpqk!APR1-26-AR-CRY&geo-redirect">Abrir cuenta</a>
   </div>
 
   <!-- N26 -->
@@ -265,9 +381,7 @@ p{
     <p>Banco digital con IBAN español y gestión simple del dinero desde el móvil.</p>
     <p>✔ IBAN español<br>✔ Categorías automáticas<br>✔ Ahorro inteligente</p>
     <p class="benefit">💸 Llévate 15€ al abrir tu cuenta</p>
-    <a class="btn" href="https://n26.com/r/marcq8763" target="_blank" rel="noopener noreferrer">
-      Abrir cuenta
-    </a>
+    <a class="btn" href="https://n26.com/r/marcq8763">Abrir cuenta</a>
   </div>
 
   <!-- TRADE REPUBLIC -->
@@ -277,9 +391,7 @@ p{
     <p>Invierte en acciones y ETFs con bajas comisiones y enfoque a largo plazo.</p>
     <p>✔ ETFs globales<br>✔ Planes automáticos<br>✔ Broker europeo regulado</p>
     <p class="benefit">📈 Consigue 10€ en acciones gratis + 2% TAE</p>
-    <a class="btn" href="https://refnocode.trade.re/z907j81c" target="_blank" rel="noopener noreferrer">
-      Abrir cuenta
-    </a>
+    <a class="btn" href="https://refnocode.trade.re/z907j81c">Abrir cuenta</a>
   </div>
 
   <!-- INDEXA -->
@@ -289,9 +401,7 @@ p{
     <p>Gestión automatizada de carteras indexadas adaptadas a tu perfil.</p>
     <p>✔ Diversificación global<br>✔ Rebalanceo automático<br>✔ Inversión pasiva</p>
     <p class="benefit">💰 0€ en comisiones de gestión hasta 15.000 € el primer año</p>
-    <a class="btn" href="https://indexacapital.com/t/MhZ02B" target="_blank" rel="noopener noreferrer">
-      Invertir en fondos indexados
-    </a>
+    <a class="btn" href="https://indexacapital.com/t/MhZ02B">Invertir en fondos indexados</a>
   </div>
 
   <!-- MYINVESTOR -->
@@ -301,9 +411,7 @@ p{
     <p>Neobanco español con cuenta e inversión en fondos indexados.</p>
     <p>✔ Cuenta bancaria<br>✔ Fondos indexados<br>✔ Bajas comisiones</p>
     <p class="benefit">🎁 Consigue 25€ al abrir tu cuenta</p>
-    <a class="btn" href="https://newapp.myinvestor.es/do/signup?promotionalCode=YADUA" target="_blank" rel="noopener noreferrer">
-      Abrir cuenta
-    </a>
+    <a class="btn" href="https://newapp.myinvestor.es/do/signup?promotionalCode=YADUA">Abrir cuenta</a>
   </div>
 
   <!-- AMEX -->
@@ -317,17 +425,13 @@ p{
       ✔ Beneficios en hoteles<br>
       ✔ Programa Membership Rewards
     </p>
-    <p style="margin-top:10px;font-size:12.5px;color:#6b7280;">
-      Ideal para usuarios que viajan con frecuencia o buscan maximizar beneficios prémium.
-    </p>
     <p class="benefit">✈️ Hasta 60.000 puntos para viajar</p>
-    <a class="btn" href="https://americanexpress.com/es-es/referral/platinum?ref=mARCQPice&XLINK=MYCP" target="_blank" rel="noopener noreferrer">
-      Solicitar Amex Platinum
-    </a>
+    <a class="btn" href="https://americanexpress.com/es-es/referral/platinum?ref=mARCQPice&XLINK=MYCP">Solicitar Amex Platinum</a>
   </div>
 
 </div>
 
+<!-- AVISO LEGAL -->
 <div class="footer">
   <div class="legal">
     <strong>Aviso legal</strong><br><br>
@@ -336,15 +440,21 @@ p{
 </div>
 
 <script>
-const d = new Date();
-d.setDate(d.getDate() - 3);
+(function () {
+  const updateEl = document.getElementById('update');
+  if (!updateEl) return;
 
-document.getElementById("update").innerText =
-  "Última actualización: " + d.toLocaleDateString("es-ES", {
-    day:"numeric",
-    month:"long",
-    year:"numeric"
+  const fecha = new Date();
+  fecha.setDate(fecha.getDate() - 3);
+
+  const fechaFormateada = fecha.toLocaleDateString('es-ES', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
   });
+
+  updateEl.textContent = 'Última actualización: ' + fechaFormateada;
+})();
 </script>
 
 </body>
