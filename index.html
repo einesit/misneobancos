@@ -10,7 +10,6 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://misneobancos.com/">
 
-<!-- SEO adicional -->
 <meta name="author" content="MisNeobancos">
 <meta name="theme-color" content="#0b1220">
 <meta name="application-name" content="MisNeobancos">
@@ -70,6 +69,11 @@
   --card:#ffffff;
   --text:#0f172a;
   --muted:#6b7280;
+  --line:#dbe3f0;
+  --soft:#eef2ff;
+  --accent:#111827;
+  --accent-2:#1f2937;
+  --accent-soft:#4f46e5;
   font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 }
 
@@ -83,30 +87,69 @@ body{
 
 /* HEADER */
 header{
+  position:relative;
   background:linear-gradient(135deg,#0b1220,#111b33);
   color:white;
   padding:28px 16px;
   text-align:center;
 }
 
-header h1{ margin:0; font-size:22px; }
+header h1{
+  margin:0;
+  font-size:22px;
+}
 
-header p{ margin-top:8px; color:#a9b4c6; font-size:14px; }
+header p{
+  margin-top:8px;
+  color:#a9b4c6;
+  font-size:14px;
+}
 
 header .subtitle{
   margin-top:10px;
   font-size:13px;
   color:#cbd5e1;
-  max-width:700px;
+  max-width:760px;
   margin-left:auto;
   margin-right:auto;
-  line-height:1.4;
+  line-height:1.5;
 }
 
 .top-info{
   margin-top:10px;
   font-size:12px;
   color:#94a3b8;
+}
+
+.lang-switcher{
+  position:absolute;
+  top:16px;
+  right:16px;
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.lang-btn{
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.08);
+  color:#e5e7eb;
+  border-radius:999px;
+  padding:8px 12px;
+  font-size:12px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.lang-btn:hover{
+  background:rgba(255,255,255,.14);
+}
+
+.lang-btn.active{
+  background:white;
+  color:#0f172a;
+  border-color:white;
 }
 
 /* HERO */
@@ -185,7 +228,6 @@ p{
   line-height:1.6;
 }
 
-/* BENEFICIO */
 .benefit{
   margin-top:12px;
   font-size:13px;
@@ -193,7 +235,6 @@ p{
   color:#1d4ed8;
 }
 
-/* BOTÓN */
 .btn{
   display:block;
   margin-top:8px;
@@ -275,6 +316,12 @@ p{
   .info-block{
     padding:20px;
   }
+
+  .lang-switcher{
+    position:static;
+    justify-content:center;
+    margin-bottom:12px;
+  }
 }
 </style>
 </head>
@@ -282,11 +329,16 @@ p{
 <body>
 
 <header>
-  <h1>MisNeobancos</h1>
-  <p>Comparador de banca digital, inversión y tarjetas prémium</p>
+  <div class="lang-switcher" aria-label="Selector de idioma">
+    <button class="lang-btn active" type="button" data-lang="es" aria-pressed="true">ES</button>
+    <button class="lang-btn" type="button" data-lang="ca" aria-pressed="false">CAT</button>
+  </div>
 
-  <p class="subtitle">
-    Comparativa de neobancos, inversión y tarjeta prémium: Revolut, N26, Trade Republic, Indexa Capital y MyInvestor.
+  <h1>MisNeobancos</h1>
+  <p id="header-tagline">Comparador de banca digital, inversión y tarjetas prémium</p>
+
+  <p class="subtitle" id="header-subtitle">
+    Comparativa de neobancos, inversión y tarjeta prémium: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor y American Express Platinum.
     Selección de opciones con información práctica y enlaces de invitación con posibles beneficios para el usuario y esta web.
   </p>
 
@@ -295,22 +347,22 @@ p{
 
 <section class="hero-image">
   <div class="hero-image-frame">
-    <img src="plan-financiero-personal.png" alt="Planificación financiera personal con análisis y gráficos">
+    <img id="hero-image" src="plan-financiero-personal.png" alt="Planificación financiera personal con análisis y gráficos">
   </div>
 </section>
 
-<!-- BLOQUE INFORMATIVO DETALLADO ANTES DE LOS BANCOS -->
+<!-- BLOQUE INFORMATIVO -->
 <div class="container">
   <div class="info-block">
-    <h2>Qué es un neobanco y por qué cada vez más personas lo eligen</h2>
-    <p>
+    <h2 id="info-title-1">¿Qué es un neobanco y por qué cada vez más personas lo eligen?</h2>
+    <p id="info-p-1">
       Un neobanco es una entidad financiera digital o una plataforma bancaria pensada para gestionar el dinero de forma
       sencilla desde el móvil, con una operativa mucho más ágil que la banca tradicional. Su propuesta se centra en la
       experiencia de usuario, la transparencia y la reducción de costes. En la práctica, suelen permitir abrir una cuenta
       en pocos minutos, controlar gastos en tiempo real, recibir notificaciones instantáneas, operar desde una app muy
       intuitiva y acceder a funciones útiles para viajes, ahorro o inversión.
     </p>
-    <p>
+    <p id="info-p-2">
       Frente a la banca tradicional, una de las grandes ventajas de muchos neobancos es el ahorro en comisiones. En muchos
       casos ofrecen cuentas sin comisiones de mantenimiento, menos costes por transferencias o una operativa internacional
       más competitiva. A ello se suma la facilidad de uso de sus apps, que suelen estar mejor diseñadas para el día a día:
@@ -318,8 +370,8 @@ p{
       espacios de ahorro y control total desde el teléfono.
     </p>
 
-    <h3>La importancia de invertir a largo plazo</h3>
-    <p>
+    <h3 id="info-title-2">La importancia de invertir a largo plazo</h3>
+    <p id="info-p-3">
       Ahorrar está bien, pero invertir a largo plazo suele ser una de las herramientas más eficaces para construir patrimonio
       con el paso de los años. Invertir a largo plazo permite aprovechar el interés compuesto, suavizar la volatilidad de los
       mercados y no depender de movimientos puntuales de corto plazo. Para muchas personas, la clave no está en intentar
@@ -327,22 +379,22 @@ p{
       objetivos financieros.
     </p>
 
-    <h3>Qué significa gestión activa y gestión pasiva</h3>
-    <p>
+    <h3 id="info-title-3">¿Qué significa gestión activa y gestión pasiva?</h3>
+    <p id="info-p-4">
       En inversión, la gestión activa consiste en seleccionar activos con el objetivo de intentar batir al mercado. Es decir,
       un gestor decide qué acciones o bonos comprar y vender buscando obtener una rentabilidad superior a la de un índice de
       referencia. La gestión pasiva, en cambio, no intenta adivinar qué activo lo hará mejor, sino replicar el comportamiento
-      de un índice o de una combinación amplia de mercados a través de fondos indexados, ETFs o carteras diversificadas.
+      de un índice o de una combinación amplia de mercados a través de fondos indexados, ETF o carteras diversificadas.
     </p>
 
-    <h3>Ventajas de la gestión pasiva con fondos indexados o carteras indexadas</h3>
-    <p>
+    <h3 id="info-title-4">Ventajas de la gestión pasiva con fondos indexados o carteras indexadas</h3>
+    <p id="info-p-5">
       La gestión pasiva se ha convertido en una de las formas más sólidas y eficientes de invertir a largo plazo. Su principal
       ventaja es que suele implicar comisiones mucho más bajas que la gestión activa, algo especialmente importante porque las
       comisiones reducen la rentabilidad acumulada con los años. Además, permite acceder a una diversificación muy amplia,
       repartiendo la inversión entre muchas empresas, sectores y geografías, lo que ayuda a reducir riesgos innecesarios.
     </p>
-    <p>
+    <p id="info-p-6">
       Otra ventaja importante es la sencillez. En lugar de estar pendiente de comprar y vender constantemente, el inversor
       puede mantener una estrategia más estable, disciplinada y fácil de seguir. Las carteras de fondos indexados añaden,
       además, la ventaja del rebalanceo y la automatización, lo que facilita mantener el perfil de riesgo adecuado sin tener
@@ -350,8 +402,8 @@ p{
       simplicidad y enfoque a largo plazo hace de la gestión pasiva una opción especialmente atractiva.
     </p>
 
-    <h3>Por qué también aparece American Express Platinum en esta comparativa</h3>
-    <p>
+    <h3 id="info-title-5">¿Por qué también aparece American Express Platinum en esta comparativa?</h3>
+    <p id="info-p-7">
       Aunque esta web está centrada sobre todo en neobancos e inversión, American Express Platinum aparece aquí porque puede
       ser una opción muy interesante para viajeros frecuentes. Destaca por sus seguros de viaje, acceso a salas VIP, ventajas
       en hoteles, acumulación de puntos y otros beneficios orientados a quienes valoran comodidad, protección y servicios
@@ -366,67 +418,67 @@ p{
 
   <!-- REVOLUT -->
   <div class="card">
-    <div class="badge">CUENTA GLOBAL</div>
+    <div class="badge" id="rev-badge">CUENTA GLOBAL</div>
     <h2>Revolut</h2>
-    <p>Cuenta multidivisa para viajes, pagos internacionales y control financiero desde app.</p>
-    <p>✔ Cambio de divisa interbancario<br>✔ Tarjetas virtuales y físicas<br>✔ Control de gastos en tiempo real</p>
-    <p class="benefit">💸 Hasta 50€ por cada amigo que invites</p>
-    <a class="btn" href="https://revolut.com/referral/?referral-code=marc6xpqk!APR1-26-AR-CRY&geo-redirect">Abrir cuenta</a>
+    <p id="rev-desc">Cuenta multidivisa para viajes, pagos internacionales y control financiero desde app.</p>
+    <p id="rev-features">✔ Cambio de divisa interbancario<br>✔ Tarjetas virtuales y físicas<br>✔ Control de gastos en tiempo real</p>
+    <p class="benefit" id="rev-benefit">💸 Hasta 50€ por cada amigo que invites</p>
+    <a class="btn" id="rev-btn" href="https://revolut.com/referral/?referral-code=marc6xpqk!APR1-26-AR-CRY&geo-redirect">Abrir cuenta</a>
   </div>
 
   <!-- N26 -->
   <div class="card">
-    <div class="badge">BANCA DIGITAL</div>
+    <div class="badge" id="n26-badge">BANCA DIGITAL</div>
     <h2>N26</h2>
-    <p>Banco digital con IBAN español y gestión simple del dinero desde el móvil.</p>
-    <p>✔ IBAN español<br>✔ Categorías automáticas<br>✔ Ahorro inteligente</p>
-    <p class="benefit">💸 Llévate 15€ al abrir tu cuenta</p>
-    <a class="btn" href="https://n26.com/r/marcq8763">Abrir cuenta</a>
+    <p id="n26-desc">Banco digital con IBAN español y gestión simple del dinero desde el móvil.</p>
+    <p id="n26-features">✔ IBAN español<br>✔ Categorías automáticas<br>✔ Ahorro inteligente</p>
+    <p class="benefit" id="n26-benefit">💸 Llévate 15€ al abrir tu cuenta</p>
+    <a class="btn" id="n26-btn" href="https://n26.com/r/marcq8763">Abrir cuenta</a>
   </div>
 
   <!-- TRADE REPUBLIC -->
   <div class="card">
-    <div class="badge">INVERSIÓN</div>
+    <div class="badge" id="tr-badge">INVERSIÓN</div>
     <h2>Trade Republic</h2>
-    <p>Invierte en acciones y ETFs con bajas comisiones y enfoque a largo plazo.</p>
-    <p>✔ ETFs globales<br>✔ Planes automáticos<br>✔ Broker europeo regulado</p>
-    <p class="benefit">📈 Consigue 10€ en acciones gratis + 2% TAE</p>
-    <a class="btn" href="https://refnocode.trade.re/z907j81c">Abrir cuenta</a>
+    <p id="tr-desc">Invierte en acciones y ETFs con bajas comisiones y enfoque a largo plazo.</p>
+    <p id="tr-features">✔ ETFs globales<br>✔ Planes automáticos<br>✔ Broker europeo regulado</p>
+    <p class="benefit" id="tr-benefit">📈 Consigue 10€ en acciones gratis + 2% TAE</p>
+    <a class="btn" id="tr-btn" href="https://refnocode.trade.re/z907j81c">Abrir cuenta</a>
   </div>
 
   <!-- INDEXA -->
   <div class="card">
-    <div class="badge">FONDOS INDEXADOS</div>
+    <div class="badge" id="indexa-badge">FONDOS INDEXADOS</div>
     <h2>Indexa Capital</h2>
-    <p>Gestión automatizada de carteras indexadas adaptadas a tu perfil.</p>
-    <p>✔ Diversificación global<br>✔ Rebalanceo automático<br>✔ Inversión pasiva</p>
-    <p class="benefit">💰 0€ en comisiones de gestión hasta 15.000 € el primer año</p>
-    <a class="btn" href="https://indexacapital.com/t/MhZ02B">Invertir en fondos indexados</a>
+    <p id="indexa-desc">Gestión automatizada de carteras indexadas adaptadas a tu perfil.</p>
+    <p id="indexa-features">✔ Diversificación global<br>✔ Rebalanceo automático<br>✔ Inversión pasiva</p>
+    <p class="benefit" id="indexa-benefit">💰 0€ en comisiones de gestión hasta 15.000 € el primer año</p>
+    <a class="btn" id="indexa-btn" href="https://indexacapital.com/t/MhZ02B">Invertir en fondos indexados</a>
   </div>
 
   <!-- MYINVESTOR -->
   <div class="card">
-    <div class="badge">AHORRO E INVERSIÓN</div>
+    <div class="badge" id="myinv-badge">AHORRO E INVERSIÓN</div>
     <h2>MyInvestor</h2>
-    <p>Neobanco español con cuenta e inversión en fondos indexados.</p>
-    <p>✔ Cuenta bancaria<br>✔ Fondos indexados<br>✔ Bajas comisiones</p>
-    <p class="benefit">🎁 Consigue 25€ al abrir tu cuenta</p>
-    <a class="btn" href="https://newapp.myinvestor.es/do/signup?promotionalCode=YADUA">Abrir cuenta</a>
+    <p id="myinv-desc">Neobanco español con cuenta e inversión en fondos indexados.</p>
+    <p id="myinv-features">✔ Cuenta bancaria<br>✔ Fondos indexados<br>✔ Bajas comisiones</p>
+    <p class="benefit" id="myinv-benefit">🎁 Consigue 25€ al abrir tu cuenta</p>
+    <a class="btn" id="myinv-btn" href="https://newapp.myinvestor.es/do/signup?promotionalCode=YADUA">Abrir cuenta</a>
   </div>
 
   <!-- AMEX -->
   <div class="card premium">
-    <div class="badge">LIFESTYLE PRÉMIUM</div>
+    <div class="badge" id="amex-badge">LIFESTYLE PRÉMIUM</div>
     <h2>American Express Platinum</h2>
-    <p>Tarjeta prémium orientada a viajes, experiencias exclusivas y beneficios de alto nivel.</p>
-    <p>
+    <p id="amex-desc">Tarjeta prémium orientada a viajes, experiencias exclusivas y beneficios de alto nivel.</p>
+    <p id="amex-features">
       ✔ Acceso a salas VIP<br>
       ✔ Seguro de viaje prémium<br>
       ✔ Beneficios en hoteles<br>
       ✔ Programa Membership Rewards
     </p>
-    <p class="benefit">✈️ Hasta 60.000 puntos para viajar</p>
-    <a class="btn" href="https://americanexpress.com/es-es/referral/platinum?ref=mARCQPice&XLINK=MYCP">Solicitar Amex Platinum</a>
+    <p class="benefit" id="amex-benefit">✈️ Hasta 60.000 puntos para viajar</p>
+    <a class="btn" id="amex-btn" href="https://americanexpress.com/es-es/referral/platinum?ref=mARCQPice&XLINK=MYCP">Solicitar Amex Platinum</a>
   </div>
 
 </div>
@@ -434,26 +486,272 @@ p{
 <!-- AVISO LEGAL -->
 <div class="footer">
   <div class="legal">
-    <strong>Aviso legal</strong><br><br>
-    La información en esta web es de carácter estrictamente informativo y general. No constituye asesoramiento financiero ni recomendación personalizada de inversión. El uso de enlaces de invitación se realiza con total transparencia, indicando que pueden generar beneficios para ambas partes, sin implicar promoción profesional ni actividad económica regulada. Siempre que consideres invertir, valora tu situación personal y, si procede, consulta a un asesor financiero independiente.
+    <strong id="legal-title">Aviso legal</strong><br><br>
+    <span id="legal-text">
+      La información en esta web es de carácter estrictamente informativo y general. No constituye asesoramiento financiero ni recomendación personalizada de inversión. El uso de enlaces de invitación se realiza con total transparencia, indicando que pueden generar beneficios para ambas partes, sin implicar promoción profesional ni actividad económica regulada. Siempre que consideres invertir, valora tu situación personal y, si procede, consulta a un asesor financiero independiente.
+    </span>
   </div>
 </div>
 
 <script>
 (function () {
-  const updateEl = document.getElementById('update');
-  if (!updateEl) return;
+  const translations = {
+    es: {
+      htmlLang: 'es',
+      metaTitle: 'MisNeobancos — Comparador financiero inteligente',
+      metaDescription: 'Comparador de neobancos, inversión y tarjeta prémium: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor y American Express Platinum. Información práctica, ahorro en comisiones y ventajas para viajeros e inversores.',
+      ogTitle: 'MisNeobancos — Comparador financiero inteligente',
+      ogDescription: 'Comparador de neobancos, inversión y tarjetas prémium. Revolut, N26, Trade Republic, Indexa Capital, MyInvestor y American Express Platinum.',
+      twitterTitle: 'MisNeobancos — Comparador financiero inteligente',
+      twitterDescription: 'Comparador de banca digital, inversión y tarjetas prémium con información práctica y enlaces de invitación.',
+      headerTagline: 'Comparador de banca digital, inversión y tarjetas prémium',
+      headerSubtitle: 'Comparativa de neobancos, inversión y tarjeta prémium: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor y American Express Platinum. Selección de opciones con información práctica y enlaces de invitación con posibles beneficios para el usuario y esta web.',
+      updateLabel: 'Última actualización: ',
+      heroAlt: 'Planificación financiera personal con análisis y gráficos',
 
-  const fecha = new Date();
-  fecha.setDate(fecha.getDate() - 3);
+      infoTitle1: '¿Qué es un neobanco y por qué cada vez más personas lo eligen?',
+      infoP1: 'Un neobanco es una entidad financiera digital o una plataforma bancaria pensada para gestionar el dinero de forma sencilla desde el móvil, con una operativa mucho más ágil que la banca tradicional. Su propuesta se centra en la experiencia de usuario, la transparencia y la reducción de costes. En la práctica, suelen permitir abrir una cuenta en pocos minutos, controlar gastos en tiempo real, recibir notificaciones instantáneas, operar desde una app muy intuitiva y acceder a funciones útiles para viajes, ahorro o inversión.',
+      infoP2: 'Frente a la banca tradicional, una de las grandes ventajas de muchos neobancos es el ahorro en comisiones. En muchos casos ofrecen cuentas sin comisiones de mantenimiento, menos costes por transferencias o una operativa internacional más competitiva. A ello se suma la facilidad de uso de sus apps, que suelen estar mejor diseñadas para el día a día: categorización automática de gastos, tarjetas virtuales, bloqueo y desbloqueo inmediato de tarjeta, creación de espacios de ahorro y control total desde el teléfono.',
+      infoTitle2: 'La importancia de invertir a largo plazo',
+      infoP3: 'Ahorrar está bien, pero invertir a largo plazo suele ser una de las herramientas más eficaces para construir patrimonio con el paso de los años. Invertir a largo plazo permite aprovechar el interés compuesto, suavizar la volatilidad de los mercados y no depender de movimientos puntuales de corto plazo. Para muchas personas, la clave no está en intentar adivinar qué hará el mercado mañana, sino en mantener una estrategia constante, diversificada y alineada con sus objetivos financieros.',
+      infoTitle3: '¿Qué significa gestión activa y gestión pasiva?',
+      infoP4: 'En inversión, la gestión activa consiste en seleccionar activos con el objetivo de intentar batir al mercado. Es decir, un gestor decide qué acciones o bonos comprar y vender buscando obtener una rentabilidad superior a la de un índice de referencia. La gestión pasiva, en cambio, no intenta adivinar qué activo lo hará mejor, sino replicar el comportamiento de un índice o de una combinación amplia de mercados a través de fondos indexados, ETF o carteras diversificadas.',
+      infoTitle4: 'Ventajas de la gestión pasiva con fondos indexados o carteras indexadas',
+      infoP5: 'La gestión pasiva se ha convertido en una de las formas más sólidas y eficientes de invertir a largo plazo. Su principal ventaja es que suele implicar comisiones mucho más bajas que la gestión activa, algo especialmente importante porque las comisiones reducen la rentabilidad acumulada con los años. Además, permite acceder a una diversificación muy amplia, repartiendo la inversión entre muchas empresas, sectores y geografías, lo que ayuda a reducir riesgos innecesarios.',
+      infoP6: 'Otra ventaja importante es la sencillez. En lugar de estar pendiente de comprar y vender constantemente, el inversor puede mantener una estrategia más estable, disciplinada y fácil de seguir. Las carteras de fondos indexados añaden, además, la ventaja del rebalanceo y la automatización, lo que facilita mantener el perfil de riesgo adecuado sin tener que tomar decisiones continuas. Para muchas personas, esta combinación de bajas comisiones, diversificación global, simplicidad y enfoque a largo plazo hace de la gestión pasiva una opción especialmente atractiva.',
+      infoTitle5: '¿Por qué también aparece American Express Platinum en esta comparativa?',
+      infoP7: 'Aunque esta web está centrada sobre todo en neobancos e inversión, American Express Platinum aparece aquí porque puede ser una opción muy interesante para viajeros frecuentes. Destaca por sus seguros de viaje, acceso a salas VIP, ventajas en hoteles, acumulación de puntos y otros beneficios orientados a quienes valoran comodidad, protección y servicios prémium al viajar. No responde al mismo perfil que un neobanco o una cartera indexada, pero sí encaja dentro de una estrategia financiera enfocada a optimizar el uso diario del dinero y aprovechar ventajas concretas según el estilo de vida.',
 
-  const fechaFormateada = fecha.toLocaleDateString('es-ES', {
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric'
+      revBadge: 'CUENTA GLOBAL',
+      revDesc: 'Cuenta multidivisa para viajes, pagos internacionales y control financiero desde app.',
+      revFeatures: '✔ Cambio de divisa interbancario<br>✔ Tarjetas virtuales y físicas<br>✔ Control de gastos en tiempo real',
+      revBenefit: '💸 Hasta 50€ por cada amigo que invites',
+      revBtn: 'Abrir cuenta',
+
+      n26Badge: 'BANCA DIGITAL',
+      n26Desc: 'Banco digital con IBAN español y gestión simple del dinero desde el móvil.',
+      n26Features: '✔ IBAN español<br>✔ Categorías automáticas<br>✔ Ahorro inteligente',
+      n26Benefit: '💸 Llévate 15€ al abrir tu cuenta',
+      n26Btn: 'Abrir cuenta',
+
+      trBadge: 'INVERSIÓN',
+      trDesc: 'Invierte en acciones y ETFs con bajas comisiones y enfoque a largo plazo.',
+      trFeatures: '✔ ETFs globales<br>✔ Planes automáticos<br>✔ Broker europeo regulado',
+      trBenefit: '📈 Consigue 10€ en acciones gratis + 2% TAE',
+      trBtn: 'Abrir cuenta',
+
+      indexaBadge: 'FONDOS INDEXADOS',
+      indexaDesc: 'Gestión automatizada de carteras indexadas adaptadas a tu perfil.',
+      indexaFeatures: '✔ Diversificación global<br>✔ Rebalanceo automático<br>✔ Inversión pasiva',
+      indexaBenefit: '💰 0€ en comisiones de gestión hasta 15.000 € el primer año',
+      indexaBtn: 'Invertir en fondos indexados',
+
+      myinvBadge: 'AHORRO E INVERSIÓN',
+      myinvDesc: 'Neobanco español con cuenta e inversión en fondos indexados.',
+      myinvFeatures: '✔ Cuenta bancaria<br>✔ Fondos indexados<br>✔ Bajas comisiones',
+      myinvBenefit: '🎁 Consigue 25€ al abrir tu cuenta',
+      myinvBtn: 'Abrir cuenta',
+
+      amexBadge: 'LIFESTYLE PRÉMIUM',
+      amexDesc: 'Tarjeta prémium orientada a viajes, experiencias exclusivas y beneficios de alto nivel.',
+      amexFeatures: '✔ Acceso a salas VIP<br>✔ Seguro de viaje prémium<br>✔ Beneficios en hoteles<br>✔ Programa Membership Rewards',
+      amexBenefit: '✈️ Hasta 60.000 puntos para viajar',
+      amexBtn: 'Solicitar Amex Platinum',
+
+      legalTitle: 'Aviso legal',
+      legalText: 'La información en esta web es de carácter estrictamente informativo y general. No constituye asesoramiento financiero ni recomendación personalizada de inversión. El uso de enlaces de invitación se realiza con total transparencia, indicando que pueden generar beneficios para ambas partes, sin implicar promoción profesional ni actividad económica regulada. Siempre que consideres invertir, valora tu situación personal y, si procede, consulta a un asesor financiero independiente.'
+    },
+
+    ca: {
+      htmlLang: 'ca',
+      metaTitle: 'MisNeobancos — Comparador financer intel·ligent',
+      metaDescription: 'Comparador de neobancs, inversió i targeta prèmium: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor i American Express Platinum. Informació pràctica, estalvi en comissions i avantatges per a viatgers i inversors.',
+      ogTitle: 'MisNeobancos — Comparador financer intel·ligent',
+      ogDescription: 'Comparador de neobancs, inversió i targetes prèmium. Revolut, N26, Trade Republic, Indexa Capital, MyInvestor i American Express Platinum.',
+      twitterTitle: 'MisNeobancos — Comparador financer intel·ligent',
+      twitterDescription: 'Comparador de banca digital, inversió i targetes prèmium amb informació pràctica i enllaços d’invitació.',
+      headerTagline: 'Comparador de banca digital, inversió i targetes prèmium',
+      headerSubtitle: 'Comparativa de neobancs, inversió i targeta prèmium: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor i American Express Platinum. Selecció d’opcions amb informació pràctica i enllaços d’invitació amb possibles beneficis per a l’usuari i aquesta web.',
+      updateLabel: 'Última actualització: ',
+      heroAlt: 'Planificació financera personal amb anàlisi i gràfics',
+
+      infoTitle1: 'Què és un neobanc i per què cada vegada més persones el trien?',
+      infoP1: 'Un neobanc és una entitat financera digital o una plataforma bancària pensada per gestionar els diners de manera senzilla des del mòbil, amb una operativa molt més àgil que la banca tradicional. La seva proposta se centra en l’experiència d’usuari, la transparència i la reducció de costos. A la pràctica, solen permetre obrir un compte en pocs minuts, controlar despeses en temps real, rebre notificacions instantànies, operar des d’una app molt intuïtiva i accedir a funcions útils per a viatges, estalvi o inversió.',
+      infoP2: 'En comparació amb la banca tradicional, un dels grans avantatges de molts neobancs és l’estalvi en comissions. En molts casos ofereixen comptes sense comissions de manteniment, menys costos per transferències o una operativa internacional més competitiva. A això s’hi afegeix la facilitat d’ús de les seves apps, que solen estar millor dissenyades per al dia a dia: categorització automàtica de despeses, targetes virtuals, bloqueig i desbloqueig immediat de la targeta, creació d’espais d’estalvi i control total des del telèfon.',
+      infoTitle2: 'La importància d’invertir a llarg termini',
+      infoP3: 'Estalviar està bé, però invertir a llarg termini sol ser una de les eines més eficaces per construir patrimoni amb el pas dels anys. Invertir a llarg termini permet aprofitar l’interès compost, suavitzar la volatilitat dels mercats i no dependre de moviments puntuals a curt termini. Per a moltes persones, la clau no és intentar endevinar què farà el mercat demà, sinó mantenir una estratègia constant, diversificada i alineada amb els seus objectius financers.',
+      infoTitle3: 'Què significa gestió activa i gestió passiva?',
+      infoP4: 'En inversió, la gestió activa consisteix a seleccionar actius amb l’objectiu d’intentar batre el mercat. És a dir, un gestor decideix quines accions o bons comprar i vendre buscant obtenir una rendibilitat superior a la d’un índex de referència. La gestió passiva, en canvi, no intenta endevinar quin actiu ho farà millor, sinó replicar el comportament d’un índex o d’una combinació àmplia de mercats a través de fons indexats, ETF o carteres diversificades.',
+      infoTitle4: 'Avantatges de la gestió passiva amb fons indexats o carteres indexades',
+      infoP5: 'La gestió passiva s’ha convertit en una de les formes més sòlides i eficients d’invertir a llarg termini. El seu principal avantatge és que sol implicar comissions molt més baixes que la gestió activa, una cosa especialment important perquè les comissions redueixen la rendibilitat acumulada amb els anys. A més, permet accedir a una diversificació molt àmplia, repartint la inversió entre moltes empreses, sectors i geografies, fet que ajuda a reduir riscos innecessaris.',
+      infoP6: 'Un altre avantatge important és la senzillesa. En lloc d’estar pendent de comprar i vendre constantment, l’inversor pot mantenir una estratègia més estable, disciplinada i fàcil de seguir. Les carteres de fons indexats afegeixen, a més, l’avantatge del reequilibri i l’automatització, cosa que facilita mantenir el perfil de risc adequat sense haver de prendre decisions contínues. Per a moltes persones, aquesta combinació de baixes comissions, diversificació global, simplicitat i enfocament a llarg termini fa de la gestió passiva una opció especialment atractiva.',
+      infoTitle5: 'Per què també apareix American Express Platinum en aquesta comparativa?',
+      infoP7: 'Tot i que aquesta web està centrada sobretot en neobancs i inversió, American Express Platinum apareix aquí perquè pot ser una opció molt interessant per a viatgers freqüents. Destaca per les seves assegurances de viatge, accés a sales VIP, avantatges en hotels, acumulació de punts i altres beneficis orientats a qui valora comoditat, protecció i serveis prèmium quan viatja. No respon al mateix perfil que un neobanc o una cartera indexada, però sí que encaixa dins d’una estratègia financera enfocada a optimitzar l’ús diari dels diners i aprofitar avantatges concrets segons l’estil de vida.',
+
+      revBadge: 'COMPTE GLOBAL',
+      revDesc: 'Compte multidivisa per a viatges, pagaments internacionals i control financer des de l’app.',
+      revFeatures: '✔ Canvi de divisa interbancari<br>✔ Targetes virtuals i físiques<br>✔ Control de despeses en temps real',
+      revBenefit: '💸 Fins a 50 € per cada amic que convidis',
+      revBtn: 'Obrir compte',
+
+      n26Badge: 'BANCA DIGITAL',
+      n26Desc: 'Banc digital amb IBAN espanyol i gestió simple dels diners des del mòbil.',
+      n26Features: '✔ IBAN espanyol<br>✔ Categories automàtiques<br>✔ Estalvi intel·ligent',
+      n26Benefit: '💸 Emporta’t 15 € en obrir el teu compte',
+      n26Btn: 'Obrir compte',
+
+      trBadge: 'INVERSIÓ',
+      trDesc: 'Inverteix en accions i ETF amb baixes comissions i enfocament a llarg termini.',
+      trFeatures: '✔ ETF globals<br>✔ Plans automàtics<br>✔ Broker europeu regulat',
+      trBenefit: '📈 Aconsegueix 10 € en accions gratis + 2 % TAE',
+      trBtn: 'Obrir compte',
+
+      indexaBadge: 'FONS INDEXATS',
+      indexaDesc: 'Gestió automatitzada de carteres indexades adaptades al teu perfil.',
+      indexaFeatures: '✔ Diversificació global<br>✔ Reequilibri automàtic<br>✔ Inversió passiva',
+      indexaBenefit: '💰 0 € en comissions de gestió fins a 15.000 € el primer any',
+      indexaBtn: 'Invertir en fons indexats',
+
+      myinvBadge: 'ESTALVI I INVERSIÓ',
+      myinvDesc: 'Neobanc espanyol amb compte i inversió en fons indexats.',
+      myinvFeatures: '✔ Compte bancari<br>✔ Fons indexats<br>✔ Baixes comissions',
+      myinvBenefit: '🎁 Aconsegueix 25 € en obrir el teu compte',
+      myinvBtn: 'Obrir compte',
+
+      amexBadge: 'ESTIL DE VIDA PRÈMIUM',
+      amexDesc: 'Targeta prèmium orientada a viatges, experiències exclusives i beneficis d’alt nivell.',
+      amexFeatures: '✔ Accés a sales VIP<br>✔ Assegurança de viatge prèmium<br>✔ Avantatges en hotels<br>✔ Programa Membership Rewards',
+      amexBenefit: '✈️ Fins a 60.000 punts per viatjar',
+      amexBtn: 'Sol·licitar Amex Platinum',
+
+      legalTitle: 'Avís legal',
+      legalText: 'La informació d’aquesta web és de caràcter estrictament informatiu i general. No constitueix assessorament financer ni recomanació personalitzada d’inversió. L’ús d’enllaços d’invitació es realitza amb total transparència, indicant que poden generar beneficis per a totes dues parts, sense implicar promoció professional ni activitat econòmica regulada. Sempre que consideris invertir, valora la teva situació personal i, si escau, consulta un assessor financer independent.'
+    }
+  };
+
+  const metaDescription = document.querySelector('meta[name="description"]');
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  const ogDescription = document.querySelector('meta[property="og:description"]');
+  const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+  const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+
+  function setHTML(id, value) {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = value;
+  }
+
+  function setText(id, value) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = value;
+  }
+
+  function updateLastUpdated(lang) {
+    const updateEl = document.getElementById('update');
+    if (!updateEl) return;
+
+    const fecha = new Date();
+    fecha.setDate(fecha.getDate() - 3);
+
+    const locale = lang === 'ca' ? 'ca-ES' : 'es-ES';
+    const label = translations[lang].updateLabel;
+
+    const fechaFormateada = fecha.toLocaleDateString(locale, {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric'
+    });
+
+    updateEl.textContent = label + fechaFormateada;
+  }
+
+  function applyLanguage(lang) {
+    const t = translations[lang] || translations.es;
+
+    document.documentElement.lang = t.htmlLang;
+    document.title = t.metaTitle;
+
+    if (metaDescription) metaDescription.setAttribute('content', t.metaDescription);
+    if (ogTitle) ogTitle.setAttribute('content', t.ogTitle);
+    if (ogDescription) ogDescription.setAttribute('content', t.ogDescription);
+    if (twitterTitle) twitterTitle.setAttribute('content', t.twitterTitle);
+    if (twitterDescription) twitterDescription.setAttribute('content', t.twitterDescription);
+
+    setText('header-tagline', t.headerTagline);
+    setText('header-subtitle', t.headerSubtitle);
+    setText('legal-title', t.legalTitle);
+    setText('legal-text', t.legalText);
+
+    const heroImage = document.getElementById('hero-image');
+    if (heroImage) heroImage.alt = t.heroAlt;
+
+    setText('info-title-1', t.infoTitle1);
+    setText('info-p-1', t.infoP1);
+    setText('info-p-2', t.infoP2);
+    setText('info-title-2', t.infoTitle2);
+    setText('info-p-3', t.infoP3);
+    setText('info-title-3', t.infoTitle3);
+    setText('info-p-4', t.infoP4);
+    setText('info-title-4', t.infoTitle4);
+    setText('info-p-5', t.infoP5);
+    setText('info-p-6', t.infoP6);
+    setText('info-title-5', t.infoTitle5);
+    setText('info-p-7', t.infoP7);
+
+    setText('rev-badge', t.revBadge);
+    setText('rev-desc', t.revDesc);
+    setHTML('rev-features', t.revFeatures);
+    setText('rev-benefit', t.revBenefit);
+    setText('rev-btn', t.revBtn);
+
+    setText('n26-badge', t.n26Badge);
+    setText('n26-desc', t.n26Desc);
+    setHTML('n26-features', t.n26Features);
+    setText('n26-benefit', t.n26Benefit);
+    setText('n26-btn', t.n26Btn);
+
+    setText('tr-badge', t.trBadge);
+    setText('tr-desc', t.trDesc);
+    setHTML('tr-features', t.trFeatures);
+    setText('tr-benefit', t.trBenefit);
+    setText('tr-btn', t.trBtn);
+
+    setText('indexa-badge', t.indexaBadge);
+    setText('indexa-desc', t.indexaDesc);
+    setHTML('indexa-features', t.indexaFeatures);
+    setText('indexa-benefit', t.indexaBenefit);
+    setText('indexa-btn', t.indexaBtn);
+
+    setText('myinv-badge', t.myinvBadge);
+    setText('myinv-desc', t.myinvDesc);
+    setHTML('myinv-features', t.myinvFeatures);
+    setText('myinv-benefit', t.myinvBenefit);
+    setText('myinv-btn', t.myinvBtn);
+
+    setText('amex-badge', t.amexBadge);
+    setText('amex-desc', t.amexDesc);
+    setHTML('amex-features', t.amexFeatures);
+    setText('amex-benefit', t.amexBenefit);
+    setText('amex-btn', t.amexBtn);
+
+    updateLastUpdated(lang);
+
+    document.querySelectorAll('.lang-btn').forEach(function(btn){
+      const isActive = btn.dataset.lang === lang;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+
+    localStorage.setItem('misneobancos-lang', lang);
+  }
+
+  document.querySelectorAll('.lang-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      applyLanguage(btn.dataset.lang);
+    });
   });
 
-  updateEl.textContent = 'Última actualización: ' + fechaFormateada;
+  const savedLang = localStorage.getItem('misneobancos-lang');
+  applyLanguage(savedLang === 'ca' ? 'ca' : 'es');
 })();
 </script>
 
