@@ -16,9 +16,7 @@
   font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{ box-sizing:border-box; }
 
 body{
   margin:0;
@@ -34,16 +32,9 @@ header{
   text-align:center;
 }
 
-header h1{
-  margin:0;
-  font-size:22px;
-}
+header h1{ margin:0; font-size:22px; }
 
-header p{
-  margin-top:8px;
-  color:#a9b4c6;
-  font-size:14px;
-}
+header p{ margin-top:8px; color:#a9b4c6; font-size:14px; }
 
 header .subtitle{
   margin-top:10px;
@@ -131,10 +122,18 @@ p{
   line-height:1.5;
 }
 
+/* BENEFICIO */
+.benefit{
+  margin-top:12px;
+  font-size:13px;
+  font-weight:700;
+  color:#1d4ed8;
+}
+
 /* BOTÓN */
 .btn{
   display:block;
-  margin-top:12px;
+  margin-top:8px;
   padding:12px;
   border-radius:12px;
   text-align:center;
@@ -169,7 +168,6 @@ p{
   font-size:10px;
   padding:6px 45px;
   transform:rotate(35deg);
-  letter-spacing:1px;
 }
 
 /* FOOTER */
@@ -235,7 +233,8 @@ p{
     <h2>Revolut</h2>
     <p>Cuenta multidivisa para viajes, pagos internacionales y control financiero desde app.</p>
     <p>✔ Cambio de divisa interbancario<br>✔ Tarjetas virtuales y físicas<br>✔ Control de gastos en tiempo real</p>
-    <a class="btn" href="https://revolut.com/referral/?referral-code=marc6xpqk!DEC2-25-AR-CRY&geo-redirect">
+    <p class="benefit">💸 Hasta 50€ por cada amigo que invites*</p>
+    <a class="btn" href="https://revolut.com/referral/?referral-code=marc6xpqk!DEC2-25-AR-CRY&geo-redirect" target="_blank" rel="noopener noreferrer">
       Abrir Revolut
     </a>
   </div>
@@ -246,7 +245,8 @@ p{
     <h2>N26</h2>
     <p>Banco digital con IBAN español y gestión simple del dinero desde el móvil.</p>
     <p>✔ IBAN español<br>✔ Categorías automáticas<br>✔ Ahorro inteligente</p>
-    <a class="btn" href="https://n26.com/r/marcq8763">
+    <p class="benefit">💸 Llévate 15€ al abrir tu cuenta</p>
+    <a class="btn" href="https://n26.com/r/marcq8763" target="_blank" rel="noopener noreferrer">
       Abrir cuenta
     </a>
   </div>
@@ -257,18 +257,20 @@ p{
     <h2>Trade Republic</h2>
     <p>Invierte en acciones y ETFs con bajas comisiones y enfoque a largo plazo.</p>
     <p>✔ ETFs globales<br>✔ Planes automáticos<br>✔ Broker europeo regulado</p>
-    <a class="btn" href="https://refnocode.trade.re/z907j81c">
+    <p class="benefit">📈 Consigue 10€ en acciones gratis + 2% TAE</p>
+    <a class="btn" href="https://refnocode.trade.re/z907j81c" target="_blank" rel="noopener noreferrer">
       Invertir
     </a>
   </div>
 
   <!-- INDEXA -->
   <div class="card">
-    <div class="badge">INDEXADOS</div>
+    <div class="badge">FONDOS INDEXADOS</div>
     <h2>Indexa Capital</h2>
     <p>Gestión automatizada de carteras indexadas adaptadas a tu perfil.</p>
     <p>✔ Diversificación global<br>✔ Rebalanceo automático<br>✔ Inversión pasiva</p>
-    <a class="btn" href="https://indexacapital.com/t/MhZ02B">
+    <p class="benefit">💰 0€ en comisiones de gestión hasta 15.000 € el primer año</p>
+    <a class="btn" href="https://indexacapital.com/t/MhZ02B" target="_blank" rel="noopener noreferrer">
       Ver cartera
     </a>
   </div>
@@ -279,7 +281,8 @@ p{
     <h2>MyInvestor</h2>
     <p>Neobanco español con cuenta e inversión en fondos indexados.</p>
     <p>✔ Cuenta bancaria<br>✔ Fondos indexados<br>✔ Bajas comisiones</p>
-    <a class="btn" href="https://newapp.myinvestor.es/do/signup?promotionalCode=YADUA">
+    <p class="benefit">🎁 Consigue 25€ al abrir tu cuenta</p>
+    <a class="btn" href="https://newapp.myinvestor.es/do/signup?promotionalCode=YADUA" target="_blank" rel="noopener noreferrer">
       Abrir cuenta
     </a>
   </div>
@@ -298,7 +301,8 @@ p{
     <p style="margin-top:10px;font-size:12.5px;color:#6b7280;">
       Ideal para usuarios que viajan con frecuencia o buscan maximizar beneficios prémium.
     </p>
-    <a class="btn" href="https://americanexpress.com/es-es/referral/platinum?ref=mARCQPice&XLINK=MYCP">
+    <p class="benefit">✈️ Hasta 60.000 puntos para viajar</p>
+    <a class="btn" href="https://americanexpress.com/es-es/referral/platinum?ref=mARCQPice&XLINK=MYCP" target="_blank" rel="noopener noreferrer">
       Solicitar Amex Platinum
     </a>
   </div>
@@ -308,7 +312,7 @@ p{
 <div class="footer">
   <div class="legal">
     <strong>Aviso legal</strong><br><br>
-    La información en esta web es de carácter estrictamente informativo y general. No constituye asesoramiento financiero ni recomendación personalizada de inversión. El uso de enlaces de invitación se realiza con total transparencia, indicando que pueden generar beneficios para ambas partes, sin implicar promoción profesional ni actividad económica regulada. Siempre que consideres invertir, valora tu situación personal y, si procede, consulta a un asesor financiero independiente.
+    La información en esta web es de carácter estrictamente informativo y general. No constituye asesoramiento financiero ni recomendación personalizada de inversión. El uso de enlaces de invitación se realiza con total transparencia, indicando que pueden generar beneficios para ambas partes, sin implicar promoción profesional ni actividad económica regulada. Siempre que consideres invertir, valora tu situación personal y, si procede, consulta a un asesor financiero independiente. *Las promociones pueden variar y están sujetas a condiciones de cada entidad.
   </div>
 </div>
 
