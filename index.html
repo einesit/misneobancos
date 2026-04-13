@@ -14,6 +14,8 @@
 <meta name="theme-color" content="#0b1220">
 <meta name="application-name" content="MisNeobancos">
 <meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="ca_ES">
+<meta property="og:locale:alternate" content="en_GB">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -30,14 +32,13 @@
 
 <link rel="preload" as="image" href="plan-financiero-personal.png">
 
-<!-- Datos estructurados -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "MisNeobancos",
   "url": "https://misneobancos.com/",
-  "description": "Comparador financiero inteligente de neobancos, inversión y tarjetas prémium en España.",
+  "description": "Comparador financiero inteligente de neobancos, inversión y tarjetas prémium.",
   "inLanguage": "es",
   "publisher": {
     "@type": "Organization",
@@ -69,11 +70,8 @@
   --card:#ffffff;
   --text:#0f172a;
   --muted:#6b7280;
-  --line:#dbe3f0;
-  --soft:#eef2ff;
   --accent:#111827;
   --accent-2:#1f2937;
-  --accent-soft:#4f46e5;
   font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 }
 
@@ -128,6 +126,7 @@ header .subtitle{
   display:flex;
   gap:8px;
   align-items:center;
+  flex-wrap:wrap;
 }
 
 .lang-btn{
@@ -254,7 +253,6 @@ p{
   box-shadow:0 12px 25px rgba(0,0,0,.25);
 }
 
-/* PREMIUM */
 .premium{
   border:1px solid #d1d5db;
   background:linear-gradient(180deg,#ffffff,#f3f4f6);
@@ -274,7 +272,6 @@ p{
   transform:rotate(35deg);
 }
 
-/* BLOQUE INFORMATIVO */
 .info-block{
   background:white;
   border-radius:18px;
@@ -329,9 +326,10 @@ p{
 <body>
 
 <header>
-  <div class="lang-switcher" aria-label="Selector de idioma">
+  <div class="lang-switcher" aria-label="Language selector">
     <button class="lang-btn active" type="button" data-lang="es" aria-pressed="true">ES</button>
     <button class="lang-btn" type="button" data-lang="ca" aria-pressed="false">CAT</button>
+    <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
   </div>
 
   <h1>MisNeobancos</h1>
@@ -351,7 +349,6 @@ p{
   </div>
 </section>
 
-<!-- BLOQUE INFORMATIVO -->
 <div class="container">
   <div class="info-block">
     <h2 id="info-title-1">¿Qué es un neobanco y por qué cada vez más personas lo eligen?</h2>
@@ -413,10 +410,8 @@ p{
   </div>
 </div>
 
-<!-- TARJETAS -->
 <div class="container grid">
 
-  <!-- REVOLUT -->
   <div class="card">
     <div class="badge" id="rev-badge">CUENTA GLOBAL</div>
     <h2>Revolut</h2>
@@ -426,7 +421,6 @@ p{
     <a class="btn" id="rev-btn" href="https://revolut.com/referral/?referral-code=marc6xpqk!APR1-26-AR-CRY&geo-redirect">Abrir cuenta</a>
   </div>
 
-  <!-- N26 -->
   <div class="card">
     <div class="badge" id="n26-badge">BANCA DIGITAL</div>
     <h2>N26</h2>
@@ -436,7 +430,6 @@ p{
     <a class="btn" id="n26-btn" href="https://n26.com/r/marcq8763">Abrir cuenta</a>
   </div>
 
-  <!-- TRADE REPUBLIC -->
   <div class="card">
     <div class="badge" id="tr-badge">INVERSIÓN</div>
     <h2>Trade Republic</h2>
@@ -446,7 +439,6 @@ p{
     <a class="btn" id="tr-btn" href="https://refnocode.trade.re/z907j81c">Abrir cuenta</a>
   </div>
 
-  <!-- INDEXA -->
   <div class="card">
     <div class="badge" id="indexa-badge">FONDOS INDEXADOS</div>
     <h2>Indexa Capital</h2>
@@ -456,7 +448,6 @@ p{
     <a class="btn" id="indexa-btn" href="https://indexacapital.com/t/MhZ02B">Invertir en fondos indexados</a>
   </div>
 
-  <!-- MYINVESTOR -->
   <div class="card">
     <div class="badge" id="myinv-badge">AHORRO E INVERSIÓN</div>
     <h2>MyInvestor</h2>
@@ -466,7 +457,6 @@ p{
     <a class="btn" id="myinv-btn" href="https://newapp.myinvestor.es/do/signup?promotionalCode=YADUA">Abrir cuenta</a>
   </div>
 
-  <!-- AMEX -->
   <div class="card premium">
     <div class="badge" id="amex-badge">LIFESTYLE PRÉMIUM</div>
     <h2>American Express Platinum</h2>
@@ -483,7 +473,6 @@ p{
 
 </div>
 
-<!-- AVISO LEGAL -->
 <div class="footer">
   <div class="legal">
     <strong id="legal-title">Aviso legal</strong><br><br>
@@ -626,6 +615,76 @@ p{
 
       legalTitle: 'Avís legal',
       legalText: 'La informació d’aquesta web és de caràcter estrictament informatiu i general. No constitueix assessorament financer ni recomanació personalitzada d’inversió. L’ús d’enllaços d’invitació es realitza amb total transparència, indicant que poden generar beneficis per a totes dues parts, sense implicar promoció professional ni activitat econòmica regulada. Sempre que consideris invertir, valora la teva situació personal i, si escau, consulta un assessor financer independent.'
+    },
+
+    en: {
+      htmlLang: 'en',
+      metaTitle: 'MisNeobancos — Smart financial comparison',
+      metaDescription: 'Comparison of neobanks, investing platforms and premium cards: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor and American Express Platinum. Practical information, lower fees and benefits for travellers and investors.',
+      ogTitle: 'MisNeobancos — Smart financial comparison',
+      ogDescription: 'Comparison of neobanks, investing platforms and premium cards. Revolut, N26, Trade Republic, Indexa Capital, MyInvestor and American Express Platinum.',
+      twitterTitle: 'MisNeobancos — Smart financial comparison',
+      twitterDescription: 'Comparison of digital banking, investing and premium cards with practical information and referral links.',
+      headerTagline: 'Digital banking, investing and premium card comparison',
+      headerSubtitle: 'Comparison of neobanks, investing platforms and premium cards: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor and American Express Platinum. A curated selection with practical information and referral links that may generate benefits for both the user and this website.',
+      updateLabel: 'Last updated: ',
+      heroAlt: 'Personal financial planning with analysis and charts',
+
+      infoTitle1: 'What is a neobank and why are more and more people choosing one?',
+      infoP1: 'A neobank is a digital financial institution or banking platform designed to manage money easily from your phone, with a much more agile experience than traditional banking. Its value proposition focuses on user experience, transparency and lower costs. In practice, they often let you open an account in minutes, track spending in real time, receive instant notifications, use a very intuitive app and access useful features for travel, saving and investing.',
+      infoP2: 'Compared with traditional banks, one of the biggest advantages of many neobanks is lower fees. In many cases they offer accounts with no maintenance fees, cheaper transfers or more competitive international banking features. On top of that, their apps are usually easier to use on a daily basis: automatic expense categorisation, virtual cards, instant card freezing and unfreezing, savings spaces and full control from your smartphone.',
+
+      infoTitle2: 'The importance of investing for the long term',
+      infoP3: 'Saving is good, but long-term investing is often one of the most effective tools for building wealth over time. Long-term investing helps you benefit from compound growth, smooth out market volatility and avoid depending on short-term movements. For many people, the key is not trying to guess what the market will do tomorrow, but following a consistent, diversified strategy aligned with their financial goals.',
+
+      infoTitle3: 'What do active management and passive management mean?',
+      infoP4: 'In investing, active management means selecting assets with the aim of trying to beat the market. In other words, a manager chooses which stocks or bonds to buy and sell in order to achieve returns above a benchmark index. Passive management, by contrast, does not try to predict which asset will perform best. Instead, it seeks to replicate the behaviour of an index or a broad combination of markets through index funds, ETFs or diversified portfolios.',
+
+      infoTitle4: 'Benefits of passive management through index funds or indexed portfolios',
+      infoP5: 'Passive management has become one of the most solid and efficient ways to invest for the long term. Its main advantage is that it usually comes with much lower fees than active management, which is especially important because fees reduce your long-term compounded returns. It also provides broad diversification by spreading your investment across many companies, sectors and regions, which helps reduce unnecessary risks.',
+      infoP6: 'Another important advantage is simplicity. Instead of constantly buying and selling, investors can follow a more stable, disciplined and easier-to-maintain strategy. Indexed fund portfolios also add the benefits of rebalancing and automation, making it easier to maintain the right risk profile without having to make continuous decisions. For many people, this combination of low fees, global diversification, simplicity and long-term focus makes passive investing especially attractive.',
+
+      infoTitle5: 'Why is American Express Platinum also included in this comparison?',
+      infoP7: 'Although this website focuses mainly on neobanks and investing, American Express Platinum is included because it can be a very attractive option for frequent travellers. It stands out for its travel insurance, lounge access, hotel benefits, points programme and other perks aimed at people who value comfort, protection and premium services while travelling. It does not fit the same profile as a neobank or an indexed portfolio, but it does belong in a broader financial strategy focused on optimising day-to-day money use and taking advantage of benefits that suit a specific lifestyle.',
+
+      revBadge: 'GLOBAL ACCOUNT',
+      revDesc: 'Multi-currency account for travel, international payments and app-based money management.',
+      revFeatures: '✔ Interbank exchange rates<br>✔ Virtual and physical cards<br>✔ Real-time spending control',
+      revBenefit: '💸 Up to €50 for each friend you invite',
+      revBtn: 'Open account',
+
+      n26Badge: 'DIGITAL BANKING',
+      n26Desc: 'Digital bank with Spanish IBAN and simple money management from your phone.',
+      n26Features: '✔ Spanish IBAN<br>✔ Automatic categories<br>✔ Smart saving',
+      n26Benefit: '💸 Get €15 when you open your account',
+      n26Btn: 'Open account',
+
+      trBadge: 'INVESTING',
+      trDesc: 'Invest in stocks and ETFs with low fees and a long-term approach.',
+      trFeatures: '✔ Global ETFs<br>✔ Automated plans<br>✔ Regulated European broker',
+      trBenefit: '📈 Get €10 in free shares + 2% APY',
+      trBtn: 'Open account',
+
+      indexaBadge: 'INDEX FUNDS',
+      indexaDesc: 'Automated management of indexed portfolios tailored to your profile.',
+      indexaFeatures: '✔ Global diversification<br>✔ Automatic rebalancing<br>✔ Passive investing',
+      indexaBenefit: '💰 €0 management fees up to €15,000 during the first year',
+      indexaBtn: 'Invest in index funds',
+
+      myinvBadge: 'SAVING & INVESTING',
+      myinvDesc: 'Spanish neobank with bank account and index fund investing.',
+      myinvFeatures: '✔ Bank account<br>✔ Index funds<br>✔ Low fees',
+      myinvBenefit: '🎁 Get €25 when you open your account',
+      myinvBtn: 'Open account',
+
+      amexBadge: 'PREMIUM LIFESTYLE',
+      amexDesc: 'Premium card designed for travel, exclusive experiences and high-end benefits.',
+      amexFeatures: '✔ Lounge access<br>✔ Premium travel insurance<br>✔ Hotel benefits<br>✔ Membership Rewards programme',
+      amexBenefit: '✈️ Up to 60,000 points for travel',
+      amexBtn: 'Apply for Amex Platinum',
+
+      legalTitle: 'Legal notice',
+      legalText: 'The information on this website is strictly general and informational in nature. It does not constitute financial advice or a personalised investment recommendation. Referral links are used transparently, indicating that they may generate benefits for both parties, without implying professional promotion or regulated economic activity. Before investing, always consider your personal circumstances and, where appropriate, consult an independent financial adviser.'
     }
   };
 
@@ -649,19 +708,22 @@ p{
     const updateEl = document.getElementById('update');
     if (!updateEl) return;
 
-    const fecha = new Date();
-    fecha.setDate(fecha.getDate() - 3);
+    const date = new Date();
+    date.setDate(date.getDate() - 3);
 
-    const locale = lang === 'ca' ? 'ca-ES' : 'es-ES';
-    const label = translations[lang].updateLabel;
+    const localeMap = {
+      es: 'es-ES',
+      ca: 'ca-ES',
+      en: 'en-GB'
+    };
 
-    const fechaFormateada = fecha.toLocaleDateString(locale, {
+    const dateFormatted = date.toLocaleDateString(localeMap[lang] || 'es-ES', {
       day: '2-digit',
       month: '2-digit',
       year: 'numeric'
     });
 
-    updateEl.textContent = label + fechaFormateada;
+    updateEl.textContent = translations[lang].updateLabel + dateFormatted;
   }
 
   function applyLanguage(lang) {
@@ -751,7 +813,18 @@ p{
   });
 
   const savedLang = localStorage.getItem('misneobancos-lang');
-  applyLanguage(savedLang === 'ca' ? 'ca' : 'es');
+  const browserLang = (navigator.language || '').toLowerCase();
+
+  let initialLang = 'es';
+  if (savedLang && translations[savedLang]) {
+    initialLang = savedLang;
+  } else if (browserLang.startsWith('ca')) {
+    initialLang = 'ca';
+  } else if (browserLang.startsWith('en')) {
+    initialLang = 'en';
+  }
+
+  applyLanguage(initialLang);
 })();
 </script>
 
