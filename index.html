@@ -10,14 +10,15 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://misneobancos.com/">
 
+<link rel="alternate" hreflang="es" href="https://misneobancos.com/">
+<link rel="alternate" hreflang="ca" href="https://misneobancos.com/ca/">
+<link rel="alternate" hreflang="en" href="https://misneobancos.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://misneobancos.com/">
+
 <meta name="author" content="MisNeobancos">
 <meta name="theme-color" content="#0b1220">
 <meta name="application-name" content="MisNeobancos">
-<meta property="og:locale" content="es_ES">
-<meta property="og:locale:alternate" content="ca_ES">
-<meta property="og:locale:alternate" content="en_GB">
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="MisNeobancos — Comparador financiero inteligente">
 <meta property="og:description" content="Comparador de neobancos, inversión y tarjetas prémium. Revolut, N26, Trade Republic, Indexa Capital, MyInvestor y American Express Platinum.">
@@ -27,10 +28,10 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MisNeobancos — Comparador financiero inteligente">
-<meta name="twitter:description" content="Comparador de banca digital, inversión y tarjetas prémium con información práctica y enlaces de invitación.">
+<meta name="twitter:description" content="Comparador de neobancos, inversión y tarjeta prémium: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor y American Express Platinum. Información práctica, ahorro en comisiones y ventajas para viajeros e inversores.">
 <meta name="twitter:image" content="https://misneobancos.com/plan-financiero-personal-2.jpg">
 
-<link rel="preload" as="image" href="plan-financiero-personal.png">
+<link rel="preload" as="image" href="/plan-financiero-personal.png">
 
 <script type="application/ld+json">
 {
@@ -38,7 +39,7 @@
   "@type": "WebSite",
   "name": "MisNeobancos",
   "url": "https://misneobancos.com/",
-  "description": "Comparador financiero inteligente de neobancos, inversión y tarjetas prémium.",
+  "description": "Comparador de neobancos, inversión y tarjeta prémium: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor y American Express Platinum. Información práctica, ahorro en comisiones y ventajas para viajeros e inversores.",
   "inLanguage": "es",
   "publisher": {
     "@type": "Organization",
@@ -52,7 +53,7 @@
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Comparativa de productos financieros",
+  "name": "Financial comparison",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Revolut" },
     { "@type": "ListItem", "position": 2, "name": "N26" },
@@ -65,6 +66,7 @@
 </script>
 
 <style>
+
 :root{
   --bg:#f6f8fc;
   --card:#ffffff;
@@ -74,16 +76,8 @@
   --accent-2:#1f2937;
   font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 }
-
 *{ box-sizing:border-box; }
-
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-}
-
-/* HEADER */
+body{ margin:0; background:var(--bg); color:var(--text); }
 header{
   position:relative;
   background:linear-gradient(135deg,#0b1220,#111b33);
@@ -91,18 +85,8 @@ header{
   padding:28px 16px;
   text-align:center;
 }
-
-header h1{
-  margin:0;
-  font-size:22px;
-}
-
-header p{
-  margin-top:8px;
-  color:#a9b4c6;
-  font-size:14px;
-}
-
+header h1{ margin:0; font-size:22px; }
+header p{ margin-top:8px; color:#a9b4c6; font-size:14px; }
 header .subtitle{
   margin-top:10px;
   font-size:13px;
@@ -112,13 +96,7 @@ header .subtitle{
   margin-right:auto;
   line-height:1.5;
 }
-
-.top-info{
-  margin-top:10px;
-  font-size:12px;
-  color:#94a3b8;
-}
-
+.top-info{ margin-top:10px; font-size:12px; color:#94a3b8; }
 .lang-switcher{
   position:absolute;
   top:16px;
@@ -128,8 +106,7 @@ header .subtitle{
   align-items:center;
   flex-wrap:wrap;
 }
-
-.lang-btn{
+.lang-link{
   border:1px solid rgba(255,255,255,.22);
   background:rgba(255,255,255,.08);
   color:#e5e7eb;
@@ -137,27 +114,20 @@ header .subtitle{
   padding:8px 12px;
   font-size:12px;
   font-weight:700;
-  cursor:pointer;
+  text-decoration:none;
   transition:.2s;
 }
-
-.lang-btn:hover{
-  background:rgba(255,255,255,.14);
-}
-
-.lang-btn.active{
+.lang-link:hover{ background:rgba(255,255,255,.14); }
+.lang-link.active{
   background:white;
   color:#0f172a;
   border-color:white;
 }
-
-/* HERO */
 .hero-image{
   max-width:1200px;
   margin:20px auto 8px;
   padding:0 16px;
 }
-
 .hero-image-frame{
   height:290px;
   overflow:hidden;
@@ -165,7 +135,6 @@ header .subtitle{
   box-shadow:0 14px 35px rgba(15,23,42,.12);
   background:#e5e7eb;
 }
-
 .hero-image-frame img{
   display:block;
   width:100%;
@@ -173,21 +142,16 @@ header .subtitle{
   object-fit:cover;
   object-position:center top;
 }
-
-/* LAYOUT */
 .container{
   max-width:1200px;
   margin:24px auto;
   padding:16px;
 }
-
-/* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:16px;
 }
-
 .card{
   background:white;
   border-radius:18px;
@@ -195,11 +159,7 @@ header .subtitle{
   box-shadow:0 10px 25px rgba(0,0,0,.06);
   transition:.2s;
 }
-
-.card:hover{
-  transform:translateY(-2px);
-}
-
+.card:hover{ transform:translateY(-2px); }
 .badge{
   display:inline-block;
   font-size:12px;
@@ -209,31 +169,15 @@ header .subtitle{
   border-radius:999px;
   margin-bottom:10px;
 }
-
-h2{
-  margin:0 0 8px;
-  font-size:20px;
-}
-
-h3{
-  margin:20px 0 8px;
-  font-size:17px;
-  color:var(--text);
-}
-
-p{
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.6;
-}
-
+h2{ margin:0 0 8px; font-size:20px; }
+h3{ margin:20px 0 8px; font-size:17px; color:var(--text); }
+p{ color:var(--muted); font-size:14px; line-height:1.6; }
 .benefit{
   margin-top:12px;
   font-size:13px;
   font-weight:700;
   color:#1d4ed8;
 }
-
 .btn{
   display:block;
   margin-top:8px;
@@ -247,19 +191,16 @@ p{
   box-shadow:0 8px 20px rgba(0,0,0,.15);
   transition:.2s;
 }
-
 .btn:hover{
   transform:translateY(-2px);
   box-shadow:0 12px 25px rgba(0,0,0,.25);
 }
-
 .premium{
   border:1px solid #d1d5db;
   background:linear-gradient(180deg,#ffffff,#f3f4f6);
   position:relative;
   overflow:hidden;
 }
-
 .premium::before{
   content:"PLATINUM";
   position:absolute;
@@ -271,21 +212,17 @@ p{
   padding:6px 45px;
   transform:rotate(35deg);
 }
-
 .info-block{
   background:white;
   border-radius:18px;
   padding:24px;
   box-shadow:0 10px 25px rgba(0,0,0,.05);
 }
-
-/* FOOTER */
 .footer{
   max-width:1200px;
   margin:30px auto;
   padding:16px;
 }
-
 .legal{
   background:white;
   border-radius:18px;
@@ -295,31 +232,18 @@ p{
   color:var(--muted);
   line-height:1.6;
 }
-
-/* RESPONSIVE */
 @media(max-width:900px){
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  .hero-image-frame{
-    height:170px;
-  }
-
-  .hero-image-frame img{
-    object-position:center top;
-  }
-
-  .info-block{
-    padding:20px;
-  }
-
+  .grid{ grid-template-columns:1fr; }
+  .hero-image-frame{ height:170px; }
+  .hero-image-frame img{ object-position:center top; }
+  .info-block{ padding:20px; }
   .lang-switcher{
     position:static;
     justify-content:center;
     margin-bottom:12px;
   }
 }
+
 </style>
 </head>
 
@@ -327,17 +251,14 @@ p{
 
 <header>
   <div class="lang-switcher" aria-label="Language selector">
-    <button class="lang-btn active" type="button" data-lang="es" aria-pressed="true">ES</button>
-    <button class="lang-btn" type="button" data-lang="ca" aria-pressed="false">CAT</button>
-    <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+    <a class="lang-link active" href="/" hreflang="es">ES</a> <a class="lang-link" href="/ca/" hreflang="ca">CAT</a> <a class="lang-link" href="/en/" hreflang="en">EN</a>
   </div>
 
   <h1>MisNeobancos</h1>
-  <p id="header-tagline">Comparador de banca digital, inversión y tarjetas prémium</p>
+  <p>Comparador de banca digital, inversión y tarjetas prémium</p>
 
-  <p class="subtitle" id="header-subtitle">
-    Comparativa de neobancos, inversión y tarjeta prémium: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor y American Express Platinum.
-    Selección de opciones con información práctica y enlaces de invitación con posibles beneficios para el usuario y esta web.
+  <p class="subtitle">
+    Comparativa de neobancos, inversión y tarjeta prémium: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor y American Express Platinum. Selección de opciones con información práctica y enlaces de invitación con posibles beneficios para el usuario y esta web.
   </p>
 
   <div class="top-info" id="update"></div>
@@ -345,596 +266,130 @@ p{
 
 <section class="hero-image">
   <div class="hero-image-frame">
-    <img id="hero-image" src="plan-financiero-personal.png" alt="Planificación financiera personal con análisis y gráficos">
+    <img src="/plan-financiero-personal.png" alt="Planificación financiera personal con análisis y gráficos">
   </div>
 </section>
 
 <div class="container">
   <div class="info-block">
-    <h2 id="info-title-1">¿Qué es un neobanco y por qué cada vez más personas lo eligen?</h2>
-    <p id="info-p-1">
-      Un neobanco es una entidad financiera digital, o una plataforma bancaria de nueva generación, pensada para gestionar el dinero de forma sencilla desde el móvil. Su propuesta de valor se basa en una experiencia de usuario más ágil que la de la banca tradicional, con procesos de alta rápidos, una operativa intuitiva y un enfoque claro en la transparencia, el control y la reducción de costes.
-    </p>
-    <p id="info-p-2">
-      En la práctica, muchos neobancos permiten abrir una cuenta en pocos minutos, controlar los gastos en tiempo real, recibir notificaciones instantáneas, crear tarjetas virtuales, bloquear y desbloquear la tarjeta desde la app y organizar mejor el ahorro diario. Frente a la banca tradicional, una de sus principales ventajas suele estar en el ahorro de comisiones y en una operativa internacional más competitiva, especialmente para quienes viajan, pagan en otras divisas o quieren una gestión financiera más moderna y flexible.
-    </p>
-
-    <h3 id="info-title-2">La importancia de invertir a largo plazo</h3>
-    <p id="info-p-3">
-      Ahorrar es importante, pero invertir a largo plazo suele ser una herramienta mucho más potente para construir patrimonio. La razón es sencilla: el capital no solo tiene la posibilidad de crecer, sino que además puede beneficiarse del interés compuesto, es decir, de generar rendimientos sobre los rendimientos acumulados.
-    </p>
-    <p id="info-p-4">
-      La historia de los mercados no garantiza el futuro, pero sí ofrece una referencia útil. A largo plazo, la renta variable ha sido el activo líquido más rentable. Para muchas personas, la clave no está en intentar adivinar qué hará el mercado el próximo mes, sino en mantener una estrategia constante, diversificada y alineada con sus objetivos financieros durante décadas.
-    </p>
-
-    <h3 id="info-title-3">¿Qué es un índice y cómo se construye?</h3>
-    <p id="info-p-5">
-      Un índice bursátil es una cesta teórica de valores construida siguiendo reglas objetivas. Sirve como referencia para medir cómo se comporta una parte concreta del mercado, por ejemplo las grandes compañías de Estados Unidos, las acciones globales de países desarrollados o un sector específico.
-    </p>
-    <p id="info-p-6">
-      Los índices no se forman al azar. Se definen mediante una metodología clara: qué empresas pueden entrar, qué criterios de tamaño y liquidez se exigen, cómo se ponderan los valores y cuándo se revisa el índice. En muchos casos se ponderan por capitalización bursátil ajustada por free float, de modo que las compañías más grandes tienen más peso y el índice representa de forma más fiel el mercado que pretende seguir.
-    </p>
-
-    <h3 id="info-title-4">¿Qué significa gestión activa y gestión pasiva?</h3>
-    <p id="info-p-7">
-      En inversión, la gestión activa consiste en seleccionar activos con el objetivo de intentar batir al mercado. Es decir, un gestor decide qué acciones o bonos comprar y vender buscando obtener una rentabilidad superior a la de un índice de referencia.
-    </p>
-    <p id="info-p-8">
-      La gestión pasiva, en cambio, no intenta adivinar qué activo lo hará mejor. Su objetivo es replicar el comportamiento de un índice o de una combinación amplia de mercados con el menor coste posible, normalmente a través de fondos indexados, ETF o carteras diversificadas.
-    </p>
-
-    <h3 id="info-title-5">Ventajas de la gestión pasiva con fondos indexados o carteras indexadas</h3>
-    <p id="info-p-9">
-      La gestión pasiva se ha convertido en una de las formas más sólidas y eficientes de invertir a largo plazo. Su principal ventaja es que suele implicar comisiones mucho más bajas que la gestión activa, algo especialmente importante porque las comisiones reducen la rentabilidad acumulada con los años. Además, permite acceder a una diversificación muy amplia, repartiendo la inversión entre muchas empresas, sectores y geografías, lo que ayuda a reducir riesgos innecesarios.
-    </p>
-    <p id="info-p-10">
-      Otra ventaja importante es la sencillez. En lugar de estar pendiente de comprar y vender constantemente, el inversor puede mantener una estrategia más estable, disciplinada y fácil de seguir. Las carteras de fondos indexados añaden, además, la ventaja del rebalanceo y la automatización, lo que facilita mantener el perfil de riesgo adecuado sin tener que tomar decisiones continuas.
-    </p>
-    <p id="info-p-11">
-      También conviene tener en cuenta que, en un gran número de ocasiones, los gestores activos no logran batir de forma sostenida a su índice de referencia, especialmente después de comisiones. Por eso, para muchos inversores, una estrategia pasiva, diversificada y de bajo coste resulta una alternativa especialmente atractiva.
-    </p>
-
-    <h3 id="info-title-6">Rentabilidad histórica, interés compuesto y visión de largo plazo</h3>
-    <p id="info-p-12">
-      Como referencia histórica, la renta variable de mercados desarrollados ha ofrecido una rentabilidad anualizada nominal en torno al 8,5% desde 1900. Esto no significa que vaya a repetirse en el futuro ni que el mercado suba todos los años, pero sí ayuda a entender por qué la inversión a largo plazo ha sido una herramienta tan potente de creación de patrimonio.
-    </p>
-    <p id="info-p-13">
-      Aquí entra en juego la magia del interés compuesto. Si una persona invierte 10.000 € hoy y obtuviera una rentabilidad media del 8% anual durante 40 años, ese capital crecería hasta aproximadamente 217.245 €. Con una hipótesis del 8,5% anual, el resultado sería de alrededor de 261.330 €. No es una promesa de rentabilidad, sino un ejemplo ilustrativo de cómo el tiempo puede ser uno de los mayores aliados del inversor.
-    </p>
-
-    <h3 id="info-title-7">Warren Buffett y la lógica de los fondos indexados</h3>
-    <p id="info-p-14">
-      Cuando se habla de inversión a largo plazo, merece la pena mencionar a Warren Buffett. A pesar de ser uno de los grandes exponentes de la selección de empresas, ha recomendado en repetidas ocasiones los fondos índice de bajo coste para la mayoría de inversores. Su lógica es clara: minimizar costes, diversificar ampliamente y dejar que el tiempo y la rentabilidad del mercado trabajen a favor del inversor.
-    </p>
-
-    <h3 id="info-title-8">Trading, inversión en valor y por qué no conviene mezclar conceptos</h3>
-    <p id="info-p-15">
-      También es importante distinguir entre invertir y hacer trading. El trading, especialmente el intradía, exige mucha dedicación, formación, control emocional, gestión del riesgo y seguimiento constante del mercado. No es una vía sencilla ni rápida, y suele requerir mucho más esfuerzo y disciplina de lo que parece desde fuera.
-    </p>
-    <p id="info-p-16">
-      La inversión en valor, por su parte, responde a una filosofía distinta. Consiste en analizar negocios y tratar de comprar buenas empresas cuando cotizan por debajo de su valor intrínseco estimado. Es un enfoque basado en el análisis fundamental y en la paciencia, no en aprovechar movimientos de precio de corto plazo.
-    </p>
-    <p id="info-p-17">
-      Dicho de otro modo, el trading busca aprovechar movimientos de precio a corto plazo; la inversión en valor busca comprar activos de calidad a precios razonables o atractivos; y la gestión pasiva busca capturar la rentabilidad del mercado de forma diversificada, sencilla y eficiente. Son enfoques distintos, con exigencias, costes y probabilidades de éxito muy diferentes.
-    </p>
-
-    <h3 id="info-title-9">¿Por qué también aparece American Express Platinum en esta comparativa?</h3>
-    <p id="info-p-18">
-      Aunque esta web está centrada sobre todo en neobancos e inversión, American Express Platinum aparece aquí porque responde a una lógica distinta pero complementaria: la optimización financiera para quienes viajan con frecuencia.
-    </p>
-    <p id="info-p-19">
-      No compite con un neobanco ni con una cartera indexada, sino que encaja como una opción orientada a usuarios que valoran seguros de viaje, acceso a salas VIP, beneficios en hoteles, acumulación de puntos y otras ventajas asociadas a un estilo de vida más viajero y prémium. En ese contexto, puede tener sentido dentro de una estrategia personal de uso inteligente del dinero, siempre que su coste anual esté justificado por el uso real que se le vaya a dar.
-    </p>
+    <h2>¿Qué es un neobanco y por qué cada vez más personas lo eligen?</h2>
+    <p>Un neobanco es una entidad financiera digital, o una plataforma bancaria de nueva generación, pensada para gestionar el dinero de forma sencilla desde el móvil. Su propuesta de valor se basa en una experiencia de usuario más ágil que la de la banca tradicional, con procesos de alta rápidos, una operativa intuitiva y un enfoque claro en la transparencia, el control y la reducción de costes.</p>
+    <p>En la práctica, muchos neobancos permiten abrir una cuenta en pocos minutos, controlar los gastos en tiempo real, recibir notificaciones instantáneas, crear tarjetas virtuales, bloquear y desbloquear la tarjeta desde la app y organizar mejor el ahorro diario. Frente a la banca tradicional, una de sus principales ventajas suele estar en el ahorro de comisiones y en una operativa internacional más competitiva, especialmente para quienes viajan, pagan en otras divisas o quieren una gestión financiera más moderna y flexible.</p>
+    <h3>La importancia de invertir a largo plazo</h3>
+    <p>Ahorrar es importante, pero invertir a largo plazo suele ser una herramienta mucho más potente para construir patrimonio. La razón es sencilla: el capital no solo tiene la posibilidad de crecer, sino que además puede beneficiarse del interés compuesto, es decir, de generar rendimientos sobre los rendimientos acumulados.</p>
+    <p>La historia de los mercados no garantiza el futuro, pero sí ofrece una referencia útil. A largo plazo, la renta variable ha sido el activo líquido más rentable. Para muchas personas, la clave no está en intentar adivinar qué hará el mercado el próximo mes, sino en mantener una estrategia constante, diversificada y alineada con sus objetivos financieros durante décadas.</p>
+    <h3>¿Qué es un índice y cómo se construye?</h3>
+    <p>Un índice bursátil es una cesta teórica de valores construida siguiendo reglas objetivas. Sirve como referencia para medir cómo se comporta una parte concreta del mercado, por ejemplo las grandes compañías de Estados Unidos, las acciones globales de países desarrollados o un sector específico.</p>
+    <p>Los índices no se forman al azar. Se definen mediante una metodología clara: qué empresas pueden entrar, qué criterios de tamaño y liquidez se exigen, cómo se ponderan los valores y cuándo se revisa el índice. En muchos casos se ponderan por capitalización bursátil ajustada por free float, de modo que las compañías más grandes tienen más peso y el índice representa de forma más fiel el mercado que pretende seguir.</p>
+    <h3>¿Qué significa gestión activa y gestión pasiva?</h3>
+    <p>En inversión, la gestión activa consiste en seleccionar activos con el objetivo de intentar batir al mercado. Es decir, un gestor decide qué acciones o bonos comprar y vender buscando obtener una rentabilidad superior a la de un índice de referencia.</p>
+    <p>La gestión pasiva, en cambio, no intenta adivinar qué activo lo hará mejor. Su objetivo es replicar el comportamiento de un índice o de una combinación amplia de mercados con el menor coste posible, normalmente a través de fondos indexados, ETF o carteras diversificadas.</p>
+    <h3>Ventajas de la gestión pasiva con fondos indexados o carteras indexadas</h3>
+    <p>La gestión pasiva se ha convertido en una de las formas más sólidas y eficientes de invertir a largo plazo. Su principal ventaja es que suele implicar comisiones mucho más bajas que la gestión activa, algo especialmente importante porque las comisiones reducen la rentabilidad acumulada con los años. Además, permite acceder a una diversificación muy amplia, repartiendo la inversión entre muchas empresas, sectores y geografías, lo que ayuda a reducir riesgos innecesarios.</p>
+    <p>Otra ventaja importante es la sencillez. En lugar de estar pendiente de comprar y vender constantemente, el inversor puede mantener una estrategia más estable, disciplinada y fácil de seguir. Las carteras de fondos indexados añaden, además, la ventaja del rebalanceo y la automatización, lo que facilita mantener el perfil de riesgo adecuado sin tener que tomar decisiones continuas.</p>
+    <p>También conviene tener en cuenta que, en un gran número de ocasiones, los gestores activos no logran batir de forma sostenida a su índice de referencia, especialmente después de comisiones. Por eso, para muchos inversores, una estrategia pasiva, diversificada y de bajo coste resulta una alternativa especialmente atractiva.</p>
+    <h3>Rentabilidad histórica, interés compuesto y visión de largo plazo</h3>
+    <p>Como referencia histórica, la renta variable de mercados desarrollados ha ofrecido una rentabilidad anualizada nominal en torno al 8,5% desde 1900. Esto no significa que vaya a repetirse en el futuro ni que el mercado suba todos los años, pero sí ayuda a entender por qué la inversión a largo plazo ha sido una herramienta tan potente de creación de patrimonio.</p>
+    <p>Aquí entra en juego la magia del interés compuesto. Si una persona invierte 10.000 € hoy y obtuviera una rentabilidad media del 8% anual durante 40 años, ese capital crecería hasta aproximadamente 217.245 €. Con una hipótesis del 8,5% anual, el resultado sería de alrededor de 261.330 €. No es una promesa de rentabilidad, sino un ejemplo ilustrativo de cómo el tiempo puede ser uno de los mayores aliados del inversor.</p>
+    <h3>Warren Buffett y la lógica de los fondos indexados</h3>
+    <p>Cuando se habla de inversión a largo plazo, merece la pena mencionar a Warren Buffett. A pesar de ser uno de los grandes exponentes de la selección de empresas, ha recomendado en repetidas ocasiones los fondos índice de bajo coste para la mayoría de inversores. Su lógica es clara: minimizar costes, diversificar ampliamente y dejar que el tiempo y la rentabilidad del mercado trabajen a favor del inversor.</p>
+    <h3>Trading, inversión en valor y por qué no conviene mezclar conceptos</h3>
+    <p>También es importante distinguir entre invertir y hacer trading. El trading, especialmente el intradía, exige mucha dedicación, formación, control emocional, gestión del riesgo y seguimiento constante del mercado. No es una vía sencilla ni rápida, y suele requerir mucho más esfuerzo y disciplina de lo que parece desde fuera.</p>
+    <p>La inversión en valor, por su parte, responde a una filosofía distinta. Consiste en analizar negocios y tratar de comprar buenas empresas cuando cotizan por debajo de su valor intrínseco estimado. Es un enfoque basado en el análisis fundamental y en la paciencia, no en aprovechar movimientos de precio de corto plazo.</p>
+    <p>Dicho de otro modo, el trading busca aprovechar movimientos de precio a corto plazo; la inversión en valor busca comprar activos de calidad a precios razonables o atractivos; y la gestión pasiva busca capturar la rentabilidad del mercado de forma diversificada, sencilla y eficiente. Son enfoques distintos, con exigencias, costes y probabilidades de éxito muy diferentes.</p>
+    <h3>¿Por qué también aparece American Express Platinum en esta web?</h3>
+    <p>Aunque esta web está centrada sobre todo en neobancos e inversión, American Express Platinum aparece aquí porque responde a una lógica distinta pero complementaria: la optimización financiera para quienes viajan con frecuencia.</p>
+    <p>No compite con un neobanco ni con una cartera indexada, sino que encaja como una opción orientada a usuarios que valoran seguros de viaje, acceso a salas VIP, beneficios en hoteles, acumulación de puntos y otras ventajas asociadas a un estilo de vida más viajero y prémium. En ese contexto, puede tener sentido dentro de una estrategia personal de uso inteligente del dinero, siempre que su coste anual esté justificado por el uso real que se le vaya a dar.</p>
   </div>
 </div>
 
 <div class="container grid">
 
   <div class="card">
-    <div class="badge" id="rev-badge">CUENTA GLOBAL</div>
+    <div class="badge">CUENTA GLOBAL</div>
     <h2>Revolut</h2>
-    <p id="rev-desc">Cuenta multidivisa para viajes, pagos internacionales y control financiero desde app.</p>
-    <p id="rev-features">✔ Cambio de divisa interbancario<br>✔ Tarjetas virtuales y físicas<br>✔ Control de gastos en tiempo real</p>
-    <p class="benefit" id="rev-benefit">💸 Hasta 50€ por cada amigo que invites</p>
-    <a class="btn" id="rev-btn" href="https://revolut.com/referral/?referral-code=marc6xpqk!APR1-26-AR-CRY&geo-redirect">Abrir cuenta</a>
+    <p>Cuenta multidivisa para viajes, pagos internacionales y control financiero desde app.</p>
+    <p>✔ Cambio de divisa interbancario<br>✔ Tarjetas virtuales y físicas<br>✔ Control de gastos en tiempo real</p>
+    <p class="benefit">💸 Hasta 50€ por cada amigo que invites</p>
+    <a class="btn" href="https://revolut.com/referral/?referral-code=marc6xpqk!APR1-26-AR-CRY&geo-redirect">Abrir cuenta</a>
   </div>
-
   <div class="card">
-    <div class="badge" id="n26-badge">BANCA DIGITAL</div>
+    <div class="badge">BANCA DIGITAL</div>
     <h2>N26</h2>
-    <p id="n26-desc">Banco digital con IBAN español y gestión simple del dinero desde el móvil.</p>
-    <p id="n26-features">✔ IBAN español<br>✔ Categorías automáticas<br>✔ Ahorro inteligente</p>
-    <p class="benefit" id="n26-benefit">💸 Llévate 15€ al abrir tu cuenta</p>
-    <a class="btn" id="n26-btn" href="https://n26.com/r/marcq8763">Abrir cuenta</a>
+    <p>Banco digital con IBAN español y gestión simple del dinero desde el móvil.</p>
+    <p>✔ IBAN español<br>✔ Categorías automáticas<br>✔ Ahorro inteligente</p>
+    <p class="benefit">💸 Llévate 15€ al abrir tu cuenta</p>
+    <a class="btn" href="https://n26.com/r/marcq8763">Abrir cuenta</a>
   </div>
-
   <div class="card">
-    <div class="badge" id="tr-badge">INVERSIÓN</div>
+    <div class="badge">INVERSIÓN</div>
     <h2>Trade Republic</h2>
-    <p id="tr-desc">Invierte en acciones y ETFs con bajas comisiones y enfoque a largo plazo.</p>
-    <p id="tr-features">✔ ETFs globales<br>✔ Planes automáticos<br>✔ Broker europeo regulado</p>
-    <p class="benefit" id="tr-benefit">📈 Consigue 10€ en acciones gratis + 2% TAE</p>
-    <a class="btn" id="tr-btn" href="https://refnocode.trade.re/z907j81c">Abrir cuenta</a>
+    <p>Invierte en acciones y ETFs con bajas comisiones y enfoque a largo plazo.</p>
+    <p>✔ ETFs globales<br>✔ Planes automáticos<br>✔ Broker europeo regulado</p>
+    <p class="benefit">📈 Consigue 10€ en acciones gratis + 2% TAE</p>
+    <a class="btn" href="https://refnocode.trade.re/z907j81c">Abrir cuenta</a>
   </div>
-
   <div class="card">
-    <div class="badge" id="indexa-badge">FONDOS INDEXADOS</div>
+    <div class="badge">FONDOS INDEXADOS</div>
     <h2>Indexa Capital</h2>
-    <p id="indexa-desc">Gestión automatizada de carteras indexadas adaptadas a tu perfil.</p>
-    <p id="indexa-features">✔ Diversificación global<br>✔ Rebalanceo automático<br>✔ Inversión pasiva</p>
-    <p class="benefit" id="indexa-benefit">💰 0€ en comisiones de gestión hasta 15.000 € el primer año</p>
-    <a class="btn" id="indexa-btn" href="https://indexacapital.com/t/MhZ02B">Invertir en fondos indexados</a>
+    <p>Gestión automatizada de carteras indexadas adaptadas a tu perfil.</p>
+    <p>✔ Diversificación global<br>✔ Rebalanceo automático<br>✔ Inversión pasiva</p>
+    <p class="benefit">💰 0€ en comisiones de gestión hasta 15.000 € el primer año</p>
+    <a class="btn" href="https://indexacapital.com/t/MhZ02B">Invertir en fondos indexados</a>
   </div>
-
   <div class="card">
-    <div class="badge" id="myinv-badge">AHORRO E INVERSIÓN</div>
+    <div class="badge">AHORRO E INVERSIÓN</div>
     <h2>MyInvestor</h2>
-    <p id="myinv-desc">Neobanco español con cuenta e inversión en fondos indexados.</p>
-    <p id="myinv-features">✔ Cuenta bancaria<br>✔ Fondos indexados<br>✔ Bajas comisiones</p>
-    <p class="benefit" id="myinv-benefit">🎁 Consigue 25€ al abrir tu cuenta</p>
-    <a class="btn" id="myinv-btn" href="https://newapp.myinvestor.es/do/signup?promotionalCode=YADUA">Abrir cuenta</a>
+    <p>Neobanco español con cuenta e inversión en fondos indexados.</p>
+    <p>✔ Cuenta bancaria<br>✔ Fondos indexados<br>✔ Bajas comisiones</p>
+    <p class="benefit">🎁 Consigue 25€ al abrir tu cuenta</p>
+    <a class="btn" href="https://newapp.myinvestor.es/do/signup?promotionalCode=YADUA">Abrir cuenta</a>
   </div>
-
   <div class="card premium">
-    <div class="badge" id="amex-badge">LIFESTYLE PRÉMIUM</div>
+    <div class="badge">LIFESTYLE PRÉMIUM</div>
     <h2>American Express Platinum</h2>
-    <p id="amex-desc">Tarjeta prémium orientada a viajes, experiencias exclusivas y beneficios de alto nivel.</p>
-    <p id="amex-features">
-      ✔ Acceso a salas VIP<br>
-      ✔ Seguro de viaje prémium<br>
-      ✔ Beneficios en hoteles<br>
-      ✔ Programa Membership Rewards
-    </p>
-    <p class="benefit" id="amex-benefit">✈️ Hasta 60.000 puntos para viajar</p>
-    <a class="btn" id="amex-btn" href="https://americanexpress.com/es-es/referral/platinum?ref=mARCQPice&XLINK=MYCP">Solicitar Amex Platinum</a>
+    <p>Tarjeta prémium orientada a viajes, experiencias exclusivas y beneficios de alto nivel.</p>
+    <p>✔ Acceso a salas VIP<br>✔ Seguro de viaje prémium<br>✔ Beneficios en hoteles<br>✔ Programa Membership Rewards</p>
+    <p class="benefit">✈️ Hasta 60.000 puntos para viajar</p>
+    <a class="btn" href="https://americanexpress.com/es-es/referral/platinum?ref=mARCQPice&XLINK=MYCP">Solicitar Amex Platinum</a>
   </div>
-
 </div>
 
 <div class="footer">
   <div class="legal">
-    <strong id="legal-title">Aviso legal</strong><br><br>
-    <span id="legal-text">
-      La información en esta web es de carácter estrictamente informativo y general. No constituye asesoramiento financiero ni recomendación personalizada de inversión. El uso de enlaces de invitación se realiza con total transparencia, indicando que pueden generar beneficios para ambas partes, sin implicar promoción profesional ni actividad económica regulada. Siempre que consideres invertir, valora tu situación personal y, si procede, consulta a un asesor financiero independiente.
-    </span>
+    <strong>Aviso legal</strong><br><br>
+    La información en esta web es de carácter estrictamente informativo y general. No constituye asesoramiento financiero ni recomendación personalizada de inversión. El uso de enlaces de invitación se realiza con total transparencia, indicando que pueden generar beneficios para ambas partes, sin implicar promoción profesional ni actividad económica regulada. Siempre que consideres invertir, valora tu situación personal y, si procede, consulta a un asesor financiero independiente.
   </div>
 </div>
 
 <script>
 (function () {
-  const translations = {
-    es: {
-      htmlLang: 'es',
-      metaTitle: 'MisNeobancos — Comparador financiero inteligente',
-      metaDescription: 'Comparador de neobancos, inversión y tarjeta prémium: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor y American Express Platinum. Información práctica, ahorro en comisiones y ventajas para viajeros e inversores.',
-      ogTitle: 'MisNeobancos — Comparador financiero inteligente',
-      ogDescription: 'Comparador de neobancos, inversión y tarjetas prémium. Revolut, N26, Trade Republic, Indexa Capital, MyInvestor y American Express Platinum.',
-      twitterTitle: 'MisNeobancos — Comparador financiero inteligente',
-      twitterDescription: 'Comparador de banca digital, inversión y tarjetas prémium con información práctica y enlaces de invitación.',
-      headerTagline: 'Comparador de banca digital, inversión y tarjetas prémium',
-      headerSubtitle: 'Comparativa de neobancos, inversión y tarjeta prémium: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor y American Express Platinum. Selección de opciones con información práctica y enlaces de invitación con posibles beneficios para el usuario y esta web.',
-      updateLabel: 'Última actualización: ',
-      heroAlt: 'Planificación financiera personal con análisis y gráficos',
+  const updateEl = document.getElementById('update');
+  if (!updateEl) return;
 
-      infoTitle1: '¿Qué es un neobanco y por qué cada vez más personas lo eligen?',
-      infoP1: 'Un neobanco es una entidad financiera digital, o una plataforma bancaria de nueva generación, pensada para gestionar el dinero de forma sencilla desde el móvil. Su propuesta de valor se basa en una experiencia de usuario más ágil que la de la banca tradicional, con procesos de alta rápidos, una operativa intuitiva y un enfoque claro en la transparencia, el control y la reducción de costes.',
-      infoP2: 'En la práctica, muchos neobancos permiten abrir una cuenta en pocos minutos, controlar los gastos en tiempo real, recibir notificaciones instantáneas, crear tarjetas virtuales, bloquear y desbloquear la tarjeta desde la app y organizar mejor el ahorro diario. Frente a la banca tradicional, una de sus principales ventajas suele estar en el ahorro de comisiones y en una operativa internacional más competitiva, especialmente para quienes viajan, pagan en otras divisas o quieren una gestión financiera más moderna y flexible.',
+  const date = new Date();
+  date.setDate(date.getDate() - 3);
 
-      infoTitle2: 'La importancia de invertir a largo plazo',
-      infoP3: 'Ahorrar es importante, pero invertir a largo plazo suele ser una herramienta mucho más potente para construir patrimonio. La razón es sencilla: el capital no solo tiene la posibilidad de crecer, sino que además puede beneficiarse del interés compuesto, es decir, de generar rendimientos sobre los rendimientos acumulados.',
-      infoP4: 'La historia de los mercados no garantiza el futuro, pero sí ofrece una referencia útil. A largo plazo, la renta variable ha sido el activo líquido más rentable. Para muchas personas, la clave no está en intentar adivinar qué hará el mercado el próximo mes, sino en mantener una estrategia constante, diversificada y alineada con sus objetivos financieros durante décadas.',
-
-      infoTitle3: '¿Qué es un índice y cómo se construye?',
-      infoP5: 'Un índice bursátil es una cesta teórica de valores construida siguiendo reglas objetivas. Sirve como referencia para medir cómo se comporta una parte concreta del mercado, por ejemplo las grandes compañías de Estados Unidos, las acciones globales de países desarrollados o un sector específico.',
-      infoP6: 'Los índices no se forman al azar. Se definen mediante una metodología clara: qué empresas pueden entrar, qué criterios de tamaño y liquidez se exigen, cómo se ponderan los valores y cuándo se revisa el índice. En muchos casos se ponderan por capitalización bursátil ajustada por free float, de modo que las compañías más grandes tienen más peso y el índice representa de forma más fiel el mercado que pretende seguir.',
-
-      infoTitle4: '¿Qué significa gestión activa y gestión pasiva?',
-      infoP7: 'En inversión, la gestión activa consiste en seleccionar activos con el objetivo de intentar batir al mercado. Es decir, un gestor decide qué acciones o bonos comprar y vender buscando obtener una rentabilidad superior a la de un índice de referencia.',
-      infoP8: 'La gestión pasiva, en cambio, no intenta adivinar qué activo lo hará mejor. Su objetivo es replicar el comportamiento de un índice o de una combinación amplia de mercados con el menor coste posible, normalmente a través de fondos indexados, ETF o carteras diversificadas.',
-
-      infoTitle5: 'Ventajas de la gestión pasiva con fondos indexados o carteras indexadas',
-      infoP9: 'La gestión pasiva se ha convertido en una de las formas más sólidas y eficientes de invertir a largo plazo. Su principal ventaja es que suele implicar comisiones mucho más bajas que la gestión activa, algo especialmente importante porque las comisiones reducen la rentabilidad acumulada con los años. Además, permite acceder a una diversificación muy amplia, repartiendo la inversión entre muchas empresas, sectores y geografías, lo que ayuda a reducir riesgos innecesarios.',
-      infoP10: 'Otra ventaja importante es la sencillez. En lugar de estar pendiente de comprar y vender constantemente, el inversor puede mantener una estrategia más estable, disciplinada y fácil de seguir. Las carteras de fondos indexados añaden, además, la ventaja del rebalanceo y la automatización, lo que facilita mantener el perfil de riesgo adecuado sin tener que tomar decisiones continuas.',
-      infoP11: 'También conviene tener en cuenta que, en un gran número de ocasiones, los gestores activos no logran batir de forma sostenida a su índice de referencia, especialmente después de comisiones. Por eso, para muchos inversores, una estrategia pasiva, diversificada y de bajo coste resulta una alternativa especialmente atractiva.',
-
-      infoTitle6: 'Rentabilidad histórica, interés compuesto y visión de largo plazo',
-      infoP12: 'Como referencia histórica, la renta variable de mercados desarrollados ha ofrecido una rentabilidad anualizada nominal en torno al 8,5% desde 1900. Esto no significa que vaya a repetirse en el futuro ni que el mercado suba todos los años, pero sí ayuda a entender por qué la inversión a largo plazo ha sido una herramienta tan potente de creación de patrimonio.',
-      infoP13: 'Aquí entra en juego la magia del interés compuesto. Si una persona invierte 10.000 € hoy y obtuviera una rentabilidad media del 8% anual durante 40 años, ese capital crecería hasta aproximadamente 217.245 €. Con una hipótesis del 8,5% anual, el resultado sería de alrededor de 261.330 €. No es una promesa de rentabilidad, sino un ejemplo ilustrativo de cómo el tiempo puede ser uno de los mayores aliados del inversor.',
-
-      infoTitle7: 'Warren Buffett y la lógica de los fondos indexados',
-      infoP14: 'Cuando se habla de inversión a largo plazo, merece la pena mencionar a Warren Buffett. A pesar de ser uno de los grandes exponentes de la selección de empresas, ha recomendado en repetidas ocasiones los fondos índice de bajo coste para la mayoría de inversores. Su lógica es clara: minimizar costes, diversificar ampliamente y dejar que el tiempo y la rentabilidad del mercado trabajen a favor del inversor.',
-
-      infoTitle8: 'Trading, inversión en valor y por qué no conviene mezclar conceptos',
-      infoP15: 'También es importante distinguir entre invertir y hacer trading. El trading, especialmente el intradía, exige mucha dedicación, formación, control emocional, gestión del riesgo y seguimiento constante del mercado. No es una vía sencilla ni rápida, y suele requerir mucho más esfuerzo y disciplina de lo que parece desde fuera.',
-      infoP16: 'La inversión en valor, por su parte, responde a una filosofía distinta. Consiste en analizar negocios y tratar de comprar buenas empresas cuando cotizan por debajo de su valor intrínseco estimado. Es un enfoque basado en el análisis fundamental y en la paciencia, no en aprovechar movimientos de precio de corto plazo.',
-      infoP17: 'Dicho de otro modo, el trading busca aprovechar movimientos de precio a corto plazo; la inversión en valor busca comprar activos de calidad a precios razonables o atractivos; y la gestión pasiva busca capturar la rentabilidad del mercado de forma diversificada, sencilla y eficiente. Son enfoques distintos, con exigencias, costes y probabilidades de éxito muy diferentes.',
-
-      infoTitle9: '¿Por qué también aparece American Express Platinum en esta comparativa?',
-      infoP18: 'Aunque esta web está centrada sobre todo en neobancos e inversión, American Express Platinum aparece aquí porque responde a una lógica distinta pero complementaria: la optimización financiera para quienes viajan con frecuencia.',
-      infoP19: 'No compite con un neobanco ni con una cartera indexada, sino que encaja como una opción orientada a usuarios que valoran seguros de viaje, acceso a salas VIP, beneficios en hoteles, acumulación de puntos y otras ventajas asociadas a un estilo de vida más viajero y prémium. En ese contexto, puede tener sentido dentro de una estrategia personal de uso inteligente del dinero, siempre que su coste anual esté justificado por el uso real que se le vaya a dar.',
-
-      revBadge: 'CUENTA GLOBAL',
-      revDesc: 'Cuenta multidivisa para viajes, pagos internacionales y control financiero desde app.',
-      revFeatures: '✔ Cambio de divisa interbancario<br>✔ Tarjetas virtuales y físicas<br>✔ Control de gastos en tiempo real',
-      revBenefit: '💸 Hasta 50€ por cada amigo que invites',
-      revBtn: 'Abrir cuenta',
-
-      n26Badge: 'BANCA DIGITAL',
-      n26Desc: 'Banco digital con IBAN español y gestión simple del dinero desde el móvil.',
-      n26Features: '✔ IBAN español<br>✔ Categorías automáticas<br>✔ Ahorro inteligente',
-      n26Benefit: '💸 Llévate 15€ al abrir tu cuenta',
-      n26Btn: 'Abrir cuenta',
-
-      trBadge: 'INVERSIÓN',
-      trDesc: 'Invierte en acciones y ETFs con bajas comisiones y enfoque a largo plazo.',
-      trFeatures: '✔ ETFs globales<br>✔ Planes automáticos<br>✔ Broker europeo regulado',
-      trBenefit: '📈 Consigue 10€ en acciones gratis + 2% TAE',
-      trBtn: 'Abrir cuenta',
-
-      indexaBadge: 'FONDOS INDEXADOS',
-      indexaDesc: 'Gestión automatizada de carteras indexadas adaptadas a tu perfil.',
-      indexaFeatures: '✔ Diversificación global<br>✔ Rebalanceo automático<br>✔ Inversión pasiva',
-      indexaBenefit: '💰 0€ en comisiones de gestión hasta 15.000 € el primer año',
-      indexaBtn: 'Invertir en fondos indexados',
-
-      myinvBadge: 'AHORRO E INVERSIÓN',
-      myinvDesc: 'Neobanco español con cuenta e inversión en fondos indexados.',
-      myinvFeatures: '✔ Cuenta bancaria<br>✔ Fondos indexados<br>✔ Bajas comisiones',
-      myinvBenefit: '🎁 Consigue 25€ al abrir tu cuenta',
-      myinvBtn: 'Abrir cuenta',
-
-      amexBadge: 'LIFESTYLE PRÉMIUM',
-      amexDesc: 'Tarjeta prémium orientada a viajes, experiencias exclusivas y beneficios de alto nivel.',
-      amexFeatures: '✔ Acceso a salas VIP<br>✔ Seguro de viaje prémium<br>✔ Beneficios en hoteles<br>✔ Programa Membership Rewards',
-      amexBenefit: '✈️ Hasta 60.000 puntos para viajar',
-      amexBtn: 'Solicitar Amex Platinum',
-
-      legalTitle: 'Aviso legal',
-      legalText: 'La información en esta web es de carácter estrictamente informativo y general. No constituye asesoramiento financiero ni recomendación personalizada de inversión. El uso de enlaces de invitación se realiza con total transparencia, indicando que pueden generar beneficios para ambas partes, sin implicar promoción profesional ni actividad económica regulada. Siempre que consideres invertir, valora tu situación personal y, si procede, consulta a un asesor financiero independiente.'
-    },
-
-    ca: {
-      htmlLang: 'ca',
-      metaTitle: 'MisNeobancos — Comparador financer intel·ligent',
-      metaDescription: 'Comparador de neobancs, inversió i targeta prèmium: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor i American Express Platinum. Informació pràctica, estalvi en comissions i avantatges per a viatgers i inversors.',
-      ogTitle: 'MisNeobancos — Comparador financer intel·ligent',
-      ogDescription: 'Comparador de neobancs, inversió i targetes prèmium. Revolut, N26, Trade Republic, Indexa Capital, MyInvestor i American Express Platinum.',
-      twitterTitle: 'MisNeobancos — Comparador financer intel·ligent',
-      twitterDescription: 'Comparador de banca digital, inversió i targetes prèmium amb informació pràctica i enllaços d’invitació.',
-      headerTagline: 'Comparador de banca digital, inversió i targetes prèmium',
-      headerSubtitle: 'Comparativa de neobancs, inversió i targeta prèmium: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor i American Express Platinum. Selecció d’opcions amb informació pràctica i enllaços d’invitació amb possibles beneficis per a l’usuari i aquesta web.',
-      updateLabel: 'Última actualització: ',
-      heroAlt: 'Planificació financera personal amb anàlisi i gràfics',
-
-      infoTitle1: 'Què és un neobanc i per què cada vegada més persones el trien?',
-      infoP1: 'Un neobanc és una entitat financera digital, o una plataforma bancària de nova generació, pensada per gestionar els diners de manera senzilla des del mòbil. La seva proposta de valor es basa en una experiència d’usuari més àgil que la de la banca tradicional, amb processos d’alta ràpids, una operativa intuïtiva i un enfocament clar en la transparència, el control i la reducció de costos.',
-      infoP2: 'A la pràctica, molts neobancs permeten obrir un compte en pocs minuts, controlar les despeses en temps real, rebre notificacions instantànies, crear targetes virtuals, bloquejar i desbloquejar la targeta des de l’app i organitzar millor l’estalvi diari. En comparació amb la banca tradicional, un dels seus principals avantatges sol estar en l’estalvi en comissions i en una operativa internacional més competitiva, especialment per a qui viatja, paga en altres divises o vol una gestió financera més moderna i flexible.',
-
-      infoTitle2: 'La importància d’invertir a llarg termini',
-      infoP3: 'Estalviar és important, però invertir a llarg termini sol ser una eina molt més potent per construir patrimoni. La raó és senzilla: el capital no només té la possibilitat de créixer, sinó que a més es pot beneficiar de l’interès compost, és a dir, de generar rendiments sobre els rendiments acumulats.',
-      infoP4: 'La història dels mercats no garanteix el futur, però sí que ofereix una referència útil. A llarg termini, la renda variable ha estat l’actiu líquid més rendible. Per a moltes persones, la clau no és intentar endevinar què farà el mercat el mes vinent, sinó mantenir una estratègia constant, diversificada i alineada amb els seus objectius financers durant dècades.',
-
-      infoTitle3: 'Què és un índex i com es construeix?',
-      infoP5: 'Un índex borsari és una cistella teòrica de valors construïda seguint regles objectives. Serveix com a referència per mesurar com es comporta una part concreta del mercat, per exemple les grans companyies dels Estats Units, les accions globals de països desenvolupats o un sector específic.',
-      infoP6: 'Els índexs no es formen a l’atzar. Es defineixen mitjançant una metodologia clara: quines empreses hi poden entrar, quins criteris de mida i liquiditat s’exigeixen, com es ponderen els valors i quan es revisa l’índex. En molts casos es ponderen per capitalització borsària ajustada per free float, de manera que les companyies més grans tenen més pes i l’índex representa de forma més fidel el mercat que pretén seguir.',
-
-      infoTitle4: 'Què significa gestió activa i gestió passiva?',
-      infoP7: 'En inversió, la gestió activa consisteix a seleccionar actius amb l’objectiu d’intentar batre el mercat. És a dir, un gestor decideix quines accions o bons comprar i vendre buscant obtenir una rendibilitat superior a la d’un índex de referència.',
-      infoP8: 'La gestió passiva, en canvi, no intenta endevinar quin actiu ho farà millor. El seu objectiu és replicar el comportament d’un índex o d’una combinació àmplia de mercats amb el menor cost possible, normalment a través de fons indexats, ETF o carteres diversificades.',
-
-      infoTitle5: 'Avantatges de la gestió passiva amb fons indexats o carteres indexades',
-      infoP9: 'La gestió passiva s’ha convertit en una de les formes més sòlides i eficients d’invertir a llarg termini. El seu principal avantatge és que sol implicar comissions molt més baixes que la gestió activa, una cosa especialment important perquè les comissions redueixen la rendibilitat acumulada amb els anys. A més, permet accedir a una diversificació molt àmplia, repartint la inversió entre moltes empreses, sectors i geografies, fet que ajuda a reduir riscos innecessaris.',
-      infoP10: 'Un altre avantatge important és la senzillesa. En lloc d’estar pendent de comprar i vendre constantment, l’inversor pot mantenir una estratègia més estable, disciplinada i fàcil de seguir. Les carteres de fons indexats afegeixen, a més, l’avantatge del reequilibri i l’automatització, cosa que facilita mantenir el perfil de risc adequat sense haver de prendre decisions contínues.',
-      infoP11: 'També convé tenir en compte que, en un gran nombre d’ocasions, els gestors actius no aconsegueixen batre de manera sostinguda el seu índex de referència, especialment després de comissions. Per això, per a molts inversors, una estratègia passiva, diversificada i de baix cost resulta una alternativa especialment atractiva.',
-
-      infoTitle6: 'Rendibilitat històrica, interès compost i visió de llarg termini',
-      infoP12: 'Com a referència històrica, la renda variable de mercats desenvolupats ha ofert una rendibilitat anualitzada nominal al voltant del 8,5% des de 1900. Això no significa que es repeteixi en el futur ni que el mercat pugi cada any, però sí que ajuda a entendre per què la inversió a llarg termini ha estat una eina tan potent de creació de patrimoni.',
-      infoP13: 'Aquí entra en joc la màgia de l’interès compost. Si una persona inverteix 10.000 € avui i obtingués una rendibilitat mitjana del 8% anual durant 40 anys, aquest capital creixeria fins a aproximadament 217.245 €. Amb una hipòtesi del 8,5% anual, el resultat seria d’uns 261.330 €. No és una promesa de rendibilitat, sinó un exemple il·lustratiu de com el temps pot ser un dels grans aliats de l’inversor.',
-
-      infoTitle7: 'Warren Buffett i la lògica dels fons indexats',
-      infoP14: 'Quan es parla d’inversió a llarg termini, val la pena mencionar Warren Buffett. Tot i ser un dels grans exponents de la selecció d’empreses, ha recomanat en repetides ocasions els fons índex de baix cost per a la majoria d’inversors. La seva lògica és clara: minimitzar costos, diversificar àmpliament i deixar que el temps i la rendibilitat del mercat treballin a favor de l’inversor.',
-
-      infoTitle8: 'Trading, inversió en valor i per què no convé barrejar conceptes',
-      infoP15: 'També és important distingir entre invertir i fer trading. El trading, especialment l’intradia, exigeix molta dedicació, formació, control emocional, gestió del risc i seguiment constant del mercat. No és una via senzilla ni ràpida, i sol requerir molt més esforç i disciplina del que sembla des de fora.',
-      infoP16: 'La inversió en valor, en canvi, respon a una filosofia diferent. Consisteix a analitzar negocis i intentar comprar bones empreses quan cotitzen per sota del seu valor intrínsec estimat. És un enfocament basat en l’anàlisi fonamental i en la paciència, no en aprofitar moviments de preu a curt termini.',
-      infoP17: 'Dit d’una altra manera, el trading busca aprofitar moviments de preu a curt termini; la inversió en valor busca comprar actius de qualitat a preus raonables o atractius; i la gestió passiva busca capturar la rendibilitat del mercat de manera diversificada, senzilla i eficient. Són enfocaments diferents, amb exigències, costos i probabilitats d’èxit molt diferents.',
-
-      infoTitle9: 'Per què també apareix American Express Platinum en aquesta comparativa?',
-      infoP18: 'Tot i que aquesta web està centrada sobretot en neobancs i inversió, American Express Platinum apareix aquí perquè respon a una lògica diferent però complementària: l’optimització financera per a qui viatja amb freqüència.',
-      infoP19: 'No competeix amb un neobanc ni amb una cartera indexada, sinó que encaixa com una opció orientada a usuaris que valoren assegurances de viatge, accés a sales VIP, beneficis en hotels, acumulació de punts i altres avantatges associats a un estil de vida més viatger i prèmium. En aquest context, pot tenir sentit dins d’una estratègia personal d’ús intel·ligent dels diners, sempre que el seu cost anual estigui justificat per l’ús real que se li donarà.',
-
-      revBadge: 'COMPTE GLOBAL',
-      revDesc: 'Compte multidivisa per a viatges, pagaments internacionals i control financer des de l’app.',
-      revFeatures: '✔ Canvi de divisa interbancari<br>✔ Targetes virtuals i físiques<br>✔ Control de despeses en temps real',
-      revBenefit: '💸 Fins a 50 € per cada amic que convidis',
-      revBtn: 'Obrir compte',
-
-      n26Badge: 'BANCA DIGITAL',
-      n26Desc: 'Banc digital amb IBAN espanyol i gestió simple dels diners des del mòbil.',
-      n26Features: '✔ IBAN espanyol<br>✔ Categories automàtiques<br>✔ Estalvi intel·ligent',
-      n26Benefit: '💸 Emporta’t 15 € en obrir el teu compte',
-      n26Btn: 'Obrir compte',
-
-      trBadge: 'INVERSIÓ',
-      trDesc: 'Inverteix en accions i ETF amb baixes comissions i enfocament a llarg termini.',
-      trFeatures: '✔ ETF globals<br>✔ Plans automàtics<br>✔ Broker europeu regulat',
-      trBenefit: '📈 Aconsegueix 10 € en accions gratis + 2 % TAE',
-      trBtn: 'Obrir compte',
-
-      indexaBadge: 'FONS INDEXATS',
-      indexaDesc: 'Gestió automatitzada de carteres indexades adaptades al teu perfil.',
-      indexaFeatures: '✔ Diversificació global<br>✔ Reequilibri automàtic<br>✔ Inversió passiva',
-      indexaBenefit: '💰 0 € en comissions de gestió fins a 15.000 € el primer any',
-      indexaBtn: 'Invertir en fons indexats',
-
-      myinvBadge: 'ESTALVI I INVERSIÓ',
-      myinvDesc: 'Neobanc espanyol amb compte i inversió en fons indexats.',
-      myinvFeatures: '✔ Compte bancari<br>✔ Fons indexats<br>✔ Baixes comissions',
-      myinvBenefit: '🎁 Aconsegueix 25 € en obrir el teu compte',
-      myinvBtn: 'Obrir compte',
-
-      amexBadge: 'ESTIL DE VIDA PRÈMIUM',
-      amexDesc: 'Targeta prèmium orientada a viatges, experiències exclusives i beneficis d’alt nivell.',
-      amexFeatures: '✔ Accés a sales VIP<br>✔ Assegurança de viatge prèmium<br>✔ Avantatges en hotels<br>✔ Programa Membership Rewards',
-      amexBenefit: '✈️ Fins a 60.000 punts per viatjar',
-      amexBtn: 'Sol·licitar Amex Platinum',
-
-      legalTitle: 'Avís legal',
-      legalText: 'La informació d’aquesta web és de caràcter estrictament informatiu i general. No constitueix assessorament financer ni recomanació personalitzada d’inversió. L’ús d’enllaços d’invitació es realitza amb total transparència, indicant que poden generar beneficis per a totes dues parts, sense implicar promoció professional ni activitat econòmica regulada. Sempre que consideris invertir, valora la teva situació personal i, si escau, consulta un assessor financer independent.'
-    },
-
-    en: {
-      htmlLang: 'en',
-      metaTitle: 'MisNeobancos — Smart financial comparison',
-      metaDescription: 'Comparison of neobanks, investing platforms and premium cards: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor and American Express Platinum. Practical information, lower fees and benefits for travellers and investors.',
-      ogTitle: 'MisNeobancos — Smart financial comparison',
-      ogDescription: 'Comparison of neobanks, investing platforms and premium cards. Revolut, N26, Trade Republic, Indexa Capital, MyInvestor and American Express Platinum.',
-      twitterTitle: 'MisNeobancos — Smart financial comparison',
-      twitterDescription: 'Comparison of digital banking, investing and premium cards with practical information and referral links.',
-      headerTagline: 'Digital banking, investing and premium card comparison',
-      headerSubtitle: 'Comparison of neobanks, investing platforms and premium cards: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor and American Express Platinum. A curated selection with practical information and referral links that may generate benefits for both the user and this website.',
-      updateLabel: 'Last updated: ',
-      heroAlt: 'Personal financial planning with analysis and charts',
-
-      infoTitle1: 'What is a neobank and why are more and more people choosing one?',
-      infoP1: 'A neobank is a digital financial institution, or a new-generation banking platform, designed to help you manage money easily from your phone. Its value proposition is based on a more agile user experience than traditional banking, with fast onboarding, intuitive day-to-day use and a clear focus on transparency, control and lower costs.',
-      infoP2: 'In practice, many neobanks allow you to open an account in minutes, track spending in real time, receive instant notifications, create virtual cards, freeze and unfreeze your card from the app and organise daily saving more effectively. Compared with traditional banks, one of their main advantages is often lower fees and more competitive international features, especially for people who travel, pay in foreign currencies or want a more modern and flexible financial experience.',
-
-      infoTitle2: 'The importance of investing for the long term',
-      infoP3: 'Saving matters, but long-term investing is often a much more powerful tool for building wealth. The reason is simple: capital not only has the potential to grow, it can also benefit from compound interest, meaning returns generated on accumulated returns over time.',
-      infoP4: 'Past market behaviour does not guarantee the future, but it does offer a useful reference point. Over long periods, equities have historically been the most rewarding liquid asset class. For many people, the key is not trying to guess what the market will do next month, but following a consistent, diversified strategy aligned with long-term financial goals.',
-
-      infoTitle3: 'What is an index and how is it built?',
-      infoP5: 'A stock market index is a theoretical basket of securities built according to objective rules. It serves as a benchmark to measure the performance of a specific part of the market, such as large US companies, global developed-market equities or a particular sector.',
-      infoP6: 'Indexes are not created randomly. They follow a clear methodology: which companies can be included, which size and liquidity criteria apply, how holdings are weighted and when the index is reviewed. In many cases, indexes are weighted by market capitalisation adjusted by free float, so larger companies carry more weight and the index more accurately reflects the market segment it is meant to represent.',
-
-      infoTitle4: 'What do active management and passive management mean?',
-      infoP7: 'In investing, active management means selecting assets with the aim of beating the market. In other words, a manager decides which stocks or bonds to buy and sell in order to achieve returns above a benchmark index.',
-      infoP8: 'Passive management, by contrast, does not try to guess which asset will perform best. Its goal is to replicate the behaviour of an index or a broad combination of markets at the lowest possible cost, usually through index funds, ETFs or diversified portfolios.',
-
-      infoTitle5: 'Benefits of passive management through index funds or indexed portfolios',
-      infoP9: 'Passive management has become one of the most solid and efficient ways to invest for the long term. Its main advantage is that it usually comes with much lower fees than active management, which is especially important because fees reduce long-term compounded returns. It also provides broad diversification by spreading investments across many companies, sectors and geographies, helping reduce unnecessary risks.',
-      infoP10: 'Another important advantage is simplicity. Instead of constantly buying and selling, investors can follow a more stable, disciplined and easier-to-maintain strategy. Indexed fund portfolios also add the benefits of rebalancing and automation, making it easier to keep the desired risk profile without making constant decisions.',
-      infoP11: 'It is also worth noting that, in a large number of cases, active managers fail to outperform their benchmark on a sustained basis, especially after fees. For that reason, a passive, diversified and low-cost strategy is especially appealing to many investors.',
-
-      infoTitle6: 'Historical returns, compound interest and a long-term perspective',
-      infoP12: 'As a historical reference, developed-market equities have delivered nominal annualised returns of around 8.5% since 1900. That does not mean the same will happen in the future, nor that markets rise every year, but it does help explain why long-term investing has been such a powerful tool for wealth creation.',
-      infoP13: 'This is where the power of compound interest comes in. If someone invests €10,000 today and earns an average annual return of 8% over 40 years, that capital would grow to approximately €217,245. Using an 8.5% annual assumption, the result would be around €261,330. This is not a promise of returns, but an illustrative example of how time can become one of an investor’s greatest allies.',
-
-      infoTitle7: 'Warren Buffett and the logic behind index funds',
-      infoP14: 'When discussing long-term investing, Warren Buffett is worth mentioning. Despite being one of the best-known advocates of business selection, he has repeatedly recommended low-cost index funds for most investors. His logic is clear: minimise costs, diversify broadly and let time and market returns work in the investor’s favour.',
-
-      infoTitle8: 'Trading, value investing and why these concepts should not be confused',
-      infoP15: 'It is also important to distinguish between investing and trading. Trading, especially intraday trading, requires a great deal of dedication, education, emotional control, risk management and constant market monitoring. It is neither easy nor quick, and it usually demands far more effort and discipline than it appears from the outside.',
-      infoP16: 'Value investing, by contrast, follows a different philosophy. It consists of analysing businesses and trying to buy good companies when they trade below their estimated intrinsic value. It is an approach based on fundamental analysis and patience, not on taking advantage of short-term price movements.',
-      infoP17: 'Put differently, trading seeks to profit from short-term price moves; value investing seeks to buy quality assets at reasonable or attractive prices; and passive management seeks to capture market returns in a diversified, simple and efficient way. They are different approaches, with different demands, costs and probabilities of success.',
-
-      infoTitle9: 'Why is American Express Platinum also included in this comparison?',
-      infoP18: 'Although this website focuses mainly on neobanks and investing, American Express Platinum is included because it responds to a different but complementary logic: financial optimisation for frequent travellers.',
-      infoP19: 'It does not compete with a neobank or an indexed portfolio. Instead, it fits as an option for users who value travel insurance, lounge access, hotel benefits, points accumulation and other perks associated with a more travel-oriented and premium lifestyle. In that context, it can make sense as part of a personal strategy for using money intelligently, provided its annual cost is justified by actual usage.',
-
-      revBadge: 'GLOBAL ACCOUNT',
-      revDesc: 'Multi-currency account for travel, international payments and app-based money management.',
-      revFeatures: '✔ Interbank exchange rates<br>✔ Virtual and physical cards<br>✔ Real-time spending control',
-      revBenefit: '💸 Up to €50 for each friend you invite',
-      revBtn: 'Open account',
-
-      n26Badge: 'DIGITAL BANKING',
-      n26Desc: 'Digital bank with Spanish IBAN and simple money management from your phone.',
-      n26Features: '✔ Spanish IBAN<br>✔ Automatic categories<br>✔ Smart saving',
-      n26Benefit: '💸 Get €15 when you open your account',
-      n26Btn: 'Open account',
-
-      trBadge: 'INVESTING',
-      trDesc: 'Invest in stocks and ETFs with low fees and a long-term approach.',
-      trFeatures: '✔ Global ETFs<br>✔ Automated plans<br>✔ Regulated European broker',
-      trBenefit: '📈 Get €10 in free shares + 2% APY',
-      trBtn: 'Open account',
-
-      indexaBadge: 'INDEX FUNDS',
-      indexaDesc: 'Automated management of indexed portfolios tailored to your profile.',
-      indexaFeatures: '✔ Global diversification<br>✔ Automatic rebalancing<br>✔ Passive investing',
-      indexaBenefit: '💰 €0 management fees up to €15,000 during the first year',
-      indexaBtn: 'Invest in index funds',
-
-      myinvBadge: 'SAVING & INVESTING',
-      myinvDesc: 'Spanish neobank with bank account and index fund investing.',
-      myinvFeatures: '✔ Bank account<br>✔ Index funds<br>✔ Low fees',
-      myinvBenefit: '🎁 Get €25 when you open your account',
-      myinvBtn: 'Open account',
-
-      amexBadge: 'PREMIUM LIFESTYLE',
-      amexDesc: 'Premium card designed for travel, exclusive experiences and high-end benefits.',
-      amexFeatures: '✔ Lounge access<br>✔ Premium travel insurance<br>✔ Hotel benefits<br>✔ Membership Rewards programme',
-      amexBenefit: '✈️ Up to 60,000 points for travel',
-      amexBtn: 'Apply for Amex Platinum',
-
-      legalTitle: 'Legal notice',
-      legalText: 'The information on this website is strictly general and informational in nature. It does not constitute financial advice or a personalised investment recommendation. Referral links are used transparently, indicating that they may generate benefits for both parties, without implying professional promotion or regulated economic activity. Before investing, always consider your personal circumstances and, where appropriate, consult an independent financial adviser.'
-    }
+  const localeMap = {
+    es: 'es-ES',
+    ca: 'ca-ES',
+    en: 'en-GB'
   };
 
-  const metaDescription = document.querySelector('meta[name="description"]');
-  const ogTitle = document.querySelector('meta[property="og:title"]');
-  const ogDescription = document.querySelector('meta[property="og:description"]');
-  const twitterTitle = document.querySelector('meta[name="twitter:title"]');
-  const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+  const labelMap = {
+    es: 'Última actualización: ',
+    ca: 'Última actualització: ',
+    en: 'Last updated: '
+  };
 
-  function setHTML(id, value) {
-    const el = document.getElementById(id);
-    if (el) el.innerHTML = value;
-  }
-
-  function setText(id, value) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = value;
-  }
-
-  function updateLastUpdated(lang) {
-    const updateEl = document.getElementById('update');
-    if (!updateEl) return;
-
-    const date = new Date();
-    date.setDate(date.getDate() - 3);
-
-    const localeMap = {
-      es: 'es-ES',
-      ca: 'ca-ES',
-      en: 'en-GB'
-    };
-
-    const dateFormatted = date.toLocaleDateString(localeMap[lang] || 'es-ES', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric'
-    });
-
-    updateEl.textContent = translations[lang].updateLabel + dateFormatted;
-  }
-
-  function applyLanguage(lang) {
-    const t = translations[lang] || translations.es;
-
-    document.documentElement.lang = t.htmlLang;
-    document.title = t.metaTitle;
-
-    if (metaDescription) metaDescription.setAttribute('content', t.metaDescription);
-    if (ogTitle) ogTitle.setAttribute('content', t.ogTitle);
-    if (ogDescription) ogDescription.setAttribute('content', t.ogDescription);
-    if (twitterTitle) twitterTitle.setAttribute('content', t.twitterTitle);
-    if (twitterDescription) twitterDescription.setAttribute('content', t.twitterDescription);
-
-    setText('header-tagline', t.headerTagline);
-    setText('header-subtitle', t.headerSubtitle);
-    setText('legal-title', t.legalTitle);
-    setText('legal-text', t.legalText);
-
-    const heroImage = document.getElementById('hero-image');
-    if (heroImage) heroImage.alt = t.heroAlt;
-
-    setText('info-title-1', t.infoTitle1);
-    setText('info-p-1', t.infoP1);
-    setText('info-p-2', t.infoP2);
-
-    setText('info-title-2', t.infoTitle2);
-    setText('info-p-3', t.infoP3);
-    setText('info-p-4', t.infoP4);
-
-    setText('info-title-3', t.infoTitle3);
-    setText('info-p-5', t.infoP5);
-    setText('info-p-6', t.infoP6);
-
-    setText('info-title-4', t.infoTitle4);
-    setText('info-p-7', t.infoP7);
-    setText('info-p-8', t.infoP8);
-
-    setText('info-title-5', t.infoTitle5);
-    setText('info-p-9', t.infoP9);
-    setText('info-p-10', t.infoP10);
-    setText('info-p-11', t.infoP11);
-
-    setText('info-title-6', t.infoTitle6);
-    setText('info-p-12', t.infoP12);
-    setText('info-p-13', t.infoP13);
-
-    setText('info-title-7', t.infoTitle7);
-    setText('info-p-14', t.infoP14);
-
-    setText('info-title-8', t.infoTitle8);
-    setText('info-p-15', t.infoP15);
-    setText('info-p-16', t.infoP16);
-    setText('info-p-17', t.infoP17);
-
-    setText('info-title-9', t.infoTitle9);
-    setText('info-p-18', t.infoP18);
-    setText('info-p-19', t.infoP19);
-
-    setText('rev-badge', t.revBadge);
-    setText('rev-desc', t.revDesc);
-    setHTML('rev-features', t.revFeatures);
-    setText('rev-benefit', t.revBenefit);
-    setText('rev-btn', t.revBtn);
-
-    setText('n26-badge', t.n26Badge);
-    setText('n26-desc', t.n26Desc);
-    setHTML('n26-features', t.n26Features);
-    setText('n26-benefit', t.n26Benefit);
-    setText('n26-btn', t.n26Btn);
-
-    setText('tr-badge', t.trBadge);
-    setText('tr-desc', t.trDesc);
-    setHTML('tr-features', t.trFeatures);
-    setText('tr-benefit', t.trBenefit);
-    setText('tr-btn', t.trBtn);
-
-    setText('indexa-badge', t.indexaBadge);
-    setText('indexa-desc', t.indexaDesc);
-    setHTML('indexa-features', t.indexaFeatures);
-    setText('indexa-benefit', t.indexaBenefit);
-    setText('indexa-btn', t.indexaBtn);
-
-    setText('myinv-badge', t.myinvBadge);
-    setText('myinv-desc', t.myinvDesc);
-    setHTML('myinv-features', t.myinvFeatures);
-    setText('myinv-benefit', t.myinvBenefit);
-    setText('myinv-btn', t.myinvBtn);
-
-    setText('amex-badge', t.amexBadge);
-    setText('amex-desc', t.amexDesc);
-    setHTML('amex-features', t.amexFeatures);
-    setText('amex-benefit', t.amexBenefit);
-    setText('amex-btn', t.amexBtn);
-
-    updateLastUpdated(lang);
-
-    document.querySelectorAll('.lang-btn').forEach(function(btn){
-      const isActive = btn.dataset.lang === lang;
-      btn.classList.toggle('active', isActive);
-      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-    });
-
-    localStorage.setItem('misneobancos-lang', lang);
-  }
-
-  document.querySelectorAll('.lang-btn').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      applyLanguage(btn.dataset.lang);
-    });
+  const currentLang = 'es';
+  const dateFormatted = date.toLocaleDateString(localeMap[currentLang], {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
   });
 
-  const savedLang = localStorage.getItem('misneobancos-lang');
-  const browserLang = (navigator.language || '').toLowerCase();
-
-  let initialLang = 'es';
-  if (savedLang && translations[savedLang]) {
-    initialLang = savedLang;
-  } else if (browserLang.startsWith('ca')) {
-    initialLang = 'ca';
-  } else if (browserLang.startsWith('en')) {
-    initialLang = 'en';
-  }
-
-  applyLanguage(initialLang);
+  updateEl.textContent = labelMap[currentLang] + dateFormatted;
 })();
 </script>
 

@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>MisNeobancos — Smart financial comparison</title>
+
+<meta name="description" content="Comparison of neobanks, investing platforms and premium cards: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor and American Express Platinum. Practical information, lower fees and benefits for travellers and investors.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://misneobancos.com/en/">
+
+<link rel="alternate" hreflang="es" href="https://misneobancos.com/">
+<link rel="alternate" hreflang="ca" href="https://misneobancos.com/ca/">
+<link rel="alternate" hreflang="en" href="https://misneobancos.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://misneobancos.com/">
+
+<meta name="author" content="MisNeobancos">
+<meta name="theme-color" content="#0b1220">
+<meta name="application-name" content="MisNeobancos">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="MisNeobancos — Smart financial comparison">
+<meta property="og:description" content="Comparison of neobanks, investing platforms and premium cards. Revolut, N26, Trade Republic, Indexa Capital, MyInvestor and American Express Platinum.">
+<meta property="og:url" content="https://misneobancos.com/en/">
+<meta property="og:image" content="https://misneobancos.com/plan-financiero-personal-2.jpg">
+<meta property="og:site_name" content="MisNeobancos">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MisNeobancos — Smart financial comparison">
+<meta name="twitter:description" content="Comparison of neobanks, investing platforms and premium cards: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor and American Express Platinum. Practical information, lower fees and benefits for travellers and investors.">
+<meta name="twitter:image" content="https://misneobancos.com/plan-financiero-personal-2.jpg">
+
+<link rel="preload" as="image" href="/plan-financiero-personal.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "MisNeobancos",
+  "url": "https://misneobancos.com/",
+  "description": "Comparison of neobanks, investing platforms and premium cards: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor and American Express Platinum. Practical information, lower fees and benefits for travellers and investors.",
+  "inLanguage": "en",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MisNeobancos",
+    "url": "https://misneobancos.com/"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Financial comparison",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Revolut" },
+    { "@type": "ListItem", "position": 2, "name": "N26" },
+    { "@type": "ListItem", "position": 3, "name": "Trade Republic" },
+    { "@type": "ListItem", "position": 4, "name": "Indexa Capital" },
+    { "@type": "ListItem", "position": 5, "name": "MyInvestor" },
+    { "@type": "ListItem", "position": 6, "name": "American Express Platinum" }
+  ]
+}
+</script>
+
+<style>
+
+:root{
+  --bg:#f6f8fc;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#6b7280;
+  --accent:#111827;
+  --accent-2:#1f2937;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+*{ box-sizing:border-box; }
+body{ margin:0; background:var(--bg); color:var(--text); }
+header{
+  position:relative;
+  background:linear-gradient(135deg,#0b1220,#111b33);
+  color:white;
+  padding:28px 16px;
+  text-align:center;
+}
+header h1{ margin:0; font-size:22px; }
+header p{ margin-top:8px; color:#a9b4c6; font-size:14px; }
+header .subtitle{
+  margin-top:10px;
+  font-size:13px;
+  color:#cbd5e1;
+  max-width:760px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:1.5;
+}
+.top-info{ margin-top:10px; font-size:12px; color:#94a3b8; }
+.lang-switcher{
+  position:absolute;
+  top:16px;
+  right:16px;
+  display:flex;
+  gap:8px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.lang-link{
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.08);
+  color:#e5e7eb;
+  border-radius:999px;
+  padding:8px 12px;
+  font-size:12px;
+  font-weight:700;
+  text-decoration:none;
+  transition:.2s;
+}
+.lang-link:hover{ background:rgba(255,255,255,.14); }
+.lang-link.active{
+  background:white;
+  color:#0f172a;
+  border-color:white;
+}
+.hero-image{
+  max-width:1200px;
+  margin:20px auto 8px;
+  padding:0 16px;
+}
+.hero-image-frame{
+  height:290px;
+  overflow:hidden;
+  border-radius:22px;
+  box-shadow:0 14px 35px rgba(15,23,42,.12);
+  background:#e5e7eb;
+}
+.hero-image-frame img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+}
+.container{
+  max-width:1200px;
+  margin:24px auto;
+  padding:16px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.card{
+  background:white;
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
+  transition:.2s;
+}
+.card:hover{ transform:translateY(-2px); }
+.badge{
+  display:inline-block;
+  font-size:12px;
+  background:#eef2ff;
+  color:#4f46e5;
+  padding:4px 10px;
+  border-radius:999px;
+  margin-bottom:10px;
+}
+h2{ margin:0 0 8px; font-size:20px; }
+h3{ margin:20px 0 8px; font-size:17px; color:var(--text); }
+p{ color:var(--muted); font-size:14px; line-height:1.6; }
+.benefit{
+  margin-top:12px;
+  font-size:13px;
+  font-weight:700;
+  color:#1d4ed8;
+}
+.btn{
+  display:block;
+  margin-top:8px;
+  padding:12px;
+  border-radius:12px;
+  text-align:center;
+  text-decoration:none;
+  font-weight:800;
+  color:white;
+  background:linear-gradient(135deg,#111827,#1f2937);
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+  transition:.2s;
+}
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+.premium{
+  border:1px solid #d1d5db;
+  background:linear-gradient(180deg,#ffffff,#f3f4f6);
+  position:relative;
+  overflow:hidden;
+}
+.premium::before{
+  content:"PLATINUM";
+  position:absolute;
+  top:12px;
+  right:-40px;
+  background:#111;
+  color:#e5e7eb;
+  font-size:10px;
+  padding:6px 45px;
+  transform:rotate(35deg);
+}
+.info-block{
+  background:white;
+  border-radius:18px;
+  padding:24px;
+  box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+.footer{
+  max-width:1200px;
+  margin:30px auto;
+  padding:16px;
+}
+.legal{
+  background:white;
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.05);
+  font-size:12.5px;
+  color:var(--muted);
+  line-height:1.6;
+}
+@media(max-width:900px){
+  .grid{ grid-template-columns:1fr; }
+  .hero-image-frame{ height:170px; }
+  .hero-image-frame img{ object-position:center top; }
+  .info-block{ padding:20px; }
+  .lang-switcher{
+    position:static;
+    justify-content:center;
+    margin-bottom:12px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="lang-switcher" aria-label="Language selector">
+    <a class="lang-link" href="/" hreflang="es">ES</a> <a class="lang-link" href="/ca/" hreflang="ca">CAT</a> <a class="lang-link active" href="/en/" hreflang="en">EN</a>
+  </div>
+
+  <h1>MisNeobancos</h1>
+  <p>Digital banking, investing and premium card comparison</p>
+
+  <p class="subtitle">
+    Comparison of neobanks, investing platforms and premium cards: Revolut, N26, Trade Republic, Indexa Capital, MyInvestor and American Express Platinum. A curated selection with practical information and referral links that may generate benefits for both the user and this website.
+  </p>
+
+  <div class="top-info" id="update"></div>
+</header>
+
+<section class="hero-image">
+  <div class="hero-image-frame">
+    <img src="/plan-financiero-personal.png" alt="Personal financial planning with analysis and charts">
+  </div>
+</section>
+
+<div class="container">
+  <div class="info-block">
+    <h2>What is a neobank and why are more and more people choosing one?</h2>
+    <p>A neobank is a digital financial institution, or a new-generation banking platform, designed to help you manage money easily from your phone. Its value proposition is based on a more agile user experience than traditional banking, with fast onboarding, intuitive day-to-day use and a clear focus on transparency, control and lower costs.</p>
+    <p>In practice, many neobanks allow you to open an account in minutes, track spending in real time, receive instant notifications, create virtual cards, freeze and unfreeze your card from the app and organise daily saving more effectively. Compared with traditional banks, one of their main advantages is often lower fees and more competitive international features, especially for people who travel, pay in foreign currencies or want a more modern and flexible financial experience.</p>
+    <h3>The importance of investing for the long term</h3>
+    <p>Saving matters, but long-term investing is often a much more powerful tool for building wealth. The reason is simple: capital not only has the potential to grow, it can also benefit from compound interest, meaning returns generated on accumulated returns over time.</p>
+    <p>Past market behaviour does not guarantee the future, but it does offer a useful reference point. Over long periods, equities have historically been the most rewarding liquid asset class. For many people, the key is not trying to guess what the market will do next month, but following a consistent, diversified strategy aligned with long-term financial goals.</p>
+    <h3>What is an index and how is it built?</h3>
+    <p>A stock market index is a theoretical basket of securities built according to objective rules. It serves as a benchmark to measure the performance of a specific part of the market, such as large US companies, global developed-market equities or a particular sector.</p>
+    <p>Indexes are not created randomly. They follow a clear methodology: which companies can be included, which size and liquidity criteria apply, how holdings are weighted and when the index is reviewed. In many cases, indexes are weighted by market capitalisation adjusted by free float, so larger companies carry more weight and the index more accurately reflects the market segment it is meant to represent.</p>
+    <h3>What do active management and passive management mean?</h3>
+    <p>In investing, active management means selecting assets with the aim of beating the market. In other words, a manager decides which stocks or bonds to buy and sell in order to achieve returns above a benchmark index.</p>
+    <p>Passive management, by contrast, does not try to guess which asset will perform best. Its goal is to replicate the behaviour of an index or a broad combination of markets at the lowest possible cost, usually through index funds, ETFs or diversified portfolios.</p>
+    <h3>Benefits of passive management through index funds or indexed portfolios</h3>
+    <p>Passive management has become one of the most solid and efficient ways to invest for the long term. Its main advantage is that it usually comes with much lower fees than active management, which is especially important because fees reduce long-term compounded returns. It also provides broad diversification by spreading investments across many companies, sectors and geographies, helping reduce unnecessary risks.</p>
+    <p>Another important advantage is simplicity. Instead of constantly buying and selling, investors can follow a more stable, disciplined and easier-to-maintain strategy. Indexed fund portfolios also add the benefits of rebalancing and automation, making it easier to keep the desired risk profile without making constant decisions.</p>
+    <p>It is also worth noting that, in a large number of cases, active managers fail to outperform their benchmark on a sustained basis, especially after fees. For that reason, a passive, diversified and low-cost strategy is especially appealing to many investors.</p>
+    <h3>Historical returns, compound interest and a long-term perspective</h3>
+    <p>As a historical reference, developed-market equities have delivered nominal annualised returns of around 8.5% since 1900. That does not mean the same will happen in the future, nor that markets rise every year, but it does help explain why long-term investing has been such a powerful tool for wealth creation.</p>
+    <p>This is where the power of compound interest comes in. If someone invests €10,000 today and earns an average annual return of 8% over 40 years, that capital would grow to approximately €217,245. Using an 8.5% annual assumption, the result would be around €261,330. This is not a promise of returns, but an illustrative example of how time can become one of an investor’s greatest allies.</p>
+    <h3>Warren Buffett and the logic behind index funds</h3>
+    <p>When discussing long-term investing, Warren Buffett is worth mentioning. Despite being one of the best-known advocates of business selection, he has repeatedly recommended low-cost index funds for most investors. His logic is clear: minimise costs, diversify broadly and let time and market returns work in the investor’s favour.</p>
+    <h3>Trading, value investing and why these concepts should not be confused</h3>
+    <p>It is also important to distinguish between investing and trading. Trading, especially intraday trading, requires a great deal of dedication, education, emotional control, risk management and constant market monitoring. It is neither easy nor quick, and it usually demands far more effort and discipline than it appears from the outside.</p>
+    <p>Value investing, by contrast, follows a different philosophy. It consists of analysing businesses and trying to buy good companies when they trade below their estimated intrinsic value. It is an approach based on fundamental analysis and patience, not on taking advantage of short-term price movements.</p>
+    <p>Put differently, trading seeks to profit from short-term price moves; value investing seeks to buy quality assets at reasonable or attractive prices; and passive management seeks to capture market returns in a diversified, simple and efficient way. They are different approaches, with different demands, costs and probabilities of success.</p>
+    <h3>Why is American Express Platinum also included on this website?</h3>
+    <p>Although this website focuses mainly on neobanks and investing, American Express Platinum is included because it responds to a different but complementary logic: financial optimisation for frequent travellers.</p>
+    <p>It does not compete with a neobank or an indexed portfolio. Instead, it fits as an option for users who value travel insurance, lounge access, hotel benefits, points accumulation and other perks associated with a more travel-oriented and premium lifestyle. In that context, it can make sense as part of a personal strategy for using money intelligently, provided its annual cost is justified by actual usage.</p>
+  </div>
+</div>
+
+<div class="container grid">
+
+  <div class="card">
+    <div class="badge">GLOBAL ACCOUNT</div>
+    <h2>Revolut</h2>
+    <p>Multi-currency account for travel, international payments and app-based money management.</p>
+    <p>✔ Interbank exchange rates<br>✔ Virtual and physical cards<br>✔ Real-time spending control</p>
+    <p class="benefit">💸 Up to €50 for each friend you invite</p>
+    <a class="btn" href="https://revolut.com/referral/?referral-code=marc6xpqk!APR1-26-AR-CRY&geo-redirect">Open account</a>
+  </div>
+  <div class="card">
+    <div class="badge">DIGITAL BANKING</div>
+    <h2>N26</h2>
+    <p>Digital bank with Spanish IBAN and simple money management from your phone.</p>
+    <p>✔ Spanish IBAN<br>✔ Automatic categories<br>✔ Smart saving</p>
+    <p class="benefit">💸 Get €15 when you open your account</p>
+    <a class="btn" href="https://n26.com/r/marcq8763">Open account</a>
+  </div>
+  <div class="card">
+    <div class="badge">INVESTING</div>
+    <h2>Trade Republic</h2>
+    <p>Invest in stocks and ETFs with low fees and a long-term approach.</p>
+    <p>✔ Global ETFs<br>✔ Automated plans<br>✔ Regulated European broker</p>
+    <p class="benefit">📈 Get €10 in free shares + 2% APY</p>
+    <a class="btn" href="https://refnocode.trade.re/z907j81c">Open account</a>
+  </div>
+  <div class="card">
+    <div class="badge">INDEX FUNDS</div>
+    <h2>Indexa Capital</h2>
+    <p>Automated management of indexed portfolios tailored to your profile.</p>
+    <p>✔ Global diversification<br>✔ Automatic rebalancing<br>✔ Passive investing</p>
+    <p class="benefit">💰 €0 management fees up to €15,000 during the first year</p>
+    <a class="btn" href="https://indexacapital.com/t/MhZ02B">Invest in index funds</a>
+  </div>
+  <div class="card">
+    <div class="badge">SAVING & INVESTING</div>
+    <h2>MyInvestor</h2>
+    <p>Spanish neobank with bank account and index fund investing.</p>
+    <p>✔ Bank account<br>✔ Index funds<br>✔ Low fees</p>
+    <p class="benefit">🎁 Get €25 when you open your account</p>
+    <a class="btn" href="https://newapp.myinvestor.es/do/signup?promotionalCode=YADUA">Open account</a>
+  </div>
+  <div class="card premium">
+    <div class="badge">PREMIUM LIFESTYLE</div>
+    <h2>American Express Platinum</h2>
+    <p>Premium card designed for travel, exclusive experiences and high-end benefits.</p>
+    <p>✔ Lounge access<br>✔ Premium travel insurance<br>✔ Hotel benefits<br>✔ Membership Rewards programme</p>
+    <p class="benefit">✈️ Up to 60,000 points for travel</p>
+    <a class="btn" href="https://americanexpress.com/es-es/referral/platinum?ref=mARCQPice&XLINK=MYCP">Apply for Amex Platinum</a>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="legal">
+    <strong>Legal notice</strong><br><br>
+    The information on this website is strictly general and informational in nature. It does not constitute financial advice or a personalised investment recommendation. Referral links are used transparently, indicating that they may generate benefits for both parties, without implying professional promotion or regulated economic activity. Before investing, always consider your personal circumstances and, where appropriate, consult an independent financial adviser.
+  </div>
+</div>
+
+<script>
+(function () {
+  const updateEl = document.getElementById('update');
+  if (!updateEl) return;
+
+  const date = new Date();
+  date.setDate(date.getDate() - 3);
+
+  const localeMap = {
+    es: 'es-ES',
+    ca: 'ca-ES',
+    en: 'en-GB'
+  };
+
+  const labelMap = {
+    es: 'Última actualización: ',
+    ca: 'Última actualització: ',
+    en: 'Last updated: '
+  };
+
+  const currentLang = 'en';
+  const dateFormatted = date.toLocaleDateString(localeMap[currentLang], {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+  });
+
+  updateEl.textContent = labelMap[currentLang] + dateFormatted;
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+ESTRUCTURA CORRECTA DE SUBIDA
+
+Sube exactamente estos archivos y carpetas respetando esta estructura:
+
+/
+├── index.html
+├── robots.txt
+├── sitemap.xml
+├── plan-financiero-personal.png   ← debes subir también esta imagen en la raíz
+├── /ca/
+│   └── index.html
+└── /en/
+    └── index.html
+
+RESULTADO ESPERADO EN LAS URLS
+- https://misneobancos.com/           → español
+- https://misneobancos.com/ca/        → catalán
+- https://misneobancos.com/en/        → inglés
+- https://misneobancos.com/robots.txt
+- https://misneobancos.com/sitemap.xml
+
+IMPORTANTE
+- Sí, en este caso es correcto que los tres archivos se llamen index.html.
+- La página en español va en la raíz.
+- Las otras versiones van dentro de /ca/ y /en/.
+- El selector de idioma debe apuntar a esas carpetas.
+- Si no subes la imagen plan-financiero-personal.png, no se verá la cabecera.
