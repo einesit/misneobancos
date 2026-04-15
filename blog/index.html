@@ -1,401 +1,150 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Blog de neobancos, cuentas online y banca digital | MisNeobancos</title>
-  <meta name="description" content="Blog de MisNeobancos con guías detalladas, comparativas y consejos sobre neobancos, cuentas online, tarjetas, viajes, seguridad y comisiones.">
+  <meta name="description" content="Blog de MisNeobancos con guías y comparativas sobre neobancos, cuentas online, tarjetas, viajes, ahorro e inversión básica.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://misneobancos.com/blog/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Blog de neobancos, cuentas online y banca digital | MisNeobancos">
-  <meta property="og:description" content="Blog de MisNeobancos con guías detalladas, comparativas y consejos sobre neobancos, cuentas online, tarjetas, viajes, seguridad y comisiones.">
+  <meta property="og:description" content="Blog de MisNeobancos con guías y comparativas sobre neobancos, cuentas online, tarjetas, viajes, ahorro e inversión básica.">
   <meta property="og:url" content="https://misneobancos.com/blog/">
   <meta property="og:site_name" content="MisNeobancos">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#0f766e">
+  <meta name="theme-color" content="#000000">
   
-  <style>
-
-    :root {
-      --bg: #f6f8fb;
-      --surface: #ffffff;
-      --text: #172033;
-      --muted: #5c667a;
-      --line: #dbe3ef;
-      --brand: #0f766e;
-      --brand-dark: #0b5b56;
-      --accent: #e6f6f4;
-      --accent-2: #eff8ff;
-      --shadow: 0 12px 32px rgba(18, 31, 53, 0.08);
-      --radius: 18px;
-      --radius-lg: 24px;
-      --max: 1120px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.72;
-    }
-    a { color: var(--brand); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    img { max-width: 100%; height: auto; }
-    .container { width: min(calc(100% - 2rem), var(--max)); margin: 0 auto; }
-    .topbar {
-      background: rgba(255,255,255,.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .topbar-inner {
-      min-height: 74px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .brand {
-      font-size: 1.2rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: var(--text);
-    }
-    .brand span { color: var(--brand); }
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: .95rem;
-      flex-wrap: wrap;
-    }
-    .nav a {
-      color: var(--muted);
-      font-weight: 700;
-      padding: .5rem .15rem;
-      border-bottom: 2px solid transparent;
-    }
-    .nav a.active {
-      color: var(--text);
-      border-bottom-color: var(--brand);
-    }
-    .btn, .btn-outline {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: .9rem 1.15rem;
-      border-radius: 999px;
-      font-weight: 800;
-      transition: .2s ease;
-    }
-    .btn {
-      background: var(--brand);
-      color: white;
-      box-shadow: var(--shadow);
-    }
-    .btn:hover { background: var(--brand-dark); text-decoration: none; }
-    .btn-outline {
-      border: 1px solid var(--line);
-      background: white;
-      color: var(--text);
-    }
-    .btn-outline:hover { border-color: var(--brand); text-decoration: none; }
-    .hero {
-      padding: 4rem 0 2.5rem;
-      background:
-        radial-gradient(circle at top left, rgba(15, 118, 110, 0.11), transparent 34%),
-        linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
-      border-bottom: 1px solid var(--line);
-    }
-    .eyebrow, .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: .45rem;
-      padding: .38rem .72rem;
-      border-radius: 999px;
-      background: var(--accent);
-      color: var(--brand-dark);
-      font-size: .92rem;
-      font-weight: 800;
-    }
-    h1, h2, h3 { line-height: 1.14; letter-spacing: -0.03em; color: var(--text); margin: 0 0 .85rem; }
-    h1 { font-size: clamp(2.15rem, 4vw, 3.6rem); }
-    h2 { font-size: clamp(1.55rem, 2.7vw, 2.2rem); margin-top: 2.15rem; }
-    h3 { font-size: 1.17rem; margin-top: 1.4rem; }
-    p, li { color: var(--text); }
-    .lead {
-      font-size: 1.08rem;
-      color: var(--muted);
-      max-width: 72ch;
-    }
-    .card, .panel, .article-card, .faq-item, .cta-box, .note, .toc {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .section { padding: 1rem 0 3.5rem; }
-    .grid-2 { display: grid; grid-template-columns: 1.18fr .82fr; gap: 1.4rem; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-    .meta { display: flex; gap: .8rem; flex-wrap: wrap; color: var(--muted); font-size: .95rem; margin-top: 1rem; }
-    .breadcrumbs { color: var(--muted); font-size: .95rem; margin-bottom: 1rem; }
-    .hero-card { padding: clamp(1.35rem, 3vw, 2.3rem); }
-    .panel { padding: 1.3rem; }
-    .panel ul, .note ul, .toc ul { margin: .7rem 0 0 1rem; padding: 0; }
-    .muted { color: var(--muted); }
-    .article-card { overflow: hidden; }
-    .article-card .body { padding: 1.2rem 1.25rem 1.3rem; }
-    .cover {
-      min-height: 220px;
-      padding: 1.4rem;
-      display: flex;
-      align-items: end;
-      background:
-        linear-gradient(135deg, rgba(15,118,110,.08), rgba(15,118,110,.22)),
-        linear-gradient(145deg, #f8fbff, #dff6f2);
-    }
-    .cover strong {
-      display: inline-block;
-      background: rgba(255,255,255,.88);
-      border: 1px solid rgba(255,255,255,.8);
-      padding: .8rem 1rem;
-      border-radius: 16px;
-      line-height: 1.25;
-      max-width: 28ch;
-      font-size: 1.1rem;
-    }
-    .list-clean { padding-left: 1.15rem; }
-    .faq-list { display: grid; gap: 1rem; }
-    .faq-item { padding: 1.2rem 1.2rem 1rem; }
-    .faq-item h3 { margin-top: 0; font-size: 1.08rem; }
-    .cta-box {
-      padding: 1.5rem;
-      background:
-        linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
-    }
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 2rem 0 3rem;
-      color: var(--muted);
-      background: linear-gradient(180deg, rgba(255,255,255,.65), transparent);
-    }
-    .footer-grid {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0 1.4rem;
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      overflow: hidden;
-      display: block;
-    }
-    th, td {
-      padding: .9rem .95rem;
-      border-bottom: 1px solid var(--line);
-      text-align: left;
-      vertical-align: top;
-    }
-    th { background: #f8fbfe; }
-    .article-wrap {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 320px;
-      gap: 1.5rem;
-      align-items: start;
-    }
-    .content, .toc { padding: 1.4rem; }
-    .content p { margin: 0 0 1rem; }
-    .content ul, .content ol { padding-left: 1.2rem; }
-    .sticky { position: sticky; top: 96px; }
-    @media (max-width: 960px) {
-      .grid-2, .grid-3, .article-wrap { grid-template-columns: 1fr; }
-      .sticky { position: static; }
-    }
-    @media (max-width: 640px) {
-      .hero { padding-top: 2.7rem; }
-      .nav { gap: .7rem; }
-      .topbar-inner { min-height: 68px; }
-      .btn, .btn-outline { width: 100%; }
-    }
-
-  </style>
-  
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Blog",
-  "name":"Blog de MisNeobancos",
-  "url":"https://misneobancos.com/blog/",
-  "description":"Blog con guías y comparativas sobre neobancos, cuentas online, tarjetas, comisiones y banca digital.",
-  "publisher":{
-    "@type":"Organization",
-    "name":"MisNeobancos",
-    "url":"https://misneobancos.com/"
-  },
-  "blogPost":[
-    {
-      "@type":"BlogPosting",
-      "headline":"Qué es un neobanco y cómo elegir el mejor según tu perfil",
-      "url":"https://misneobancos.com/blog/que-es-un-neobanco-y-como-elegir.html"
-    },
-    {
-      "@type":"BlogPosting",
-      "headline":"Mejor neobanco para viajar: qué mirar antes de elegir",
-      "url":"https://misneobancos.com/blog/mejor-neobanco-para-viajar.html"
-    },
-    {
-      "@type":"BlogPosting",
-      "headline":"Cuenta online sin comisiones o neobanco: diferencias reales",
-      "url":"https://misneobancos.com/blog/cuenta-online-sin-comisiones-vs-neobanco.html"
-    }
-  ]
+<style>
+:root{
+  --bg:#ffffff;
+  --text:#111111;
+  --muted:#4b5563;
+  --line:#e5e7eb;
+  --soft:#f7f7f7;
+  --header:#000000;
+  --header-text:#ffffff;
+  --max:980px;
 }
-</script>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+a{color:var(--text);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto}
+.container{width:min(calc(100% - 2rem),var(--max));margin:0 auto}
+.topbar{background:var(--header);color:var(--header-text)}
+.topbar-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{font-size:1.45rem;font-weight:800;letter-spacing:-.02em;color:#fff}
+.brand:hover{text-decoration:none}
+.nav{display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap}
+.nav a{color:rgba(255,255,255,.85);font-weight:700}
+.nav a.active,.nav a:hover{color:#fff;text-decoration:none}
+.hero{padding:3.25rem 0 2rem}
+.hero.center{text-align:center}
+.kicker{display:inline-block;font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#111;margin-bottom:1rem}
+h1,h2,h3{line-height:1.16;letter-spacing:-.03em;color:#111;margin:0 0 .9rem}
+h1{font-size:clamp(2.1rem,4.6vw,3.55rem)}
+h2{font-size:clamp(1.55rem,3vw,2.25rem);margin-top:2rem}
+h3{font-size:1.1rem;margin-top:1.15rem}
+p{margin:0 0 1rem}
+.lead{font-size:1.06rem;color:var(--muted);max-width:800px}
+.center .lead{margin-left:auto;margin-right:auto}
+.section{padding:0 0 2.6rem}
+.grid{display:grid;gap:1rem}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{border:1px solid var(--line);background:#fff;padding:1.35rem}
+.soft{background:var(--soft)}
+.meta{display:flex;gap:1rem;flex-wrap:wrap;color:var(--muted);font-size:.95rem;margin-top:1rem}
+.list{padding-left:1.15rem;margin:0}
+.list li{margin:.45rem 0}
+.btn{display:inline-block;background:#111;color:#fff;padding:.82rem 1.05rem;font-weight:700;border-radius:0}
+.btn:hover{text-decoration:none;background:#000}
+.btn-light{display:inline-block;border:1px solid var(--line);padding:.82rem 1.05rem;font-weight:700}
+.btn-light:hover{text-decoration:none;background:var(--soft)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.article-card{border:1px solid var(--line);padding:1.35rem;background:#fff}
+.article-card .eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#555;margin-bottom:.75rem}
+.article-card h3{margin-top:0;font-size:1.35rem}
+.article-card p{color:#374151}
+.breadcrumbs{font-size:.95rem;color:var(--muted);margin-bottom:1rem}
+.article-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:2rem}
+.aside-box{border:1px solid var(--line);padding:1.15rem;background:var(--soft)}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem}
+th,td{padding:.8rem;border:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--soft)}
+.cta{border-top:3px solid #111;padding-top:1rem;margin-top:2rem}
+footer{border-top:1px solid var(--line);padding:1.6rem 0 2.4rem;color:var(--muted)}
+.footer-inner{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+@media (max-width:900px){.cards,.grid-2,.article-layout{grid-template-columns:1fr}.topbar-inner{padding:.8rem 0}}
+</style>
 
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Blog de MisNeobancos","url":"https://misneobancos.com/blog/","description":"Guías y comparativas sobre neobancos, cuentas online, tarjetas, viajes y ahorro.","publisher":{"@type":"Organization","name":"MisNeobancos","url":"https://misneobancos.com/"}}</script>
 </head>
 <body>
-
-
-<header class="topbar">
-  <div class="container topbar-inner">
-    <a class="brand" href="/"><span>Mis</span>Neobancos</a>
-    <nav class="nav" aria-label="Principal">
-      <a href="/">Inicio</a>
-      <a href="/blog/" class="active">Blog</a>
-      <a href="/faq.html">FAQ</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
+<header class="topbar"><div class="container topbar-inner"><a class="brand" href="/blog/">MisNeobancos</a><nav class="nav" aria-label="Principal"><a href="/blog/" class="active">Blog</a><a href="/faq.html">FAQ</a></nav></div></header>
+<section class="hero center">
   <div class="container">
-    <div class="grid-2">
-      <div class="card hero-card">
-        <div class="eyebrow">Blog sobre neobancos y banca digital</div>
-        <h1>Guías claras para entender, comparar y elegir mejor</h1>
-        <p class="lead">En este blog encontrarás contenidos pensados para responder dudas reales sobre neobancos, cuentas online, tarjetas, comisiones, seguridad, viajes y uso diario. El objetivo es ayudarte a entender mejor tus opciones y moverte con más criterio en tu día a día financiero.</p>
-        <div class="meta">
-          <span>Guías prácticas</span>
-          <span>Comparativas claras</span>
-          <span>Consejos para el día a día</span>
-        </div>
-        <p style="margin-top:1.2rem; display:flex; gap:.8rem; flex-wrap:wrap;">
-          <a class="btn" href="/">Ir a Inicio</a>
-          <a class="btn-outline" href="/faq.html">Ver preguntas frecuentes</a>
-        </p>
-      </div>
-      <aside class="panel">
-        <h2 style="margin-top:0;">Qué encontrarás aquí</h2>
-        <ul class="list-clean">
-          <li>Explicaciones sencillas sobre cómo funcionan los neobancos.</li>
-          <li>Comparativas útiles entre cuentas, tarjetas y servicios digitales.</li>
-          <li>Consejos para viajar, evitar comisiones y revisar la seguridad.</li>
-          <li>Respuestas claras a dudas frecuentes sobre banca digital.</li>
-        </ul>
-        <div class="cta-box" style="margin-top:1rem;">
-          <strong>Empieza por aquí</strong>
-          <p class="muted" style="margin:.45rem 0 0;">Si es tu primera vez comparando neobancos, empieza por la guía básica y después consulta la sección de preguntas frecuentes.</p>
-        </div>
-      </aside>
-    </div>
+    <div class="kicker">Blog de MisNeobancos</div>
+    <h1>Guías y comparativas para entender mejor la banca digital</h1>
+    <p class="lead">Aquí encontrarás artículos pensados para resolver dudas reales sobre neobancos, cuentas online, comisiones, tarjetas, viajes y ahorro. El objetivo es ayudarte a comparar mejor y tomar decisiones con más criterio.</p>
   </div>
 </section>
-
-<main class="section">
-  <div class="container">
-    <div class="card" style="padding:1.45rem; margin-bottom:1.5rem;">
-      <div class="breadcrumbs">Inicio / Blog</div>
-      <h2 style="margin-top:0;">Artículo destacado</h2>
-      <div class="grid-2" style="align-items:stretch;">
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="card soft">
+        <div class="kicker">Artículo destacado</div>
+        <h2 style="margin-top:0">Qué es un neobanco y cómo elegir el que mejor encaja contigo</h2>
+        <p>Una guía base para entender cómo funciona un neobanco, qué puede aportarte en el día a día y qué deberías revisar antes de abrir una cuenta.</p>
+        <p><a class="btn" href="/blog/que-es-un-neobanco-y-como-elegir.html">Leer guía</a></p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2>Últimos artículos</h2>
+      <div class="cards">
         <article class="article-card">
-          <div class="cover"><strong>Qué es un neobanco y cómo elegir el mejor según tu perfil</strong></div>
-          <div class="body">
-            <div class="tag">Guía esencial</div>
-            <p>Una guía base para entender cómo funciona un neobanco, qué ventajas ofrece frente a la banca tradicional, qué riesgos conviene revisar y en qué fijarte antes de abrir una cuenta.</p>
-            <p><a class="btn" href="/blog/que-es-un-neobanco-y-como-elegir.html">Leer artículo</a></p>
-          </div>
+          <div class="eyebrow">Guía básica</div>
+          <h3><a href="/blog/que-es-un-neobanco-y-como-elegir.html">Qué es un neobanco y cómo elegir uno sin equivocarte</a></h3>
+          <p>Explicación clara de qué es un neobanco, qué ventajas ofrece y en qué conviene fijarse antes de abrir una cuenta.</p>
         </article>
-        <div class="panel">
-          <h3 style="margin-top:0;">Por qué empezar por aquí</h3>
-          <p>Este contenido es una buena puerta de entrada si quieres entender qué es un neobanco, en qué se diferencia de una cuenta online tradicional y qué conviene revisar antes de abrir una cuenta.</p>
-          <h3>Lecturas recomendadas</h3>
-          <ul class="list-clean">
-            <li><a href="/faq.html">Preguntas frecuentes sobre neobancos</a></li>
-            <li><a href="/">Ver la comparativa principal</a></li>
+        <article class="article-card">
+          <div class="eyebrow">Viajes</div>
+          <h3><a href="/blog/mejor-neobanco-para-viajar.html">Mejor neobanco para viajar: qué conviene mirar</a></h3>
+          <p>Claves para comparar cambio de divisa, retiradas en efectivo, pagos en el extranjero y control desde la app.</p>
+        </article>
+        <article class="article-card">
+          <div class="eyebrow">Comparativa</div>
+          <h3><a href="/blog/cuenta-online-sin-comisiones-vs-neobanco.html">Cuenta online sin comisiones vs neobanco</a></h3>
+          <p>Diferencias reales entre una cuenta online clásica y un neobanco, y en qué casos puede interesarte más cada opción.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="kicker">Temas que tratamos</div>
+          <ul class="list">
+            <li>Neobancos y cuentas digitales para el día a día.</li>
+            <li>Comisiones, tarjetas, cajeros y pagos internacionales.</li>
+            <li>Uso práctico para viajar o separar gastos.</li>
+            <li>Ahorro, inversión básica y dudas frecuentes.</li>
           </ul>
+        </div>
+        <div class="card">
+          <div class="kicker">Para empezar</div>
+          <p>Si es tu primera vez comparando opciones de banca digital, puedes empezar por la guía sobre qué es un neobanco y después ampliar con la sección de preguntas frecuentes.</p>
+          <p><a class="btn-light" href="/faq.html">Ir a FAQ</a></p>
         </div>
       </div>
     </div>
-
-    <section aria-labelledby="ultimos-articulos">
-      <h2 id="ultimos-articulos">Últimos artículos del blog</h2>
-      <p class="lead">Empieza por la guía que mejor encaje con tu situación: entender qué es un neobanco, elegir una opción para viajar o comparar frente a una cuenta online sin comisiones.</p>
-      <div class="grid-3">
-        <article class="article-card">
-          <div class="cover"><strong>Qué es un neobanco y cómo elegir el mejor según tu perfil</strong></div>
-          <div class="body">
-            <div class="tag">Definiciones y comparativa</div>
-            <p>Explica de forma clara qué es un neobanco, qué lo diferencia de un banco tradicional y qué conviene revisar antes de abrir una cuenta.</p>
-            <p><a href="/blog/que-es-un-neobanco-y-como-elegir.html">Leer más</a></p>
-          </div>
-        </article>
-        <article class="article-card">
-          <div class="cover"><strong>Mejor neobanco para viajar: qué mirar antes de elegir</strong></div>
-          <div class="body">
-            <div class="tag">Viajes y comisiones</div>
-            <p>Guía detallada para quienes quieren pagar en el extranjero, sacar dinero fuera o evitar sorpresas con el tipo de cambio.</p>
-            <p><a href="/blog/mejor-neobanco-para-viajar.html">Leer más</a></p>
-          </div>
-        </article>
-        <article class="article-card">
-          <div class="cover"><strong>Cuenta online sin comisiones o neobanco: diferencias reales</strong></div>
-          <div class="body">
-            <div class="tag">Comparativa útil</div>
-            <p>Un artículo pensado para resolver una duda muy común: cuándo te conviene una cuenta online clásica y cuándo un neobanco.</p>
-            <p><a href="/blog/cuenta-online-sin-comisiones-vs-neobanco.html">Leer más</a></p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" style="padding-bottom:1rem;">
-      <div class="grid-2">
-        <div class="panel">
-          <h2 style="margin-top:0;">Preguntas habituales al empezar</h2>
-          <ol class="list-clean">
-            <li>¿Qué diferencia hay entre un neobanco y un banco tradicional?</li>
-            <li>¿Conviene más una cuenta online clásica o una solución digital más flexible?</li>
-            <li>¿Qué comisiones pueden aparecer al viajar o sacar dinero?</li>
-            <li>¿Qué medidas de seguridad merece la pena revisar antes de contratar?</li>
-          </ol>
-        </div>
-        <div class="cta-box">
-          <h2 style="margin-top:0;">Sigue comparando</h2>
-          <p>Cuando tengas más claro qué tipo de cuenta necesitas, puedes volver a la página principal para comparar opciones de forma más rápida y ordenada.</p>
-          <p style="margin:0;"><a class="btn" href="/">Ir a Inicio</a></p>
-        </div>
-      </div>
-    </section>
-  </div>
+  </section>
 </main>
-
-<footer>
-  <div class="container footer-grid">
-    <div>© MisNeobancos · Blog sobre neobancos, cuentas online y banca digital.</div>
-    <div><a href="/">Inicio</a> · <a href="/blog/">Blog</a> · <a href="/faq.html">FAQ</a></div>
-  </div>
-</footer>
-
+<footer><div class="container footer-inner"><div>© MisNeobancos</div><div><a href="/blog/">Blog</a> · <a href="/faq.html">FAQ</a></div></div></footer>
 </body>
 </html>
