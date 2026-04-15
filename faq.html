@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ sobre neobancos, cuentas online y banca digital | MisNeobancos</title>
+  <meta name="description" content="Preguntas frecuentes sobre neobancos: seguridad, IBAN, comisiones, viajes, recibos, tarjetas y diferencias frente a una cuenta online tradicional.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://misneobancos.com/faq.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FAQ sobre neobancos, cuentas online y banca digital | MisNeobancos">
+  <meta property="og:description" content="Preguntas frecuentes sobre neobancos: seguridad, IBAN, comisiones, viajes, recibos, tarjetas y diferencias frente a una cuenta online tradicional.">
+  <meta property="og:url" content="https://misneobancos.com/faq.html">
+  <meta property="og:site_name" content="MisNeobancos">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0f766e">
+  
+  <style>
+
+    :root {
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --text: #172033;
+      --muted: #5c667a;
+      --line: #dbe3ef;
+      --brand: #0f766e;
+      --brand-dark: #0b5b56;
+      --accent: #e6f6f4;
+      --accent-2: #eff8ff;
+      --shadow: 0 12px 32px rgba(18, 31, 53, 0.08);
+      --radius: 18px;
+      --radius-lg: 24px;
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.72;
+    }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; height: auto; }
+    .container { width: min(calc(100% - 2rem), var(--max)); margin: 0 auto; }
+    .topbar {
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topbar-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .brand {
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+    .brand span { color: var(--brand); }
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: .95rem;
+      flex-wrap: wrap;
+    }
+    .nav a {
+      color: var(--muted);
+      font-weight: 700;
+      padding: .5rem .15rem;
+      border-bottom: 2px solid transparent;
+    }
+    .nav a.active {
+      color: var(--text);
+      border-bottom-color: var(--brand);
+    }
+    .btn, .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: .9rem 1.15rem;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: .2s ease;
+    }
+    .btn {
+      background: var(--brand);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+    .btn:hover { background: var(--brand-dark); text-decoration: none; }
+    .btn-outline {
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--text);
+    }
+    .btn-outline:hover { border-color: var(--brand); text-decoration: none; }
+    .hero {
+      padding: 4rem 0 2.5rem;
+      background:
+        radial-gradient(circle at top left, rgba(15, 118, 110, 0.11), transparent 34%),
+        linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
+      border-bottom: 1px solid var(--line);
+    }
+    .eyebrow, .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      padding: .38rem .72rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--brand-dark);
+      font-size: .92rem;
+      font-weight: 800;
+    }
+    h1, h2, h3 { line-height: 1.14; letter-spacing: -0.03em; color: var(--text); margin: 0 0 .85rem; }
+    h1 { font-size: clamp(2.15rem, 4vw, 3.6rem); }
+    h2 { font-size: clamp(1.55rem, 2.7vw, 2.2rem); margin-top: 2.15rem; }
+    h3 { font-size: 1.17rem; margin-top: 1.4rem; }
+    p, li { color: var(--text); }
+    .lead {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 72ch;
+    }
+    .card, .panel, .article-card, .faq-item, .cta-box, .note, .toc {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .section { padding: 1rem 0 3.5rem; }
+    .grid-2 { display: grid; grid-template-columns: 1.18fr .82fr; gap: 1.4rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .meta { display: flex; gap: .8rem; flex-wrap: wrap; color: var(--muted); font-size: .95rem; margin-top: 1rem; }
+    .breadcrumbs { color: var(--muted); font-size: .95rem; margin-bottom: 1rem; }
+    .hero-card { padding: clamp(1.35rem, 3vw, 2.3rem); }
+    .panel { padding: 1.3rem; }
+    .panel ul, .note ul, .toc ul { margin: .7rem 0 0 1rem; padding: 0; }
+    .muted { color: var(--muted); }
+    .article-card { overflow: hidden; }
+    .article-card .body { padding: 1.2rem 1.25rem 1.3rem; }
+    .cover {
+      min-height: 220px;
+      padding: 1.4rem;
+      display: flex;
+      align-items: end;
+      background:
+        linear-gradient(135deg, rgba(15,118,110,.08), rgba(15,118,110,.22)),
+        linear-gradient(145deg, #f8fbff, #dff6f2);
+    }
+    .cover strong {
+      display: inline-block;
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(255,255,255,.8);
+      padding: .8rem 1rem;
+      border-radius: 16px;
+      line-height: 1.25;
+      max-width: 28ch;
+      font-size: 1.1rem;
+    }
+    .list-clean { padding-left: 1.15rem; }
+    .faq-list { display: grid; gap: 1rem; }
+    .faq-item { padding: 1.2rem 1.2rem 1rem; }
+    .faq-item h3 { margin-top: 0; font-size: 1.08rem; }
+    .cta-box {
+      padding: 1.5rem;
+      background:
+        linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      background: linear-gradient(180deg, rgba(255,255,255,.65), transparent);
+    }
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.4rem;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      display: block;
+    }
+    th, td {
+      padding: .9rem .95rem;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #f8fbfe; }
+    .article-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    .content, .toc { padding: 1.4rem; }
+    .content p { margin: 0 0 1rem; }
+    .content ul, .content ol { padding-left: 1.2rem; }
+    .sticky { position: sticky; top: 96px; }
+    @media (max-width: 960px) {
+      .grid-2, .grid-3, .article-wrap { grid-template-columns: 1fr; }
+      .sticky { position: static; }
+    }
+    @media (max-width: 640px) {
+      .hero { padding-top: 2.7rem; }
+      .nav { gap: .7rem; }
+      .topbar-inner { min-height: 68px; }
+      .btn, .btn-outline { width: 100%; }
+    }
+
+  </style>
+  
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+{
+      "@type":"Question",
+      "name":"¿Qué es exactamente un neobanco?",
+      "acceptedAnswer":{"@type":"Answer","text":"Un neobanco es una entidad o servicio financiero digital que ofrece operativa bancaria desde una app o desde una web, normalmente con procesos más ágiles, menos oficinas físicas y una experiencia muy centrada en el móvil. Algunos tienen licencia bancaria propia y otros operan mediante acuerdos con bancos o entidades de dinero electrónico."}
+    },
+{
+      "@type":"Question",
+      "name":"¿Un neobanco es lo mismo que un banco online?",
+      "acceptedAnswer":{"@type":"Answer","text":"No siempre. Un banco online puede ser simplemente la versión digital de un banco tradicional, mientras que un neobanco suele haber nacido ya con un enfoque digital. En la práctica pueden parecerse mucho, pero conviene revisar quién presta realmente el servicio, qué licencia utiliza y qué protección del dinero ofrece."}
+    },
+{
+      "@type":"Question",
+      "name":"¿Es seguro abrir una cuenta en un neobanco?",
+      "acceptedAnswer":{"@type":"Answer","text":"En general puede ser seguro, pero depende de la entidad concreta. Antes de abrir una cuenta conviene revisar la licencia, el país de registro, las medidas de seguridad de la app, la autenticación en dos pasos, la política de atención al cliente, las condiciones de bloqueo de tarjeta y el sistema de protección aplicable a los depósitos o fondos."}
+    },
+{
+      "@type":"Question",
+      "name":"¿Los neobancos tienen IBAN español?",
+      "acceptedAnswer":{"@type":"Answer","text":"Algunos sí y otros no. Para muchas personas esto es importante porque puede facilitar domiciliar recibos, nómina o ciertos trámites. Si necesitas operativa local cómoda, conviene revisar este punto antes de elegir."}
+    },
+{
+      "@type":"Question",
+      "name":"¿Se puede domiciliar la nómina o los recibos?",
+      "acceptedAnswer":{"@type":"Answer","text":"Depende del neobanco y del tipo de cuenta. Algunos permiten nómina, recibos y transferencias habituales sin problema, mientras que otros están más orientados a pagos, viajes o gasto diario. Revisa siempre la letra pequeña."}
+    },
+{
+      "@type":"Question",
+      "name":"¿Cobran comisiones?",
+      "acceptedAnswer":{"@type":"Answer","text":"Muchos se anuncian como cuentas sin comisiones, pero eso no significa que todo sea gratis. Puede haber límites en retiradas de efectivo, costes por cambio de divisa fuera del horario del mercado, comisiones por planes premium, reposición de tarjeta o determinadas transferencias."}
+    },
+{
+      "@type":"Question",
+      "name":"¿Sirven para viajar mejor que un banco tradicional?",
+      "acceptedAnswer":{"@type":"Answer","text":"En muchos casos sí, sobre todo por el control desde la app, la claridad de movimientos y el enfoque en pagos internacionales. Aun así, no todos son igual de buenos para viajar. Hay que revisar comisiones por retirada, tipo de cambio, recargos de fin de semana y límites."}
+    },
+{
+      "@type":"Question",
+      "name":"¿Puedo ingresar dinero en efectivo?",
+      "acceptedAnswer":{"@type":"Answer","text":"No siempre. Este es uno de los puntos que más diferencias genera frente a la banca tradicional. Si necesitas operar con efectivo, revisa si existe red de ingreso, acuerdos con terceros o alternativas viables."}
+    },
+{
+      "@type":"Question",
+      "name":"¿Qué pasa si tengo un problema o un cargo no reconocido?",
+      "acceptedAnswer":{"@type":"Answer","text":"La rapidez y calidad de la atención al cliente cambia bastante entre entidades. Antes de abrir una cuenta conviene comprobar si ofrecen chat real, teléfono, soporte en español y un proceso claro para bloquear tarjeta, reclamar cargos o pedir ayuda urgente."}
+    },
+{
+      "@type":"Question",
+      "name":"¿Qué debo comparar antes de elegir un neobanco?",
+      "acceptedAnswer":{"@type":"Answer","text":"Los puntos clave suelen ser: licencia y protección, IBAN, comisiones reales, retiradas en efectivo, pagos en divisa, atención al cliente, facilidad de uso, compatibilidad con Bizum o wallets, opciones de ahorro y si encaja con tu perfil de uso."}
+    },
+{
+      "@type":"Question",
+      "name":"¿Es mejor para jóvenes, viajeros o uso diario?",
+      "acceptedAnswer":{"@type":"Answer","text":"Puede serlo, pero no existe un mejor neobanco universal. Lo importante es elegir según tu caso: viajar, controlar gastos, tener una segunda cuenta, cobrar ingresos o pagar recibos. Por eso conviene comparar antes de abrir."}
+    },
+{
+      "@type":"Question",
+      "name":"¿Puedo usar un neobanco como cuenta principal?",
+      "acceptedAnswer":{"@type":"Answer","text":"Sí, muchas personas lo hacen. Pero antes de dar ese paso conviene verificar si cubre todas tus necesidades: recibos, transferencias, cajeros, soporte, operativa fiscal, tarjetas, ingresos y gestión de incidencias."}
+    },
+{
+      "@type":"Question",
+      "name":"¿Tienen tarjeta física y virtual?",
+      "acceptedAnswer":{"@type":"Answer","text":"Muchos ofrecen ambas opciones, aunque las condiciones cambian según el plan. Hay entidades que incluyen tarjetas virtuales muy útiles para compras online, mientras que la tarjeta física puede tener coste de envío o requerir ciertos requisitos."}
+    },
+{
+      "@type":"Question",
+      "name":"¿Un neobanco me ayuda a controlar mejor mis gastos?",
+      "acceptedAnswer":{"@type":"Answer","text":"A menudo sí. Una de sus ventajas más habituales es la experiencia de usuario: categorización de movimientos, alertas instantáneas, presupuestos, espacios de ahorro y control desde el móvil."}
+    },
+{
+      "@type":"Question",
+      "name":"¿Dónde puedo comparar opciones de forma más clara?",
+      "acceptedAnswer":{"@type":"Answer","text":"La mejor forma es pasar de la teoría a una comparativa práctica. En ese punto la web principal de MisNeobancos está pensada para ayudarte a revisar opciones con más contexto y encontrar la que mejor encaja contigo."}
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="/"><span>Mis</span>Neobancos</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="/">Inicio</a>
+      <a href="/blog/">Blog</a>
+      <a href="/faq.html" class="active">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="card hero-card">
+      <div class="eyebrow">FAQ sobre neobancos</div>
+      <h1>Preguntas frecuentes sobre neobancos, cuentas online y banca digital</h1>
+      <p class="lead">Esta página reúne dudas habituales de usuarios que quieren entender mejor cómo funcionan los neobancos antes de comparar opciones. Está pensada para resolver preguntas clave y ayudarte a dar el siguiente paso hacia la web principal de MisNeobancos.</p>
+      <div class="meta">
+        <span>Respuestas claras</span>
+        <span>Contenido útil para SEO</span>
+        <span>Enlace directo a la comparativa principal</span>
+      </div>
+      <p style="margin-top:1.2rem; display:flex; gap:.8rem; flex-wrap:wrap;">
+        <a class="btn" href="/">Ir a la web inicial</a>
+        <a class="btn-outline" href="/blog/">Ir al blog</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<main class="section">
+  <div class="container">
+    <div class="card" style="padding:1.45rem; margin-bottom:1.3rem;">
+      <div class="breadcrumbs">Inicio / FAQ</div>
+      <h2 style="margin-top:0;">Resuelve tus dudas antes de elegir</h2>
+      <p>En finanzas digitales, muchas decisiones empiezan con una búsqueda sencilla: qué es un neobanco, si es seguro, si tiene IBAN español o si realmente merece la pena frente a una cuenta online tradicional. Aquí tienes una base sólida para entenderlo mejor.</p>
+    </div>
+
+    <section class="faq-list" aria-label="Preguntas frecuentes">
+      <article class="faq-item"><h3>¿Qué es exactamente un neobanco?</h3><p>Un neobanco es una entidad o servicio financiero digital que ofrece operativa bancaria desde una app o desde una web, normalmente con procesos más ágiles, menos oficinas físicas y una experiencia muy centrada en el móvil. Algunos tienen licencia bancaria propia y otros operan mediante acuerdos con bancos o entidades de dinero electrónico.</p></article>
+<article class="faq-item"><h3>¿Un neobanco es lo mismo que un banco online?</h3><p>No siempre. Un banco online puede ser simplemente la versión digital de un banco tradicional, mientras que un neobanco suele haber nacido ya con un enfoque digital. En la práctica pueden parecerse mucho, pero conviene revisar quién presta realmente el servicio, qué licencia utiliza y qué protección del dinero ofrece.</p></article>
+<article class="faq-item"><h3>¿Es seguro abrir una cuenta en un neobanco?</h3><p>En general puede ser seguro, pero depende de la entidad concreta. Antes de abrir una cuenta conviene revisar la licencia, el país de registro, las medidas de seguridad de la app, la autenticación en dos pasos, la política de atención al cliente, las condiciones de bloqueo de tarjeta y el sistema de protección aplicable a los depósitos o fondos.</p></article>
+<article class="faq-item"><h3>¿Los neobancos tienen IBAN español?</h3><p>Algunos sí y otros no. Para muchas personas esto es importante porque puede facilitar domiciliar recibos, nómina o ciertos trámites. Si necesitas operativa local cómoda, conviene revisar este punto antes de elegir.</p></article>
+<article class="faq-item"><h3>¿Se puede domiciliar la nómina o los recibos?</h3><p>Depende del neobanco y del tipo de cuenta. Algunos permiten nómina, recibos y transferencias habituales sin problema, mientras que otros están más orientados a pagos, viajes o gasto diario. Revisa siempre la letra pequeña.</p></article>
+<article class="faq-item"><h3>¿Cobran comisiones?</h3><p>Muchos se anuncian como cuentas sin comisiones, pero eso no significa que todo sea gratis. Puede haber límites en retiradas de efectivo, costes por cambio de divisa fuera del horario del mercado, comisiones por planes premium, reposición de tarjeta o determinadas transferencias.</p></article>
+<article class="faq-item"><h3>¿Sirven para viajar mejor que un banco tradicional?</h3><p>En muchos casos sí, sobre todo por el control desde la app, la claridad de movimientos y el enfoque en pagos internacionales. Aun así, no todos son igual de buenos para viajar. Hay que revisar comisiones por retirada, tipo de cambio, recargos de fin de semana y límites.</p></article>
+<article class="faq-item"><h3>¿Puedo ingresar dinero en efectivo?</h3><p>No siempre. Este es uno de los puntos que más diferencias genera frente a la banca tradicional. Si necesitas operar con efectivo, revisa si existe red de ingreso, acuerdos con terceros o alternativas viables.</p></article>
+<article class="faq-item"><h3>¿Qué pasa si tengo un problema o un cargo no reconocido?</h3><p>La rapidez y calidad de la atención al cliente cambia bastante entre entidades. Antes de abrir una cuenta conviene comprobar si ofrecen chat real, teléfono, soporte en español y un proceso claro para bloquear tarjeta, reclamar cargos o pedir ayuda urgente.</p></article>
+<article class="faq-item"><h3>¿Qué debo comparar antes de elegir un neobanco?</h3><p>Los puntos clave suelen ser: licencia y protección, IBAN, comisiones reales, retiradas en efectivo, pagos en divisa, atención al cliente, facilidad de uso, compatibilidad con Bizum o wallets, opciones de ahorro y si encaja con tu perfil de uso.</p></article>
+<article class="faq-item"><h3>¿Es mejor para jóvenes, viajeros o uso diario?</h3><p>Puede serlo, pero no existe un mejor neobanco universal. Lo importante es elegir según tu caso: viajar, controlar gastos, tener una segunda cuenta, cobrar ingresos o pagar recibos. Por eso conviene comparar antes de abrir.</p></article>
+<article class="faq-item"><h3>¿Puedo usar un neobanco como cuenta principal?</h3><p>Sí, muchas personas lo hacen. Pero antes de dar ese paso conviene verificar si cubre todas tus necesidades: recibos, transferencias, cajeros, soporte, operativa fiscal, tarjetas, ingresos y gestión de incidencias.</p></article>
+<article class="faq-item"><h3>¿Tienen tarjeta física y virtual?</h3><p>Muchos ofrecen ambas opciones, aunque las condiciones cambian según el plan. Hay entidades que incluyen tarjetas virtuales muy útiles para compras online, mientras que la tarjeta física puede tener coste de envío o requerir ciertos requisitos.</p></article>
+<article class="faq-item"><h3>¿Un neobanco me ayuda a controlar mejor mis gastos?</h3><p>A menudo sí. Una de sus ventajas más habituales es la experiencia de usuario: categorización de movimientos, alertas instantáneas, presupuestos, espacios de ahorro y control desde el móvil.</p></article>
+<article class="faq-item"><h3>¿Dónde puedo comparar opciones de forma más clara?</h3><p>La mejor forma es pasar de la teoría a una comparativa práctica. En ese punto la web principal de MisNeobancos está pensada para ayudarte a revisar opciones con más contexto y encontrar la que mejor encaja contigo.</p></article>
+
+    </section>
+
+    <section class="section" style="padding-bottom:0;">
+      <div class="grid-2">
+        <div class="panel">
+          <h2 style="margin-top:0;">Lecturas relacionadas</h2>
+          <ul class="list-clean">
+            <li><a href="/blog/que-es-un-neobanco-y-como-elegir.html">Qué es un neobanco y cómo elegir el mejor según tu perfil</a></li>
+            <li><a href="/blog/mejor-neobanco-para-viajar.html">Mejor neobanco para viajar: qué mirar antes de elegir</a></li>
+            <li><a href="/blog/cuenta-online-sin-comisiones-vs-neobanco.html">Cuenta online sin comisiones o neobanco: diferencias reales</a></li>
+          </ul>
+        </div>
+        <div class="cta-box">
+          <h2 style="margin-top:0;">Da el siguiente paso</h2>
+          <p>Cuando ya tengas claras las diferencias principales, lo más útil es pasar a la comparativa práctica. Ahí es donde la home principal de MisNeobancos cobra sentido.</p>
+          <p style="margin:0;"><a class="btn" href="/">Ver la web principal</a></p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>© MisNeobancos · FAQ sobre neobancos y cuentas online.</div>
+    <div><a href="/">Inicio</a> · <a href="/blog/">Blog</a> · <a href="/faq.html">FAQ</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
