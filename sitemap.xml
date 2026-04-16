@@ -2,9 +2,10 @@
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
     <loc>https://misneobancos.com/</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://misneobancos.com/" />
@@ -12,9 +13,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://misneobancos.com/en/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://misneobancos.com/" />
   </url>
+
   <url>
     <loc>https://misneobancos.com/ca/</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://misneobancos.com/" />
@@ -22,9 +24,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://misneobancos.com/en/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://misneobancos.com/" />
   </url>
+
   <url>
     <loc>https://misneobancos.com/en/</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://misneobancos.com/" />
@@ -32,4 +35,47 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://misneobancos.com/en/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://misneobancos.com/" />
   </url>
+
+  <url>
+    <loc>https://misneobancos.com/blog/</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://misneobancos.com/faq.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://misneobancos.com/blog/que-es-un-neobanco-y-como-elegir.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://misneobancos.com/blog/mejor-neobanco-para-viajar.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://misneobancos.com/blog/cuenta-online-sin-comisiones-vs-neobanco.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://misneobancos.com/blog/enlaces-de-invitacion-neobancos.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
